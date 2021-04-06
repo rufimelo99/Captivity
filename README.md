@@ -7,7 +7,7 @@
   <p align="center">
     Some Project
     <br />
-    <a href="https://github.com/rufimelo99/AASMA"><strong>Check Files »</strong></a>
+    <a href="https://github.com/rufimelo99/Captivity"><strong>Check Files »</strong></a>
     <br />
     <br />
     · This project was done in MDJ at 
