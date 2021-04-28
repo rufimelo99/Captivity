@@ -5,10 +5,11 @@ ScriptsOnlyBuild:
     - Cainos.PixelArtTopDown_Basic.LayerTrigger
     - Cainos.PixelArtTopDown_Basic.PropsAltar
     - Cainos.PixelArtTopDown_Basic.SpriteColorAnimation
-    - ColliderManager
+    - EndGame
     - Enemy1
     - ExplodeFinishedEvent
     - PlayerMovement
+    - RiverColliderManager
     - Weapon
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -89,35 +90,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 12676}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13332}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 14080}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 14084}
     - Class: 114
-      Script: {instanceID: 14586}
+      Script: {instanceID: 14518}
     - Class: 114
-      Script: {instanceID: 14876}
+      Script: {instanceID: 14592}
     - Class: 114
-      Script: {instanceID: 15196}
+      Script: {instanceID: 14882}
     - Class: 114
-      Script: {instanceID: 15256}
+      Script: {instanceID: 15200}
     - Class: 114
-      Script: {instanceID: 125756}
+      Script: {instanceID: 15260}
+    - Class: 114
+      Script: {instanceID: 15262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -559,6 +562,12 @@ ScriptsOnlyBuild:
     className: InputSettings
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndGame
+  - hash:
+      serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -883,6 +892,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 30f3213a6e218a461fa00e428f22d3eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CaveDoor
+  - hash:
+      serializedVersion: 2
       Hash: a66794b62dbf044668a5f102bb7908c2
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1087,6 +1102,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: e5406b2c261a1c9b1f2c25232cfd2c09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RiverColliderManager
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1117,6 +1138,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: c12d4fbbe9e09203af801c9955163c2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy2
+  - hash:
+      serializedVersion: 2
       Hash: 880d064aa7bf32abd8295b0fe07bcc13
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
@@ -1139,12 +1166,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e5406b2c261a1c9b1f2c25232cfd2c09
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ColliderManager
   platform: 19
   scenePathNames:
   - Assets/Cainos/Pixel Art Top Down - Basic/Scene/SC Pixel Art Top Down - Basic.unity

@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - Obstacle_blue
   - endGame
+  - Virtual Camera
+  - Room Changer
   layers:
   - Default
   - TransparentFX

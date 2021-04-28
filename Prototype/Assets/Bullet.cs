@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public int damage = 40;
     public Rigidbody2D rb;
-    public GameObject impactEffect;
     public SpriteRenderer spriteRenderer;
 
     // Start is called

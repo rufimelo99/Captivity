@@ -18,13 +18,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetInteger("Color", playerColor);
     }
 
-    //void OnTriggerEnter2D(Collider2D obj)
-    //{
-    //    if (obj.tag == "endGame")
-    //    {
-    //        Application.Quit();
-    //    }
-    //}
 
     // Update is called once per frame
     void Update()
