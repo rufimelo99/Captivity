@@ -127,6 +127,11 @@ public class PlayerMovement : MonoBehaviour
             health = health - 1;
             healthBar.fillAmount = health / 10f;
         }
+
+        if (col.tag == "endGame")
+        {
+            Application.Quit();
+        }
     }
 
 }

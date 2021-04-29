@@ -2,19 +2,21 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Bullet
-    - Cainos.PixelArtTopDown_Basic.LayerTrigger
-    - Cainos.PixelArtTopDown_Basic.PropsAltar
-    - Cainos.PixelArtTopDown_Basic.SpriteColorAnimation
-    - EndGame
-    - Enemy1
+    - CaveDoor
+    - Enemy2
+    - EnemyBullet
     - ExplodeFinishedEvent
     - PlayerMovement
+    - PlayerMovement2
     - RiverColliderManager
     - Weapon
+    - Weapon2
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
-    - Cinemachine.CinemachineFramingTransposer
+    - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineTransposer
+    - Cinemachine.CinemachineTriggerAction
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -33,22 +35,18 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Cainos/Pixel Art Top Down - Basic/Scene/SC Pixel Art Top Down - Basic.unity:
+    Assets/Top Down Adventure Assets/Scenes/FireLevel1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -65,13 +63,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
-    - Class: 60
-      Script: {instanceID: 0}
     - Class: 61
-      Script: {instanceID: 0}
-    - Class: 66
-      Script: {instanceID: 0}
-    - Class: 68
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -84,43 +76,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 598}
-    - Class: 114
       Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12660}
+      Script: {instanceID: 12072}
     - Class: 114
-      Script: {instanceID: 12676}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13312}
     - Class: 114
-      Script: {instanceID: 13336}
+      Script: {instanceID: 13340}
     - Class: 114
-      Script: {instanceID: 13462}
+      Script: {instanceID: 13744}
     - Class: 114
-      Script: {instanceID: 14084}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14518}
+      Script: {instanceID: 14204}
     - Class: 114
-      Script: {instanceID: 14592}
+      Script: {instanceID: 14522}
     - Class: 114
-      Script: {instanceID: 14882}
+      Script: {instanceID: 14954}
     - Class: 114
-      Script: {instanceID: 15200}
+      Script: {instanceID: 15208}
     - Class: 114
-      Script: {instanceID: 15260}
+      Script: {instanceID: 15270}
     - Class: 114
-      Script: {instanceID: 15262}
+      Script: {instanceID: 15346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -136,14 +126,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 19719996
-      Script: {instanceID: 0}
-    - Class: 156049354
-      Script: {instanceID: 0}
-    - Class: 483693784
-      Script: {instanceID: 0}
-    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -292,6 +274,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 7bd65d802fa7de0f76ccbf1c24ca2414
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyBullet
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -382,10 +370,16 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
-      Hash: 742db8891e325669b4addeda8b5557cb
+      Hash: 52f417d0fb7aa9278d23d24f11570acd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet
+  - hash:
+      serializedVersion: 2
+      Hash: 3f5fc4188c42b37b3ea8d3ba12814e32
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Weapon2
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -658,7 +652,7 @@ ScriptsOnlyBuild:
     className: CinemachinePipeline
   - hash:
       serializedVersion: 2
-      Hash: 3c5cca6b8a75210918dd9ceb9b73651d
+      Hash: 084c5702f15918b1c7c17fe6e52dfcb8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -994,6 +988,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: e5406b2c261a1c9b1f2c25232cfd2c09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColliderManager
+  - hash:
+      serializedVersion: 2
       Hash: 5e84370a36252d6aa37d6a7bd37710f7
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1016,6 +1016,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: AdvancedDropdownWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 084c5702f15918b1c7c17fe6e52dfcb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement2
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
@@ -1102,7 +1108,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: e5406b2c261a1c9b1f2c25232cfd2c09
+      Hash: bbf15370143f6bbffba18a72ddf19605
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RiverColliderManager
@@ -1138,7 +1144,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: c12d4fbbe9e09203af801c9955163c2b
+      Hash: 2ac89796b8676abd5e2f0aaddc233e15
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy2
@@ -1168,5 +1174,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Cainos/Pixel Art Top Down - Basic/Scene/SC Pixel Art Top Down - Basic.unity
+  - Assets/Top Down Adventure Assets/Scenes/FireLevel1.unity
   playerPath: C:/Users/eduar/Documents/Mestrado/2 semestre/MDJ/Prototype.exe
