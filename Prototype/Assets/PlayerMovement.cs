@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,12 +13,16 @@ public class PlayerMovement : MonoBehaviour
     public int playerColor = 0;
     public BoxCollider2D collider;
 
+    public float health = 10f;
+    public Image healthBar;
+
     Vector2 movement;
     Vector2 roomMover;
 
     void Start()
     {
         animator.SetInteger("Color", playerColor);
+        healthBar.GetComponent<Image>().color = Color.green;
     }
 
 
@@ -26,14 +32,24 @@ public class PlayerMovement : MonoBehaviour
         changeColor();
         move();
         animate();
+        if (health == 0)
+        {
+            die();
+        }
     }
 
+    void die()
+    {
+        health = 10f;
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
 
     void animate()
     {
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        healthBar.fillAmount = health / 10f;
     }
 
 
@@ -49,11 +65,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             playerColor = 0;
-            collider.isTrigger = false;
+            healthBar.GetComponent<Image>().color = Color.green;
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             playerColor = 1;
+            healthBar.GetComponent<Image>().color = Color.blue;
         }
         animator.SetInteger("Color", playerColor);
     }
@@ -87,7 +104,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
+
+        if (col.tag == "Obstacle_blue" && playerColor != 1)
+        {
+            health = 0;
+        }
+
         if (col.tag == "Vertical Room Changer")
         {
             roomMover = new Vector2(0, 2 * movement.y);
@@ -98,6 +120,13 @@ public class PlayerMovement : MonoBehaviour
         {
             roomMover = new Vector2(2 * movement.x,0);
             gameObject.transform.position = rb.position + roomMover;
+        }
+
+        if (col.tag == "Enemy Bullet")
+        {
+            health = health - 1;
+            animator.SetFloat("enemyHealth", health);
+            healthBar.fillAmount = health / 10f;
         }
     }
 
