@@ -12,10 +12,11 @@ public class PlayerMovement2 : MonoBehaviour
     public BoxCollider2D collider;
 
     Vector2 movement;
-
+    Vector2 roomMover;
 
     void Start()
     {
+        roomMover = new Vector2(0, 1);
         animator.SetInteger("Color2", playerColor);
     }
 
@@ -71,14 +72,21 @@ public class PlayerMovement2 : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
 
-    //void OnCollisionEnter2D(Collision2D obj)
-    //{
-    //    if (obj.gameObject.tag == "Obstacle_blue" && playerColor == 1)
-    //   {
-    //        collider.isTrigger = true;
-    //    }
-    //}
+        if (col.tag == "Vertical Room Changer")
+        {
+            roomMover = new Vector2(0, 2*movement.y);
+            gameObject.transform.position = rb.position + roomMover;
+        }
+
+        if (col.tag == "Horizontal Room Changer")
+        {
+            roomMover = new Vector2(2 * movement.x, 0);
+            gameObject.transform.position = rb.position + roomMover;
+        }
+    }
 
 }
 

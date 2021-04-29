@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider2D collider;
 
     Vector2 movement;
-
+    Vector2 roomMover;
 
     void Start()
     {
@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         changeColor();
         move();
         animate();
@@ -85,5 +84,21 @@ public class PlayerMovement : MonoBehaviour
     //        collider.isTrigger = true;
     //    }
     //}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        
+        if (col.tag == "Vertical Room Changer")
+        {
+            roomMover = new Vector2(0, 2 * movement.y);
+            gameObject.transform.position = rb.position + roomMover;
+        }
+
+        if (col.tag == "Horizontal Room Changer")
+        {
+            roomMover = new Vector2(2 * movement.x,0);
+            gameObject.transform.position = rb.position + roomMover;
+        }
+    }
 
 }

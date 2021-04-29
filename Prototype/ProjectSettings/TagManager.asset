@@ -12,6 +12,8 @@ TagManager:
   - Virtual Camera
   - Room Changer
   - Player2
+  - Vertical Room Changer
+  - Horizontal Room Changer
   layers:
   - Default
   - TransparentFX
