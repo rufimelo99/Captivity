@@ -33,6 +33,11 @@ public class Bullet : MonoBehaviour
         if (bulletcolor == 0)
         {
             spriteRenderer.color = Color.green;
-       }
+        }
+        if (bulletcolor == 2)
+        {
+            spriteRenderer.color = Color.red;
+        }
+
     }
 }

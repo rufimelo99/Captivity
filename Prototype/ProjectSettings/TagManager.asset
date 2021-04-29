@@ -14,6 +14,7 @@ TagManager:
   - Player2
   - Vertical Room Changer
   - Horizontal Room Changer
+  - Small Enemy Bullet
   layers:
   - Default
   - TransparentFX

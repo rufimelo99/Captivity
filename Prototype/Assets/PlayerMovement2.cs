@@ -29,8 +29,8 @@ public class PlayerMovement2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animate();
         move();
+        animate();
         changeColor();
         if (health == 0)
         {
@@ -46,8 +46,8 @@ public class PlayerMovement2 : MonoBehaviour
 
     void animate()
     {
-        animator.SetFloat("Horizontal2", 1);
-        animator.SetFloat("Vertical2", 0);
+        animator.SetFloat("Horizontal2", movement.x);
+        animator.SetFloat("Vertical2", movement.y);
         animator.SetFloat("Speed2", movement.sqrMagnitude);
         healthBar.fillAmount = health / 10f;
     }
@@ -86,8 +86,8 @@ public class PlayerMovement2 : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal2") != 0 || Input.GetAxisRaw("Vertical2") != 0)
         {
-            animator.SetFloat("lastMoveX2", 1);//Input.GetAxisRaw("Horizontal2")
-            animator.SetFloat("lastMoveY2", 0);// Input.GetAxisRaw("Vertical2"));
+            animator.SetFloat("lastMoveX2", movement.x);//Input.GetAxisRaw("Horizontal2")
+            animator.SetFloat("lastMoveY2", movement.y);// Input.GetAxisRaw("Vertical2"));
         }
     }
 
@@ -111,10 +111,9 @@ public class PlayerMovement2 : MonoBehaviour
             gameObject.transform.position = rb.position + roomMover;
         }
 
-        if (col.tag == "Enemy Bullet")
+        if (col.tag == "Small Enemy Bullet")
         {
             health = health - 1;
-            animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
         }
     }

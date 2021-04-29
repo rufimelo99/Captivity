@@ -122,10 +122,9 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.position = rb.position + roomMover;
         }
 
-        if (col.tag == "Enemy Bullet")
+        if (col.tag == "Small Enemy Bullet")
         {
             health = health - 1;
-            animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
         }
     }

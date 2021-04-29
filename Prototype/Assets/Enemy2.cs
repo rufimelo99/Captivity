@@ -12,7 +12,35 @@ public class Enemy2 : MonoBehaviour
     public Image healthBar;
     public BoxCollider2D caveCollider;
 
-    void OnTriggerEnter2D(Collider2D obj)
+    public GameObject bulletPrefab;
+    public GameObject projectile;
+    public Transform firePoint;
+    public bool left;
+
+    void Start()
+    {
+        left = true;
+        StartCoroutine(ShotTimer());
+    }
+
+    //void Update()
+    //{
+        
+    //}
+
+    IEnumerator ShotTimer()
+    {
+        WaitForSeconds pause = new WaitForSeconds(0.5f);
+        while (true)
+        {
+            yield return pause;
+            Shoot();
+            Rotate();
+        }
+    }
+
+
+        void OnTriggerEnter2D(Collider2D obj)
     {
         if (obj.tag == "Bullet")
         {
@@ -27,5 +55,25 @@ public class Enemy2 : MonoBehaviour
             animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
         }
+    }
+
+    void Shoot()
+    {
+        projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void Rotate()
+    {
+        if (left)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
+            left = false;
+        }
+        else
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
+            left = true;
+        }
+        
     }
 }
