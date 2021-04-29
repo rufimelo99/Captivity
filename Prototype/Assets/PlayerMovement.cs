@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public int playerColor = 0;
+    public BoxCollider2D collider;
 
     Vector2 movement;
 
@@ -24,27 +25,37 @@ public class PlayerMovement : MonoBehaviour
     {
 
         changeColor();
+        move();
+        animate();
+    }
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
 
+    void animate()
+    {
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
 
+    void move()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
+
+
     void changeColor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             playerColor = 0;
+            collider.isTrigger = false;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             playerColor = 1;
         }
-
         animator.SetInteger("Color", playerColor);
     }
 
@@ -52,11 +63,27 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        
-        if(Input.GetAxisRaw("Horizontal")!= 0 || Input.GetAxisRaw("Vertical") != 0)
+
+        rotate();
+    }
+
+    
+    void rotate()
+    {
+
+        if(Input.GetAxisRaw("Horizontal")!=0 || Input.GetAxisRaw("Vertical") != 0)
         {
             animator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
             animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
     }
+
+    //void OnCollisionEnter2D(Collision2D obj)
+    //{
+    //    if (obj.gameObject.tag == "Obstacle_blue" && playerColor == 1)
+    //   {
+    //        collider.isTrigger = true;
+    //    }
+    //}
+
 }

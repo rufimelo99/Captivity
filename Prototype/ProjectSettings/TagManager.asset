@@ -11,6 +11,7 @@ TagManager:
   - endGame
   - Virtual Camera
   - Room Changer
+  - Player2
   layers:
   - Default
   - TransparentFX

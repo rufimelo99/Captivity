@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
         changeBulletColor();
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Minus))
         {
             Shoot();
         }
@@ -26,11 +26,11 @@ public class Weapon : MonoBehaviour
 
     void changeBulletColor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             bulletColor = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             bulletColor = 1;
         }
