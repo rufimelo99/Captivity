@@ -5,7 +5,9 @@ ScriptsOnlyBuild:
     - CaveDoor
     - Enemy2
     - EnemyBullet
+    - EnemyController
     - ExplodeFinishedEvent
+    - GreenObstacle
     - PlayerMovement
     - PlayerMovement2
     - RiverColliderManager
@@ -35,8 +37,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -104,13 +108,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14522}
     - Class: 114
-      Script: {instanceID: 14954}
+      Script: {instanceID: 14596}
     - Class: 114
-      Script: {instanceID: 15208}
+      Script: {instanceID: 14956}
     - Class: 114
-      Script: {instanceID: 15270}
+      Script: {instanceID: 15210}
     - Class: 114
-      Script: {instanceID: 15346}
+      Script: {instanceID: 15272}
+    - Class: 114
+      Script: {instanceID: 15348}
+    - Class: 114
+      Script: {instanceID: 15364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -370,7 +378,7 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
-      Hash: 52f417d0fb7aa9278d23d24f11570acd
+      Hash: 9fbf2461a746998f8b60f0ed5361a993
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet
@@ -958,6 +966,12 @@ ScriptsOnlyBuild:
     className: CinemachineSmoothPath
   - hash:
       serializedVersion: 2
+      Hash: 87925c0cabebcda167c4508ede5bc883
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyController
+  - hash:
+      serializedVersion: 2
       Hash: f521aa63d9ffd972f8971012483a12ff
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cainos.PixelArtTopDown_Basic
@@ -1154,6 +1168,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: InputSystemObject
+  - hash:
+      serializedVersion: 2
+      Hash: 6d10a7fb598852190f7b3fca214d9277
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GreenObstacle
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030

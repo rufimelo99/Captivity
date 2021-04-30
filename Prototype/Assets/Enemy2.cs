@@ -19,14 +19,12 @@ public class Enemy2 : MonoBehaviour
 
     void Start()
     {
-        left = true;
+        firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
+        left = false;
         StartCoroutine(ShotTimer());
     }
 
-    //void Update()
-    //{
-        
-    //}
+    
 
     IEnumerator ShotTimer()
     {
