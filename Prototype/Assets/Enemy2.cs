@@ -7,20 +7,20 @@ public class Enemy2 : MonoBehaviour
 {
 
     public Animator animator;
-    public Animator animator2;
+    //public Animator animator2;
     public float health = 10f;
     public Image healthBar;
-    public BoxCollider2D caveCollider;
+    //public BoxCollider2D caveCollider;
 
     public GameObject bulletPrefab;
     public GameObject projectile;
     public Transform firePoint;
-    public bool left;
+    public bool right;
 
     void Start()
     {
-        firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-        left = false;
+        firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
+        right = false;
         StartCoroutine(ShotTimer());
     }
 
@@ -28,27 +28,27 @@ public class Enemy2 : MonoBehaviour
 
     IEnumerator ShotTimer()
     {
-        WaitForSeconds pause = new WaitForSeconds(0.5f);
+        WaitForSeconds pause = new WaitForSeconds(0.8f);
         while (true)
         {
             yield return pause;
             Shoot();
-            Rotate();
+            //Rotate();
         }
     }
 
 
-        void OnTriggerEnter2D(Collider2D obj)
+    void OnTriggerEnter2D(Collider2D obj)
     {
         if (obj.tag == "Bullet")
         {
             health = health - 1;
 
-            if (health == 0)
-            {
-                animator2.SetBool("isEnemyDead", true);
-                caveCollider.enabled = false;
-            }
+            //if (health == 0)
+            //{
+                //animator2.SetBool("isEnemyDead", true);
+                //caveCollider.enabled = false;
+            //}
 
             animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
@@ -62,15 +62,15 @@ public class Enemy2 : MonoBehaviour
 
     void Rotate()
     {
-        if (left)
+        if (right)
         {
-            firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-            left = false;
+            firePoint.rotation = Quaternion.Euler(0f, 60f, 0f);
+            right = false;
         }
         else
         {
-            firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
-            left = true;
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
+            right = true;
         }
         
     }
