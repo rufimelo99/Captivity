@@ -15,6 +15,7 @@ TagManager:
   - Vertical Room Changer
   - Horizontal Room Changer
   - Small Enemy Bullet
+  - Evil Touch
   layers:
   - Default
   - TransparentFX

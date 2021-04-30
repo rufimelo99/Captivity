@@ -1,24 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
 
 
     public float speed;
+    public float range;
+
     public Animator animator;
+
     public Transform Player1;
     public Transform Player2;
+
     public float distance1;
     public float distance2;
     public Vector3 direction;
 
+    public float health = 10f;
+    public Image healthBar;
+
 
     void Start()
     {
-        animator.SetFloat("Speed", 2);
+        animator.SetFloat("Health", 10);
+        animator.SetFloat("Speed", 0);
     }
 
 
@@ -49,13 +57,36 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (distance1 <= distance2)
+        if (distance1 <= range || distance2 <= range)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Player1.position, Time.deltaTime * speed);
+            animator.SetFloat("Speed", 2);
+            speed = 2.0f;
+            if (distance1 <= distance2)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player1.position, Time.deltaTime * speed);
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player2.position, Time.deltaTime * speed);
+            }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, Player2.position, Time.deltaTime * speed);
+            animator.SetFloat("Speed", 0);
+            speed = 0f;
         }
     }
+
+
+    void OnTriggerEnter2D(Collider2D obj)
+    {
+        if (obj.tag == "Bullet")
+        {
+            health = health - 1;
+            animator.SetFloat("Health", health);
+            healthBar.fillAmount = health / 10f;
+        }
+    }
+
+
 }

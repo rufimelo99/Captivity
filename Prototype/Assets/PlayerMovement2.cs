@@ -32,7 +32,7 @@ public class PlayerMovement2 : MonoBehaviour
         move();
         animate();
         changeColor();
-        if (health == 0)
+        if (health <= 0.1)
         {
             die();
         }
@@ -75,6 +75,22 @@ public class PlayerMovement2 : MonoBehaviour
         animator.SetInteger("Color2", playerColor);
     }
 
+    void OnCollisionEnter2D(Collision2D obj)
+    {
+        if (obj.gameObject.tag == "Evil Touch")
+        {
+            health = health - 0.1f;
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D obj)
+    {
+        if (obj.gameObject.tag == "Evil Touch")
+        {
+            health = health - 0.1f;
+        }
+    }
+
 
     void FixedUpdate()
     {
@@ -101,13 +117,13 @@ public class PlayerMovement2 : MonoBehaviour
 
         if (col.tag == "Vertical Room Changer")
         {
-            roomMover = new Vector2(0, 2*movement.y);
+            roomMover = new Vector2(0, movement.y);
             gameObject.transform.position = rb.position + roomMover;
         }
 
         if (col.tag == "Horizontal Room Changer")
         {
-            roomMover = new Vector2(2 * movement.x, 0);
+            roomMover = new Vector2(movement.x, 0);
             gameObject.transform.position = rb.position + roomMover;
         }
 

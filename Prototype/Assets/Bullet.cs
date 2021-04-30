@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     public int damage = 40;
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
+    public int color;
 
     // Start is called
     void Start()
@@ -26,6 +27,8 @@ public class Bullet : MonoBehaviour
 
     public void makeColor(int bulletcolor)
     {
+        color = bulletcolor;
+
         if (bulletcolor == 1)
         {
             spriteRenderer.color = Color.blue;
