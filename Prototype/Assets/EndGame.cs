@@ -7,7 +7,7 @@ public class EndGame : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag == "Player")
+        if (obj.tag == "Player" || obj.tag == "Player2")
         {
             SceneManager.LoadScene(0);
         }
