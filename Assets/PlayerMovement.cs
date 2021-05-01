@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 roomMover;
 
     public float health = 10f;
-    public Image healthBar;
+    public Image healthBar = null;
 
 
     void Start()
