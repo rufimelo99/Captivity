@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     void die()
     {
         health = 10f;

@@ -22,7 +22,10 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
         }
+
     }
+
+
 
     void changeBulletColor()
     {
