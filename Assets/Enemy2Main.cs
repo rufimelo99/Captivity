@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class Enemy2Main : MonoBehaviour
 {
 
     public Animator animator;
-    public Animator animator2;
+    //public Animator animator2;
     public float health = 10f;
     public Image healthBar;
-    public BoxCollider2D caveCollider;
+    
 
     public GameObject bulletPrefab;
     public GameObject projectile;
@@ -24,6 +25,11 @@ public class Enemy2Main : MonoBehaviour
         StartCoroutine(ShotTimer());
     }
 
+    //Doors kinda
+    [SerializeField]
+    private Tilemap tileMap;
+    [SerializeField]
+    private Tile tileExample;
 
 
     IEnumerator ShotTimer()
@@ -43,13 +49,32 @@ public class Enemy2Main : MonoBehaviour
         if (obj.tag == "Bullet")
         {
             health = health - 1;
-
-            if (health == 0)
+            
+            if (health <= 0)
             {
-                animator2.SetBool("isEnemyDead", true);
-                caveCollider.enabled = false;
-            }
 
+          
+
+                Vector3Int wallLocation0_0Doorlayer = new Vector3Int(-5, -15, 0);
+                Vector3Int wallLocation0_1Doorlayer = new Vector3Int(-5, -14, 0);
+                Vector3Int wallLocation0_2Doorlayer = new Vector3Int(-5, -13, 0);
+                Vector3Int wallLocation0_3Doorlayer = new Vector3Int(-4, -13, 0);
+                Vector3Int wallLocation0_4Doorlayer = new Vector3Int(-4, -14, 0);
+                Vector3Int wallLocation0_5Doorlayer = new Vector3Int(-4, -15, 0);
+                Vector3Int wallLocation0_6Doorlayer = new Vector3Int(-3, -13, 0);
+                Vector3Int wallLocation0_7Doorlayer = new Vector3Int(-3, -14, 0);
+                Vector3Int wallLocation0_8Doorlayer = new Vector3Int(-3, -15, 0);
+                tileMap.SetTile(wallLocation0_0Doorlayer, null);
+                tileMap.SetTile(wallLocation0_1Doorlayer, null);
+                tileMap.SetTile(wallLocation0_2Doorlayer, null);
+                tileMap.SetTile(wallLocation0_3Doorlayer, null);
+                tileMap.SetTile(wallLocation0_4Doorlayer, null);
+                tileMap.SetTile(wallLocation0_5Doorlayer, null);
+                tileMap.SetTile(wallLocation0_6Doorlayer, null);
+                tileMap.SetTile(wallLocation0_7Doorlayer, null);
+                tileMap.SetTile(wallLocation0_8Doorlayer, null);
+            }
+            
             animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
         }

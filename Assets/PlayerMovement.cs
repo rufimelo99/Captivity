@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Tilemaps;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         {
             die();
         }
+        
     }
 
 
@@ -141,24 +142,32 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-
+        //river
         if (col.tag == "Obstacle_blue" && playerColor != 1)
         {
             health = 0;
         }
-
+        /*
         if (col.tag == "Vertical Room Changer")
         {
             roomMover = new Vector2(0, 2 * movement.y);
             gameObject.transform.position = rb.position + roomMover;
         }
-
-        if (col.tag == "Horizontal Room Changer")
+        */
+        if (col.tag == "Room Changer Next")
         {
-            roomMover = new Vector2(2 * movement.x, 0);
+            roomMover = new Vector2(27, -1);
             gameObject.transform.position = rb.position + roomMover;
-        }
 
+            //TODO
+        }
+        if (col.tag == "Room Changer Back")
+        {
+            roomMover = new Vector2(-27, -1);
+            gameObject.transform.position = rb.position + roomMover;
+
+            //TODO
+        }
         if (col.tag == "Small Enemy Bullet")
         {
             health = health - 1;

@@ -225,11 +225,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 0
+  PlayerColor: Color
+  PlayerHorizontal: Horizontal
+  PlayerVertical: Vertical
+  playerFire: 45
+  playerCombination: 303
+  tryingCombination: 0
   moveSpeed: 5
   rb: {fileID: 2168002739416069405}
   animator: {fileID: 2168002739416069407}
   playerColor: 0
-  collider: {fileID: 2168002739416069393}
   health: 10
   healthBar: {fileID: 2168002738922739491}
 --- !u!95 &2168002739416069407
@@ -263,11 +269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86714c62b5592f74bab024fbe47f7d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2168002739416069404}
   firePoint: {fileID: 2168002738634747895}
   bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
     type: 3}
-  projectile: {fileID: 0}
-  bulletColor: 0
+  otherPlayer: {fileID: 0}
 --- !u!61 &2168002739416069393
 BoxCollider2D:
   m_ObjectHideFlags: 0
