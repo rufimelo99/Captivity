@@ -41,6 +41,10 @@ public class Bullet : MonoBehaviour
         {
             spriteRenderer.color = Color.red;
         }
+    }
 
+    public void makeBigger()
+    {
+        transform.localScale = new Vector3(24.0f, 12.0f, 0);
     }
 }
