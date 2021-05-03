@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FireLevel1.unity
     guid: ee19713247c9c9040aa9621d22022a93
   - enabled: 1
-    path: Assets/Scenes/Instructions.unity
+    path: Assets/Scenes/Controls.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 41a7f41e32af5804682b53641ac7d47b
   m_configObjects: {}
