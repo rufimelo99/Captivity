@@ -147,13 +147,7 @@ public class PlayerMovement : MonoBehaviour
         {
             health = 0;
         }
-        /*
-        if (col.tag == "Vertical Room Changer")
-        {
-            roomMover = new Vector2(0, 2 * movement.y);
-            gameObject.transform.position = rb.position + roomMover;
-        }
-        */
+
         if (col.tag == "Room Changer Next")
         {
             roomMover = new Vector2(27, -1);
@@ -172,11 +166,6 @@ public class PlayerMovement : MonoBehaviour
         {
             health = health - 1;
             healthBar.fillAmount = health / 10f;
-        }
-
-        if (col.tag == "endGame")
-        {
-            Application.Quit();
         }
     }
 
