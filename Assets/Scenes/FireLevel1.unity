@@ -3674,7 +3674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08de81618bd77eb4ab468f6911de491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 0}
+  camera1: {fileID: 846701283}
   camera2: {fileID: 930752507}
 --- !u!61 &459608267
 BoxCollider2D:
@@ -11892,7 +11892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd2566da95052d449b84f83c34b9729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 0}
+  camera1: {fileID: 846701283}
   camera2: {fileID: 930752507}
 --- !u!61 &1536110886
 BoxCollider2D:
@@ -11964,7 +11964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08de81618bd77eb4ab468f6911de491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 0}
+  camera1: {fileID: 846701283}
   camera2: {fileID: 930752507}
 --- !u!61 &1564686201
 BoxCollider2D:
