@@ -10,8 +10,7 @@ public class Weapon : MonoBehaviour
     private int bulletColor = 0;
 
 	private Vector3 offset;
-
-
+    private float distanceToOtherPlayer;
     public Transform firePoint;
     public GameObject bulletPrefab;
 	public GameObject combiningTreePrefab;
@@ -37,6 +36,7 @@ public class Weapon : MonoBehaviour
             Shoot();
         }
 
+        distanceToOtherPlayer = (transform.position - otherPlayer.transform.position).sqrMagnitude;
     }
 
 
@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
                 timeForCombinationToCharge -= Time.deltaTime;
 
             }
-            if (timeForCombinationToCharge <= 0)
+            if (timeForCombinationToCharge <= 0 && distanceToOtherPlayer <= 5)
             {
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
