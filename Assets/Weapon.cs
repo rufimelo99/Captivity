@@ -9,13 +9,20 @@ public class Weapon : MonoBehaviour
     private PlayerMovement player;
     private int bulletColor = 0;
 
+	private Vector3 offset;
+
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+	public GameObject combiningTreePrefab;
 
     //TODO
     public PlayerMovement otherPlayer;
 
+	void Start()
+	{
+		offset = new Vector3(2, 0, 0);
+	}
 
     // Update is called once per frame
     void Update()
@@ -53,7 +60,7 @@ public class Weapon : MonoBehaviour
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
                 {
-                    Shoot();
+                    Combine();
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
                 }
@@ -71,27 +78,37 @@ public class Weapon : MonoBehaviour
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
     }
 
+	void Combine()
+    {
+        GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
+        //tree.GetComponent<GrowingTree>().animate();
+    }
+	
 
     void turnWeapon()
     {
         if (Input.GetAxisRaw(player.PlayerHorizontal) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
+			offset = new Vector3(2, 0, 0);
         }
 
         if (Input.GetAxisRaw(player.PlayerHorizontal) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
+			offset = new Vector3(-2, 0, 0);
         }
 
         if (Input.GetAxisRaw(player.PlayerVertical) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
+			offset = new Vector3(0, 2, 0);
         }
 
         if (Input.GetAxisRaw(player.PlayerVertical) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
+			offset = new Vector3(0, -2, 0);
         }
     }
 

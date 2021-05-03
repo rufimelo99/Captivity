@@ -4,9 +4,11 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - player: {instanceID: 0}
   - firePoint: {instanceID: 0}
   - bulletPrefab: {instanceID: 0}
-  - bullet: {fileID: 351307265727639459, guid: 91d69078389650543ae95e2748860e9f, type: 3}
+  - combiningTreePrefab: {instanceID: 0}
+  - otherPlayer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

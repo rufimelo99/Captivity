@@ -3674,7 +3674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08de81618bd77eb4ab468f6911de491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 846701283}
+  camera1: {fileID: 0}
   camera2: {fileID: 930752507}
 --- !u!61 &459608267
 BoxCollider2D:
@@ -10969,6 +10969,7 @@ MonoBehaviour:
   firePoint: {fileID: 1379772041}
   bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
     type: 3}
+  combiningTreePrefab: {fileID: 0}
   otherPlayer: {fileID: 1731262612}
 --- !u!1 &1522443499
 GameObject:
@@ -11891,7 +11892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd2566da95052d449b84f83c34b9729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 846701283}
+  camera1: {fileID: 0}
   camera2: {fileID: 930752507}
 --- !u!61 &1536110886
 BoxCollider2D:
@@ -11963,7 +11964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08de81618bd77eb4ab468f6911de491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 846701283}
+  camera1: {fileID: 0}
   camera2: {fileID: 930752507}
 --- !u!61 &1564686201
 BoxCollider2D:
@@ -17843,6 +17844,12 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 1402917939}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: combiningTreePrefab
+      value: 
+      objectReference: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb711b64104ea704aa6ec6e871cfffd6, type: 3}
 --- !u!1001 &8146559361645228279
