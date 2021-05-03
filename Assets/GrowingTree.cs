@@ -15,6 +15,7 @@ public class GrowingTree : MonoBehaviour
         {
             animiate1.SetBool("Hole", true);
             myCollider.enabled = false;
+            obj.collider.enabled = false;
         }
         
     }

@@ -18,6 +18,7 @@ TagManager:
   - Evil Touch
   - Room Changer Next
   - Room Changer Back
+  - Hole
   layers:
   - Default
   - TransparentFX
