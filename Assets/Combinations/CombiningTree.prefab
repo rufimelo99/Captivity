@@ -165,3 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animiate1: {fileID: 5771622389956625214}
   myCollider: {fileID: -7412425228695714553}
+  rend: {fileID: 5663700730415192398}
