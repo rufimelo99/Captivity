@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
                 {
-                    Debug.Log("explosion");
+                    Shoot();
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
                 }

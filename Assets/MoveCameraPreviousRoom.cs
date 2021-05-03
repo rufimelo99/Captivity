@@ -5,20 +5,17 @@ using UnityEngine;
 public class MoveCameraPreviousRoom : MonoBehaviour
 {
     [SerializeField]
-    private Transform camera;
+    private Transform camera1;
     [SerializeField]
     private Transform camera2;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             Vector3 roomMover = new Vector3(-27, -1, 0);
-            camera.position += roomMover;
+            camera1.position += roomMover;
         }
     
         if (collision.tag == "Player2")
@@ -27,9 +24,6 @@ public class MoveCameraPreviousRoom : MonoBehaviour
             camera2.position += roomMover;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+
 }

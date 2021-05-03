@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public string PlayerVertical = "Vertical";
 
 
-    private KeyCode heroBlue = KeyCode.K;
-    private KeyCode heroGreen = KeyCode.L;
+    private KeyCode heroBlue = KeyCode.L;
+    private KeyCode heroGreen = KeyCode.K;
     public KeyCode playerFire = KeyCode.Minus;
     public KeyCode playerCombination = KeyCode.RightShift;
     public bool tryingCombination = false;
