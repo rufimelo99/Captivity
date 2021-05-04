@@ -11,10 +11,10 @@ public class GreenObstacle : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == 0)
+        if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == 0 && obj.gameObject.GetComponent<Bullet>().isBigger)
         {
-            health = health - 1;
-            if (health == 0)
+            health = health - 3;
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }

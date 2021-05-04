@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public int color;
-
+    public bool isBigger = false;
     // Start is called
     void Start()
     {
@@ -46,5 +46,6 @@ public class Bullet : MonoBehaviour
     public void makeBigger()
     {
         transform.localScale = new Vector3(24.0f, 12.0f, 0);
+        isBigger = true;
     }
 }

@@ -57,12 +57,12 @@ public class PressurePlates : MonoBehaviour
                 tileMap.SetTile(firstPressurePlateReal, tilePlateNotActive);
 
             }
-
-            Vector3Int secondPressurePlateReal = new Vector3Int(49, -23, 0);//onTileMap
-            float distanceToSecondPressurePlate = Mathf.Sqrt((rb.position.x - (49.0f)) * (rb.position.x - (49.0f)) + (rb.position.y - (-22.0f)) * (rb.position.y - (-22.0f)));
-            float distanceToSecondPressurePlate2 = Mathf.Sqrt((rb2.position.x - (49.0f)) * (rb2.position.x - (49.0f)) + (rb2.position.y - (-22.0f)) * (rb2.position.y - (-22.0f)));
-            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > 49 && rb.position.y > -22) ||
-                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > 49 && rb2.position.y > -22))
+            //49,-22
+            Vector3Int secondPressurePlateReal = new Vector3Int(49, -22, 0);//onTileMap
+            float distanceToSecondPressurePlate = Mathf.Sqrt((rb.position.x - (secondPressurePlateReal.x)) * (rb.position.x - (secondPressurePlateReal.x)) + (rb.position.y - (secondPressurePlateReal.y+ 1)) * (rb.position.y - (secondPressurePlateReal.y + 1)));
+            float distanceToSecondPressurePlate2 = Mathf.Sqrt((rb2.position.x - (secondPressurePlateReal.x)) * (rb2.position.x - (secondPressurePlateReal.x)) + (rb2.position.y - (secondPressurePlateReal.y + 1)) * (rb2.position.y - (secondPressurePlateReal.y + 1)));
+            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > secondPressurePlateReal.x && rb.position.y > (secondPressurePlateReal.y)) ||
+                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > secondPressurePlateReal.x && rb2.position.y > (secondPressurePlateReal.y )))
             {
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateActive);

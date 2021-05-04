@@ -139,29 +139,23 @@ public class PlayerMovement : MonoBehaviour
             health = health - 0.1f;
         }
     }
-
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        //river
+        if (col.tag == "Obstacle_blue" && playerColor != 1)
+        {
+            health = health - 0.2f;
+        }
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         //river
         if (col.tag == "Obstacle_blue" && playerColor != 1)
         {
-            health = 0;
+            health = health - 0.1f;
         }
 
-        if (col.tag == "Room Changer Next")
-        {
-            roomMover = new Vector2(27, -2);
-            gameObject.transform.position = rb.position + roomMover;
-
-            //TODO
-        }
-        if (col.tag == "Room Changer Back")
-        {
-            roomMover = new Vector2(-27, -2);
-            gameObject.transform.position = rb.position + roomMover;
-
-            //TODO
-        }
+       
         if (col.tag == "Small Enemy Bullet")
         {
             health = health - 1;

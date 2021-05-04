@@ -18,8 +18,10 @@ public class GrowingTree : MonoBehaviour
             animiate1.SetBool("Hole", true);
             myCollider.enabled = false;
             obj.collider.enabled = false;
-            gameObject.layer = 10;
+            gameObject.layer = 1 ;
             rend.sortingOrder = -1;
+            transform.position = obj.transform.position+new Vector3(-1.5f,1,0);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
         
     }
