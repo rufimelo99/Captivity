@@ -10691,11 +10691,24 @@ MonoBehaviour:
   playerColor: 0
   health: 10
   healthBar: {fileID: 280842291}
+--- !u!114 &1402917940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402917938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ce3ebd3e1acd342a13f58a3050542f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 931744539}
+  rb2: {fileID: 1402917942}
   tileMap: {fileID: 964190209}
-  doorsToUnlock: {fileID: 2113619925}
+  doorsToUnlock: {fileID: 197659251}
   tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
   tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
-  rb2: {fileID: 931744539}
 --- !u!95 &1402917941 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8146559362446528175, guid: 296f6c99e2197e14fb0dbde03a1630ee,
@@ -11759,7 +11772,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2168002739688113606}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2168002739688113607}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
@@ -17595,6 +17608,30 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb711b64104ea704aa6ec6e871cfffd6, type: 3}
+--- !u!1 &2168002739688113607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2168002739416069392, guid: cb711b64104ea704aa6ec6e871cfffd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2168002739688113606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2168002739688113608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168002739688113607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ce3ebd3e1acd342a13f58a3050542f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 931744539}
+  rb2: {fileID: 1402917942}
+  tileMap: {fileID: 964190209}
+  doorsToUnlock: {fileID: 2113619925}
+  tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
+  tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
 --- !u!1001 &8146559361645228279
 PrefabInstance:
   m_ObjectHideFlags: 0

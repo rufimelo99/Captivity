@@ -14,14 +14,11 @@ public class MoveCameraPreviousRoom : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Vector3 roomMover = new Vector3(-27, -1, 0);
-            camera1.position += roomMover;
+            camera1.position += new Vector3(-27, 0, 0);
         }
-    
         if (collision.tag == "Player2")
         {
-            Vector3 roomMover = new Vector3(-27, -1, 0);
-            camera2.position += roomMover;
+            camera2.position += new Vector3(-27, 0, 0);
         }
     }
     
