@@ -923,10 +923,10 @@ MonoBehaviour:
 
     Projectile - Space Key
 
-    Change elemental - Q,E
+    Change color - Q,E
 
-    Combine/
-    Fuse - V
+    Combine
+    Powers - V
 
 '
   m_isRightToLeft: 0
@@ -1195,10 +1195,10 @@ MonoBehaviour:
 
     Shoot - minus key
 
-    Change elemental - K,L
+    Change color - K,L
 
-    Combine/Fuse
-    - Right Shift
+    Combine
+    Powers- Right Shift
 
 '
   m_isRightToLeft: 0

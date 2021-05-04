@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000059605, y: 2.6}
+  m_AnchoredPosition: {x: -0.00000059605, y: 3.5}
   m_SizeDelta: {x: 71.48659, y: 29.808594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568306209
@@ -177,14 +177,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Shoot projectiles to kill your enemies.
+  m_text: 'Each color represents a natural element. You can only have contact with
+    elements that match your current color.
 
-    When the two character are
-    together they can combine their powers. The product of the combination depends
-    on which element (color) each character has.
 
-    Enemy Projectiles will decrease
-    the character''s health and direct contact with enemies may decrease it as well.
+    When you see an enemy, avoid touching
+    him and his projectiles. You can kill enemies by shooting projectiles of your
+    own.
+
+
+    To use a combination of powers, the characters have to be together.
+    One of them has to "charge" the power, by pressing his combination key, and then
+    the other has to press his combination key as well, to trigger the combination.
+    The effect depends on the colors of each character.
 
 '
   m_isRightToLeft: 0
@@ -213,8 +218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
-  m_fontSizeBase: 3
+  m_fontSize: 2.4
+  m_fontSizeBase: 2.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
