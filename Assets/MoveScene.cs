@@ -19,7 +19,7 @@ public class MoveScene : MonoBehaviour
 
     public void goGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void goInstructions()

@@ -13,7 +13,7 @@ public class GreenObstacle : MonoBehaviour
     {
         if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == 0 && obj.gameObject.GetComponent<Bullet>().isBigger)
         {
-            health = health - 3;
+            health = health - 5;
             if (health <= 0)
             {
                 Destroy(gameObject);
