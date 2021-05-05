@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.730011, y: 20.132996}
-  m_SizeDelta: {x: -780.68384, y: -449.4114}
+  m_AnchoredPosition: {x: 14.383, y: 20.132996}
+  m_SizeDelta: {x: -777.3773, y: -449.4114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108227885
 MonoBehaviour:
@@ -186,10 +186,15 @@ MonoBehaviour:
     own.
 
 
-    To use a combination of powers, the characters have to be together.
-    One of them has to "charge" the power, by pressing his combination key for one
-    seconf, and then the other has to press his combination key as well, to trigger
-    the combination. The effect depends on the colors of each character.
+    To use a combination of powers, the characters have to be together
+    and press their correspondent combination key for 1 second each.
+
+    The first
+    to press the combination key acts as a charger and the second as a trigger, who
+    determines the direction that the combination takes.
+
+    The effect depends
+    on the colors of each character.
 
 
 '

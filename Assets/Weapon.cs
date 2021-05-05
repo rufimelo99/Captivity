@@ -49,30 +49,7 @@ public class Weapon : MonoBehaviour
     }
     void chargeCombination()
     {
-        /*if (Input.GetKeyDown(player.playerCombination))
-        {
-            float timeForCombinationToCharge = 2;
-            while (timeForCombinationToCharge > 0)
-            {
-                timeForCombinationToCharge -= Time.deltaTime;
-
-            }
-            if (timeForCombinationToCharge <= 0 && distanceToOtherPlayer <= 5)
-            {
-                player.tryingCombination = true;
-                if (otherPlayer.tryingCombination)
-                {
-                    Combine();
-                    player.tryingCombination = false;
-                    otherPlayer.tryingCombination = false;
-                }
-            }
-            if (Input.GetKeyUp(player.playerCombination))
-            {
-                player.tryingCombination = false;
-                timeForCombinationToCharge = 2;
-            }
-        }*/
+        
         if (Input.GetKeyDown(player.playerCombination))
         {
             startTime = Time.time;
@@ -88,7 +65,7 @@ public class Weapon : MonoBehaviour
         }
         if (pressedKey)
         {
-            if ((Time.time - startTime) >= 2)
+            if ((Time.time - startTime) >= 1)
             {
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
