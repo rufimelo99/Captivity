@@ -47833,6 +47833,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2168002738922739491, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300792, guid: 95d22684aba5646d79a26b3287a692b6,
+        type: 3}
     - target: {fileID: 2168002739416069392, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: m_Name
@@ -47950,6 +47956,11 @@ PrefabInstance:
       objectReference: {fileID: 2113619925}
     - target: {fileID: 2168002739416069404, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
+      propertyPath: combinationBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168002739416069404, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
       propertyPath: tilePlateActive
       value: 
       objectReference: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7,
@@ -47970,6 +47981,11 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 1402917939}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: combinationBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: combiningTreePrefab
@@ -48059,7 +48075,7 @@ PrefabInstance:
     - target: {fileID: 8146559362446528171, guid: 296f6c99e2197e14fb0dbde03a1630ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.72
+      value: -16.99
       objectReference: {fileID: 0}
     - target: {fileID: 8146559362446528171, guid: 296f6c99e2197e14fb0dbde03a1630ee,
         type: 3}
@@ -48116,6 +48132,12 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1884189207
       objectReference: {fileID: 0}
+    - target: {fileID: 8146559362522134272, guid: 296f6c99e2197e14fb0dbde03a1630ee,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300792, guid: 95d22684aba5646d79a26b3287a692b6,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8146559362446528170, guid: 296f6c99e2197e14fb0dbde03a1630ee, type: 3}
     - {fileID: 8146559362446528160, guid: 296f6c99e2197e14fb0dbde03a1630ee, type: 3}

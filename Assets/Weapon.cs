@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Weapon : MonoBehaviour
 	void Start()
 	{
 		offset = new Vector3(2, 0, 0);
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -39,9 +40,10 @@ public class Weapon : MonoBehaviour
         }
 
         distanceToOtherPlayer = (transform.position - otherPlayer.transform.position).sqrMagnitude;
+
     }
 
-
+    
 
     void changeBulletColor()
     {
@@ -63,6 +65,7 @@ public class Weapon : MonoBehaviour
             startTime = 0; 
             //Debug.Log("canceled");
         }
+
         if (pressedKey)
         {
             if ((Time.time - startTime) >= 1)
@@ -87,50 +90,50 @@ public class Weapon : MonoBehaviour
 
     }
     void Shoot()
+    {
+        GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        projectile.GetComponent<Bullet>().makeColor(bulletColor);
+    }
+
+    void Combine()
+    {
+        if (player.playerColor != otherPlayer.playerColor)
+        {
+            GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
+        }
+        else
         {
             GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             projectile.GetComponent<Bullet>().makeColor(bulletColor);
+            projectile.GetComponent<Bullet>().makeBigger();
         }
+    }
 
-        void Combine()
+
+    void turnWeapon()
+    {
+        if (Input.GetAxisRaw(player.PlayerHorizontal) == 1)
         {
-            if (player.playerColor != otherPlayer.playerColor)
-            {
-                GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
-            }
-            else
-            {
-                GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-                projectile.GetComponent<Bullet>().makeColor(bulletColor);
-                projectile.GetComponent<Bullet>().makeBigger();
-            }
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
+            offset = new Vector3(2, 0, 0);
         }
 
-
-        void turnWeapon()
+        if (Input.GetAxisRaw(player.PlayerHorizontal) == -1)
         {
-            if (Input.GetAxisRaw(player.PlayerHorizontal) == 1)
-            {
-                firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
-                offset = new Vector3(2, 0, 0);
-            }
-
-            if (Input.GetAxisRaw(player.PlayerHorizontal) == -1)
-            {
-                firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-                offset = new Vector3(-2, 0, 0);
-            }
-
-            if (Input.GetAxisRaw(player.PlayerVertical) == 1)
-            {
-                firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
-                offset = new Vector3(0, 2, 0);
-            }
-
-            if (Input.GetAxisRaw(player.PlayerVertical) == -1)
-            {
-                firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
-                offset = new Vector3(0, -2, 0);
-            }
+            firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
+            offset = new Vector3(-2, 0, 0);
         }
+
+        if (Input.GetAxisRaw(player.PlayerVertical) == 1)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
+            offset = new Vector3(0, 2, 0);
+        }
+
+        if (Input.GetAxisRaw(player.PlayerVertical) == -1)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
+            offset = new Vector3(0, -2, 0);
+        }
+    }
 }

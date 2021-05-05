@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public string PlayerHorizontal = "Horizontal";
     public string PlayerVertical = "Vertical";
 
+    private bool isCharging = false;
+
 
     private KeyCode heroBlue = KeyCode.L;
     private KeyCode heroGreen = KeyCode.K;
@@ -86,6 +88,26 @@ public class PlayerMovement : MonoBehaviour
 
     void animate()
     {
+
+        if (Input.GetKeyDown(playerCombination))
+        {
+            healthBar.GetComponent<Image>().color = Color.yellow;
+            isCharging = true;
+        }
+        if (Input.GetKeyUp(playerCombination))
+        {
+            isCharging = false;
+            if (playerColor==0)
+            {
+                healthBar.GetComponent<Image>().color = Color.green;
+            }
+            if (playerColor == 1)
+            {
+                healthBar.GetComponent<Image>().color = Color.blue;
+            }
+
+        }
+
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -105,13 +127,20 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(heroGreen))
         {
             playerColor = 0;
-            healthBar.GetComponent<Image>().color = Color.green;
+            if (!isCharging)
+            {
+                healthBar.GetComponent<Image>().color = Color.green;
+            }
         }
         if (Input.GetKeyDown(heroBlue))
         {
             playerColor = 1;
-            healthBar.GetComponent<Image>().color = Color.blue;
+            if (!isCharging)
+            {
+                healthBar.GetComponent<Image>().color = Color.blue;
+            }
         }
+
         animator.SetInteger(PlayerColor, playerColor);
     }
 
