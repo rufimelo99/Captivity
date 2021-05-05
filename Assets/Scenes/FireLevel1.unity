@@ -41783,7 +41783,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0031411983, y: -0.03}
+  m_Offset: {x: 0.0031411946, y: -0.02046984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -41794,7 +41794,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15832767, y: 0.09}
+  m_Size: {x: 0.15832767, y: 0.13765064}
   m_EdgeRadius: 0
 --- !u!114 &1315714718
 MonoBehaviour:
@@ -41954,7 +41954,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0031411983, y: -0.06}
+  m_Offset: {x: 0.0031411946, y: -0.026644567}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -41965,7 +41965,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15832767, y: 0.09}
+  m_Size: {x: 0.15832767, y: 0.15671088}
   m_EdgeRadius: 0
 --- !u!114 &1390475049
 MonoBehaviour:
@@ -42139,6 +42139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 931744539}
   rb2: {fileID: 1402917942}
+  player1: {fileID: 1731262612}
+  player2: {fileID: 1402917939}
   tileMap: {fileID: 900951775}
   doorsToUnlock: {fileID: 1515916484}
   tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
@@ -43773,7 +43775,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14634311, y: 0.0470438}
+  m_Offset: {x: 0.18640041, y: 0.08705214}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -43784,7 +43786,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6949308, y: 0.12046242}
+  m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
 --- !u!1 &1576569283
 GameObject:
@@ -44286,7 +44288,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0018090904, y: -0.1}
+  m_Offset: {x: -0.0018090904, y: -0.039654538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -44297,7 +44299,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.14}
+  m_Size: {x: 0.25, y: 0.26069093}
   m_EdgeRadius: 0
 --- !u!212 &1914340198
 SpriteRenderer:
@@ -48050,6 +48052,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 931744539}
   rb2: {fileID: 1402917942}
+  player1: {fileID: 1731262612}
+  player2: {fileID: 1402917939}
   tileMap: {fileID: 900951775}
   doorsToUnlock: {fileID: 1515916484}
   tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}

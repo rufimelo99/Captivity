@@ -10,6 +10,8 @@ public class PressurePlates : MonoBehaviour
 
     public Rigidbody2D rb;
     public Rigidbody2D rb2;
+    public PlayerMovement player1;
+    public PlayerMovement player2;
 
     bool door0_opened = false;
     [SerializeField]
@@ -44,28 +46,34 @@ public class PressurePlates : MonoBehaviour
             float distanceTofirstPressurePlate = Mathf.Sqrt((rb.position.x - (-4.0f)) * (rb.position.x - (-4.0f)) + (rb.position.y - (-20.0f + 1)) * (rb.position.y - (-20.0f + 1)));
             float distanceTofirstPressurePlate2 = Mathf.Sqrt((rb2.position.x - (-4.0f)) * (rb2.position.x - (-4.0f)) + (rb2.position.y - (-20.0f + 1)) * (rb2.position.y - (-20.0f + 1)));
 
-            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20) ||
-                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20))
+            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20 && player1.playerColor==0) ||
+                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20 && player2.playerColor == 0))
             {
                 tileMap.SetTile(firstPressurePlateReal, null);
                 tileMap.SetTile(firstPressurePlateReal, tilePlateActive);
+                tileMap.SetTileFlags(firstPressurePlateReal, TileFlags.None);
+                tileMap.SetColor(firstPressurePlateReal, Color.green);
                 firstPressurePlateActive = true;
             }
             else
             {
                 tileMap.SetTile(firstPressurePlateReal, null);
                 tileMap.SetTile(firstPressurePlateReal, tilePlateNotActive);
+                tileMap.SetTileFlags(firstPressurePlateReal, TileFlags.None);
+                tileMap.SetColor(firstPressurePlateReal, Color.green);
 
             }
             //49,-22
             Vector3Int secondPressurePlateReal = new Vector3Int(49, -22, 0);//onTileMap
             float distanceToSecondPressurePlate = Mathf.Sqrt((rb.position.x - (secondPressurePlateReal.x)) * (rb.position.x - (secondPressurePlateReal.x)) + (rb.position.y - (secondPressurePlateReal.y+ 1)) * (rb.position.y - (secondPressurePlateReal.y + 1)));
             float distanceToSecondPressurePlate2 = Mathf.Sqrt((rb2.position.x - (secondPressurePlateReal.x)) * (rb2.position.x - (secondPressurePlateReal.x)) + (rb2.position.y - (secondPressurePlateReal.y + 1)) * (rb2.position.y - (secondPressurePlateReal.y + 1)));
-            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > secondPressurePlateReal.x && rb.position.y > (secondPressurePlateReal.y)) ||
-                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > secondPressurePlateReal.x && rb2.position.y > (secondPressurePlateReal.y )))
+            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > secondPressurePlateReal.x && rb.position.y > (secondPressurePlateReal.y) && player1.playerColor == 1) ||
+                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > secondPressurePlateReal.x && rb2.position.y > (secondPressurePlateReal.y ) && player2.playerColor == 1))
             {
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateActive);
+                tileMap.SetTileFlags(secondPressurePlateReal, TileFlags.None);
+                tileMap.SetColor(secondPressurePlateReal, Color.blue);
 
                 secondPressurePlateActive = true;
             }
@@ -73,6 +81,8 @@ public class PressurePlates : MonoBehaviour
             {
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateNotActive);
+                tileMap.SetTileFlags(secondPressurePlateReal, TileFlags.None);
+                tileMap.SetColor(secondPressurePlateReal, Color.blue);
 
             }
 
