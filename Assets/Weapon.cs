@@ -43,12 +43,12 @@ public class Weapon : MonoBehaviour
 
     }
 
-    
 
     void changeBulletColor()
     {
         bulletColor = player.playerColor;
     }
+
     void chargeCombination()
     {
         
@@ -97,15 +97,17 @@ public class Weapon : MonoBehaviour
 
     void Combine()
     {
-        if (player.playerColor != otherPlayer.playerColor)
-        {
-            GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
-        }
-        else
-        {
-            GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            projectile.GetComponent<Bullet>().makeColor(bulletColor);
-            projectile.GetComponent<Bullet>().makeBigger();
+        if (distanceToOtherPlayer <= 5) { 
+            if (player.playerColor != otherPlayer.playerColor)
+            {
+                GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
+            }
+            else
+            {
+                GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                projectile.GetComponent<Bullet>().makeColor(bulletColor);
+                projectile.GetComponent<Bullet>().makeBigger();
+            }
         }
     }
 
