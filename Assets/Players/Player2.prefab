@@ -119,8 +119,6 @@ GameObject:
   - component: {fileID: 8146559362446528173}
   - component: {fileID: 8146559362446528175}
   - component: {fileID: 8146559362446528161}
-  - component: {fileID: 8146559362446528170}
-  - component: {fileID: 8146559362446528160}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -260,42 +258,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08412786, y: 0.19551538}
   m_EdgeRadius: 0
---- !u!114 &8146559362446528170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146559362446528162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73b9240e23cdab94b9bb8798f3b05203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 8146559362446528173}
-  animator: {fileID: 8146559362446528175}
-  playerColor: 0
-  collider: {fileID: 8146559362446528161}
-  health: 10
-  healthBar: {fileID: 8146559362522134272}
---- !u!114 &8146559362446528160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146559362446528162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f6e3333eb83fe4ba18fd5080ffcbd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 8146559362425321615}
-  bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
-    type: 3}
-  projectile: {fileID: 0}
-  bulletColor: 0
 --- !u!1 &8146559362522134274
 GameObject:
   m_ObjectHideFlags: 0

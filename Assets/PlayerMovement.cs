@@ -60,18 +60,28 @@ public class PlayerMovement : MonoBehaviour
         changeColor();
         move();
         animate();
-        //checkPressurePlates();
         if (health <= 0.1)
         {
             die();
         }
-        
+        goToMenu();
+
+
     }
 
     void die()
     {
         health = 10f;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    void goToMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void animate()
@@ -162,5 +172,8 @@ public class PlayerMovement : MonoBehaviour
             healthBar.fillAmount = health / 10f;
         }
     }
+
+
+
 
 }
