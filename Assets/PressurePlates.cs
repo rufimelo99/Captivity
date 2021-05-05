@@ -74,7 +74,7 @@ public class PressurePlates : MonoBehaviour
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateActive);
                 tileMap.SetTileFlags(secondPressurePlateReal, TileFlags.None);
-                tileMap.SetColor(secondPressurePlateReal, Color.blue);
+                tileMap.SetColor(secondPressurePlateReal, new Color(0f, 0.9f, 1f));//0,224,255
 
                 secondPressurePlateActive = true;
             }
@@ -83,7 +83,7 @@ public class PressurePlates : MonoBehaviour
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateNotActive);
                 tileMap.SetTileFlags(secondPressurePlateReal, TileFlags.None);
-                tileMap.SetColor(secondPressurePlateReal, Color.blue);
+                tileMap.SetColor(secondPressurePlateReal, new Color(0f, 0.9f, 1f));
 
             }
 
