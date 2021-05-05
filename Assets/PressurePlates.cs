@@ -27,6 +27,7 @@ public class PressurePlates : MonoBehaviour
     void Update()
     {
         checkPressurePlates();
+
     }
 
 
@@ -88,15 +89,15 @@ public class PressurePlates : MonoBehaviour
 
             if (secondPressurePlateActive && firstPressurePlateActive)
             {
-                Vector3Int wallLocation0_0Doorlayer = new Vector3Int(48, -15, 0);
+                Vector3Int wallLocation0_0Doorlayer = new Vector3Int(48, -12, 0);
                 Vector3Int wallLocation0_1Doorlayer = new Vector3Int(48, -14, 0);
                 Vector3Int wallLocation0_2Doorlayer = new Vector3Int(48, -13, 0);
                 Vector3Int wallLocation0_3Doorlayer = new Vector3Int(50, -13, 0);
                 Vector3Int wallLocation0_4Doorlayer = new Vector3Int(50, -14, 0);
-                Vector3Int wallLocation0_5Doorlayer = new Vector3Int(50, -15, 0);
+                Vector3Int wallLocation0_5Doorlayer = new Vector3Int(50, -12, 0);
                 Vector3Int wallLocation0_6Doorlayer = new Vector3Int(49, -13, 0);
                 Vector3Int wallLocation0_7Doorlayer = new Vector3Int(49, -14, 0);
-                Vector3Int wallLocation0_8Doorlayer = new Vector3Int(49, -15, 0);
+                Vector3Int wallLocation0_8Doorlayer = new Vector3Int(49, -12, 0);
                 doorsToUnlock.SetTile(wallLocation0_0Doorlayer, null);
                 doorsToUnlock.SetTile(wallLocation0_1Doorlayer, null);
                 doorsToUnlock.SetTile(wallLocation0_2Doorlayer, null);
