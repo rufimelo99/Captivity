@@ -96,6 +96,8 @@ public class Weapon : MonoBehaviour
                     Combine();
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
+                    pressedKey = false;
+                    startTime = 0;
                     //Debug.Log("combine pls");
                 }
             }
