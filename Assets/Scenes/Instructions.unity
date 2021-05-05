@@ -187,9 +187,9 @@ MonoBehaviour:
 
 
     To use a combination of powers, the characters have to be together.
-    One of them has to "charge" the power, by pressing his combination key, and then
-    the other has to press his combination key as well, to trigger the combination.
-    The effect depends on the colors of each character.
+    One of them has to "charge" the power, by pressing his combination key for one
+    seconf, and then the other has to press his combination key as well, to trigger
+    the combination. The effect depends on the colors of each character.
 
 '
   m_isRightToLeft: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2735849, g: 0.025809893, b: 0.025809893, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
