@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class ChooseElemental : MonoBehaviour
 {
-    public bool DEBUG = false;
+    private bool DEBUG = false;
     private Player player;
 
 
-    [SerializeField]
     private Image healthBar;
-    [SerializeField]
     private Animator animator;
 
 

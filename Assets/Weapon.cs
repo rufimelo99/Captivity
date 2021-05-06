@@ -8,9 +8,9 @@ public class Weapon : MonoBehaviour
 
     [SerializeField]
     private Player player;
-    //TODO
-    public Player otherPlayer;
     [SerializeField]
+    private Player otherPlayer;
+
     private Player playerObject;
     private int bulletColor = 0;
 

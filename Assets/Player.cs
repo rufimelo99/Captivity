@@ -12,25 +12,25 @@ public class Player : MonoBehaviour
     //not used for the moment
     public float speed = 5.0f;
     public float damagePower = 5.0f;
-    [SerializeField]
+    [HideInInspector]
     public List<ElementalsAvailable> elementalsPossesed = new List<ElementalsAvailable>();
 
     //need to be editable after during the game play
-    [SerializeField]
+    [HideInInspector]
     public KeyCode selectNextElemental = KeyCode.L;
-    [SerializeField]
+    [HideInInspector]
     public KeyCode selectPreviousElemental = KeyCode.K;
-    [SerializeField]
+    [HideInInspector]
     public KeyCode playerFire = KeyCode.Minus;
-    [SerializeField]
+    [HideInInspector]
     public KeyCode playerCombination = KeyCode.RightShift;
 
     //animator and controls
-    [SerializeField]
+    [HideInInspector]
     public string PlayerColor = "Color";
-    [SerializeField]
+    [HideInInspector]
     public string PlayerHorizontal = "Horizontal";
-    [SerializeField]
+    [HideInInspector]
     public string PlayerVertical = "Vertical";
 
     public Rigidbody2D rb;
