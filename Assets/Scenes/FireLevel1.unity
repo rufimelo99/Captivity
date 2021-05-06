@@ -41680,6 +41680,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &1174760690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2168002738922739491, guid: cb711b64104ea704aa6ec6e871cfffd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2168002739688113606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1315714715
 GameObject:
   m_ObjectHideFlags: 0
@@ -42058,39 +42070,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 2
-  PlayerColor: Color
-  PlayerHorizontal: Horizontal
-  PlayerVertical: Vertical
-  playerFire: 45
-  playerCombination: 303
-  tryingCombination: 0
   moveSpeed: 5
   rb: {fileID: 1402917942}
   animator: {fileID: 1402917941}
   playerColor: 0
-  health: 10
   healthBar: {fileID: 280842291}
---- !u!114 &1402917940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402917938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ce3ebd3e1acd342a13f58a3050542f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 931744539}
-  rb2: {fileID: 1402917942}
-  player1: {fileID: 1731262612}
-  player2: {fileID: 1402917939}
-  tileMap: {fileID: 900951775}
-  doorsToUnlock: {fileID: 2113619925}
-  tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
-  tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
 --- !u!95 &1402917941 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8146559362446528175, guid: 296f6c99e2197e14fb0dbde03a1630ee,
@@ -42103,6 +42087,37 @@ Rigidbody2D:
     type: 3}
   m_PrefabInstance: {fileID: 8146559361645228279}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402917943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402917938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3cba26767c6e1e49b03c2ba3ad5def6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DEBUG: 1
+  playerId: 2
+  actualElementalIndex: 0
+  speed: 5
+  damagePower: 5
+  elementalsPossesed: 
+  selectNextElemental: 108
+  selectPreviousElemental: 107
+  playerFire: 45
+  playerCombination: 303
+  PlayerColor: Color
+  PlayerHorizontal: Horizontal
+  PlayerVertical: Vertical
+  rb: {fileID: 1402917942}
+  animator: {fileID: 1402917941}
+  health: 10
+  healthBar: {fileID: 280842291}
+  isCharging: 0
+  tryingCombination: 0
 --- !u!114 &1402917944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42115,13 +42130,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86714c62b5592f74bab024fbe47f7d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1402917939}
+  player: {fileID: 1402917943}
+  otherPlayer: {fileID: 2168002739688113609}
+  playerObject: {fileID: 1402917943}
   firePoint: {fileID: 1379772041}
   bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
     type: 3}
   combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
     type: 3}
-  otherPlayer: {fileID: 1731262612}
+--- !u!114 &1402917945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402917938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a957c5e6a570bf4e88b1ae0f1508c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DEBUG: 1
+  healthBar: {fileID: 280842291}
+  animator: {fileID: 2168002739688113610}
 --- !u!1 &1414372694
 GameObject:
   m_ObjectHideFlags: 0
@@ -43757,18 +43788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.023, y: 0.186}
   m_SizeDelta: {x: 0.35239077, y: 0.049628332}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1731262612 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2168002739416069404, guid: cb711b64104ea704aa6ec6e871cfffd6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2168002739688113606}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2168002739688113607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1741040585
 GameObject:
   m_ObjectHideFlags: 0
@@ -47750,6 +47769,72 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!1 &2141142681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141142683}
+  - component: {fileID: 2141142682}
+  - component: {fileID: 2141142684}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141142682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141142681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc15e85252960684aa3f48c8c99b7413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 2168002739688113609}
+  player2: {fileID: 1402917943}
+--- !u!4 &2141142683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141142681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.753412, y: -18.245083, z: -3.40625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141142684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141142681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ce3ebd3e1acd342a13f58a3050542f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  rb2: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  tileMap: {fileID: 900951775}
+  doorsToUnlock: {fileID: 1515916484}
+  tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
+  tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
 --- !u!1 &2145939973
 GameObject:
   m_ObjectHideFlags: 0
@@ -47842,7 +47927,7 @@ PrefabInstance:
     - target: {fileID: 2168002739416069392, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 2168002739416069393, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
@@ -47867,7 +47952,7 @@ PrefabInstance:
     - target: {fileID: 2168002739416069402, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2168002739416069402, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
@@ -47975,12 +48060,17 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1731262612}
+      objectReference: {fileID: 2168002739688113609}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: otherPlayer
       value: 
-      objectReference: {fileID: 1402917939}
+      objectReference: {fileID: 1402917943}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 2168002739688113609}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: combinationBar
@@ -48000,7 +48090,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2168002739688113606}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2168002739688113608
+--- !u!114 &2168002739688113609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48009,17 +48099,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 2168002739688113607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ce3ebd3e1acd342a13f58a3050542f, type: 3}
+  m_Script: {fileID: 11500000, guid: c3cba26767c6e1e49b03c2ba3ad5def6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DEBUG: 1
+  playerId: 1
+  actualElementalIndex: 0
+  speed: 5
+  damagePower: 5
+  elementalsPossesed: 
+  selectNextElemental: 108
+  selectPreviousElemental: 107
+  playerFire: 45
+  playerCombination: 303
+  PlayerColor: Color
+  PlayerHorizontal: Horizontal
+  PlayerVertical: Vertical
   rb: {fileID: 931744539}
-  rb2: {fileID: 1402917942}
-  player1: {fileID: 1731262612}
-  player2: {fileID: 1402917939}
-  tileMap: {fileID: 900951775}
-  doorsToUnlock: {fileID: 1515916484}
-  tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
-  tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
+  animator: {fileID: 2168002739688113610}
+  health: 10
+  healthBar: {fileID: 1174760690}
+  isCharging: 0
+  tryingCombination: 0
+--- !u!95 &2168002739688113610 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2168002739416069407, guid: cb711b64104ea704aa6ec6e871cfffd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2168002739688113606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2168002739688113614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168002739688113607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a957c5e6a570bf4e88b1ae0f1508c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DEBUG: 1
+  healthBar: {fileID: 1174760690}
+  animator: {fileID: 2168002739688113610}
 --- !u!1001 &8146559361645228279
 PrefabInstance:
   m_ObjectHideFlags: 0

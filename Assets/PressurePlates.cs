@@ -8,10 +8,6 @@ using UnityEngine.Tilemaps;
 public class PressurePlates : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
-    public Rigidbody2D rb2;
-    public PlayerMovement player1;
-    public PlayerMovement player2;
 
     bool door0_opened = false;
     [SerializeField]
@@ -23,7 +19,19 @@ public class PressurePlates : MonoBehaviour
     [SerializeField]
     private Tile tilePlateActive;
 
-    
+    private Player player1;
+    private Player player2;
+    private Rigidbody2D rb;
+    private Rigidbody2D rb2;
+
+    private void Start()
+    {
+
+        player1 = gameObject.GetComponent<CaptivityManager>().player1;
+        player2 = gameObject.GetComponent<CaptivityManager>().player2;
+        rb = player1.GetComponent<Rigidbody2D>();
+        rb2 = player2.GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         checkPressurePlates();
@@ -47,8 +55,8 @@ public class PressurePlates : MonoBehaviour
             float distanceTofirstPressurePlate = Mathf.Sqrt((rb.position.x - (-4.0f)) * (rb.position.x - (-4.0f)) + (rb.position.y - (-20.0f + 1)) * (rb.position.y - (-20.0f + 1)));
             float distanceTofirstPressurePlate2 = Mathf.Sqrt((rb2.position.x - (-4.0f)) * (rb2.position.x - (-4.0f)) + (rb2.position.y - (-20.0f + 1)) * (rb2.position.y - (-20.0f + 1)));
 
-            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20 && player1.playerColor==0) ||
-                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20 && player2.playerColor == 0))
+            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20 && player1.elementalsPossesed[player1.actualElementalIndex] == Player.ElementalsAvailable.HUMAN) ||
+                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20 && player2.elementalsPossesed[player2.actualElementalIndex] == Player.ElementalsAvailable.HUMAN))
             {
                 tileMap.SetTile(firstPressurePlateReal, null);
                 tileMap.SetTile(firstPressurePlateReal, tilePlateActive);
@@ -68,8 +76,8 @@ public class PressurePlates : MonoBehaviour
             Vector3Int secondPressurePlateReal = new Vector3Int(49, -22, 0);//onTileMap
             float distanceToSecondPressurePlate = Mathf.Sqrt((rb.position.x - (secondPressurePlateReal.x)) * (rb.position.x - (secondPressurePlateReal.x)) + (rb.position.y - (secondPressurePlateReal.y+ 1)) * (rb.position.y - (secondPressurePlateReal.y + 1)));
             float distanceToSecondPressurePlate2 = Mathf.Sqrt((rb2.position.x - (secondPressurePlateReal.x)) * (rb2.position.x - (secondPressurePlateReal.x)) + (rb2.position.y - (secondPressurePlateReal.y + 1)) * (rb2.position.y - (secondPressurePlateReal.y + 1)));
-            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > secondPressurePlateReal.x && rb.position.y > (secondPressurePlateReal.y) && player1.playerColor == 1) ||
-                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > secondPressurePlateReal.x && rb2.position.y > (secondPressurePlateReal.y ) && player2.playerColor == 1))
+            if ((distanceToSecondPressurePlate <= 1.0f && rb.position.x > secondPressurePlateReal.x && rb.position.y > (secondPressurePlateReal.y) && player1.elementalsPossesed[player1.actualElementalIndex] == Player.ElementalsAvailable.WATER) ||
+                (distanceToSecondPressurePlate2 <= 1.0f && rb2.position.x > secondPressurePlateReal.x && rb2.position.y > (secondPressurePlateReal.y ) && player2.elementalsPossesed[player2.actualElementalIndex] == Player.ElementalsAvailable.WATER))
             {
                 tileMap.SetTile(secondPressurePlateReal, null);
                 tileMap.SetTile(secondPressurePlateReal, tilePlateActive);

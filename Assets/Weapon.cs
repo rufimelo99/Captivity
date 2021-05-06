@@ -7,7 +7,11 @@ public class Weapon : MonoBehaviour
 {
 
     [SerializeField]
-    private PlayerMovement player;
+    private Player player;
+    //TODO
+    public Player otherPlayer;
+    [SerializeField]
+    private Player playerObject;
     private int bulletColor = 0;
 
 	private Vector3 offset;
@@ -18,12 +22,11 @@ public class Weapon : MonoBehaviour
 
     private bool pressedKey = false;
     private float startTime = 0;
-    //TODO
-    public PlayerMovement otherPlayer;
 
 	void Start()
 	{
 		offset = new Vector3(2, 0, 0);
+        playerObject = gameObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -46,7 +49,7 @@ public class Weapon : MonoBehaviour
 
     void changeBulletColor()
     {
-        bulletColor = player.playerColor;
+        bulletColor = player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]];
     }
 
     void chargeCombination()
@@ -81,11 +84,6 @@ public class Weapon : MonoBehaviour
                     //Debug.Log("combine pls");
                 }
             }
-            /*else
-            {
-                Debug.Log((Time.time - startTime).ToString("00:00.00"));
-            }*/
-
         }
 
     }
@@ -97,8 +95,9 @@ public class Weapon : MonoBehaviour
 
     void Combine()
     {
-        if (distanceToOtherPlayer <= 5) { 
-            if (player.playerColor != otherPlayer.playerColor)
+        if (distanceToOtherPlayer <= 5) {
+            //check if their colors are different only
+            if (player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] != player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] )
             {
                 GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
             }
@@ -114,25 +113,25 @@ public class Weapon : MonoBehaviour
 
     void turnWeapon()
     {
-        if (Input.GetAxisRaw(player.PlayerHorizontal) == 1)
+        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
             offset = new Vector3(2, 0, 0);
         }
 
-        if (Input.GetAxisRaw(player.PlayerHorizontal) == -1)
+        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
             offset = new Vector3(-2, 0, 0);
         }
 
-        if (Input.GetAxisRaw(player.PlayerVertical) == 1)
+        if (Input.GetAxisRaw(playerObject.PlayerVertical) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
             offset = new Vector3(0, 2, 0);
         }
 
-        if (Input.GetAxisRaw(player.PlayerVertical) == -1)
+        if (Input.GetAxisRaw(playerObject.PlayerVertical) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
             offset = new Vector3(0, -2, 0);

@@ -6,102 +6,57 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private int player;
-
-    public string PlayerColor = "Color";
-    public string PlayerHorizontal = "Horizontal";
-    public string PlayerVertical = "Vertical";
-
-    private bool isCharging = false;
+    private Player player;
 
 
-    private KeyCode heroBlue = KeyCode.L;
-    private KeyCode heroGreen = KeyCode.K;
-    public KeyCode playerFire = KeyCode.Minus;
-    public KeyCode playerCombination = KeyCode.RightShift;
-    public bool tryingCombination = false;
+
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
     public Animator animator;
-    public int playerColor = 0;
 
     Vector2 movement;
-    Vector2 roomMover;
 
-    public float health = 10f;
-    public Image healthBar = null;
+    [SerializeField]
+    private Image healthBar;
+
 
 
     void Start()
     {
-        if (player == 2)
-        {
-            PlayerColor = "Color2";
-            PlayerHorizontal = "Horizontal2";
-            PlayerVertical = "Vertical2";
+        player = gameObject.GetComponent<Player>();
 
-
-            heroGreen = KeyCode.Q;
-            heroBlue = KeyCode.E;
-
-
-
-            playerFire = KeyCode.Space;
-            playerCombination = KeyCode.V;
-        }
-        animator.SetInteger(PlayerColor, playerColor);
-        healthBar.GetComponent<Image>().color = Color.green;
+        healthBar = player.GetComponent<Player>().healthBar;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        changeColor();
         move();
         animate();
-        if (health <= 0.1)
-        {
-            die();
-        }
-        goToMenu();
-
+        
 
     }
 
-    void die()
-    {
-        health = 10f;
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-    }
-
-
-    void goToMenu()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
 
     void animate()
     {
 
-        if (Input.GetKeyDown(playerCombination))
+        if (Input.GetKeyDown(player.playerCombination))
         {
+
             healthBar.GetComponent<Image>().color = Color.yellow;
-            isCharging = true;
+            
         }
-        if (Input.GetKeyUp(playerCombination))
+        if (Input.GetKeyUp(player.playerCombination))
         {
-            isCharging = false;
-            if (playerColor==0)
+            
+            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.HUMAN)
             {
                 healthBar.GetComponent<Image>().color = Color.green;
             }
-            if (playerColor == 1)
+            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.WATER)
             {
                 healthBar.GetComponent<Image>().color = Color.blue;
             }
@@ -111,37 +66,14 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        healthBar.fillAmount = health / 10f;
+        healthBar.fillAmount = player.health / 10f;
     }
 
 
     void move()
     {
-        movement.x = Input.GetAxisRaw(PlayerHorizontal);
-        movement.y = Input.GetAxisRaw(PlayerVertical);
-    }
-
-
-    void changeColor()
-    {
-        if (Input.GetKeyDown(heroGreen))
-        {
-            playerColor = 0;
-            if (!isCharging)
-            {
-                healthBar.GetComponent<Image>().color = Color.green;
-            }
-        }
-        if (Input.GetKeyDown(heroBlue))
-        {
-            playerColor = 1;
-            if (!isCharging)
-            {
-                healthBar.GetComponent<Image>().color = Color.blue;
-            }
-        }
-
-        animator.SetInteger(PlayerColor, playerColor);
+        movement.x = Input.GetAxisRaw(player.PlayerHorizontal);
+        movement.y = Input.GetAxisRaw(player.PlayerVertical);
     }
 
 
@@ -156,10 +88,10 @@ public class PlayerMovement : MonoBehaviour
     void rotate()
     {
 
-        if (Input.GetAxisRaw(PlayerHorizontal) != 0 || Input.GetAxisRaw(PlayerVertical) != 0)
+        if (Input.GetAxisRaw(player.PlayerHorizontal) != 0 || Input.GetAxisRaw(player.PlayerVertical) != 0)
         {
-            animator.SetFloat("lastMoveX", Input.GetAxisRaw(PlayerHorizontal));
-            animator.SetFloat("lastMoveY", Input.GetAxisRaw(PlayerVertical));
+            animator.SetFloat("lastMoveX", Input.GetAxisRaw(player.PlayerHorizontal));
+            animator.SetFloat("lastMoveY", Input.GetAxisRaw(player.PlayerVertical));
         }
     }
 
@@ -167,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            health = health - 0.1f;
+            player.health = player.health - 0.1f;
         }
     }
 
@@ -175,30 +107,30 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            health = health - 0.1f;
+            player.health = player.health - 0.1f;
         }
     }
     private void OnTriggerStay2D(Collider2D col)
     {
         //river
-        if (col.tag == "Obstacle_blue" && playerColor != 1)
+        if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            health = health - 0.2f;
+            player.health = player.health - 0.2f;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
         //river
-        if (col.tag == "Obstacle_blue" && playerColor != 1)
+        if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            health = health - 0.1f;
+            player.health = player.health - 0.1f;
         }
 
        
         if (col.tag == "Small Enemy Bullet")
         {
-            health = health - 1;
-            healthBar.fillAmount = health / 10f;
+            player.health = player.health - 1;
+            healthBar.fillAmount = player.health / 10f;
         }
     }
 
