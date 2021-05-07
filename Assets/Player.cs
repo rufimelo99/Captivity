@@ -8,10 +8,8 @@ public class Player : MonoBehaviour
 {
     public bool DEBUG = false;
     public int playerId;
+    [HideInInspector]
     public int actualElementalIndex = 0;
-    //not used for the moment
-    public float speed = 5.0f;
-    public float damagePower = 5.0f;
     [HideInInspector]
     public List<ElementalsAvailable> elementalsPossesed = new List<ElementalsAvailable>();
 
@@ -36,12 +34,17 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    [HideInInspector]
     public float health = 10f;
     public Image healthBar = null;
 
     //check both
+    [HideInInspector]
     public bool isCharging = false;
+    [HideInInspector]
     public bool tryingCombination = false;
+
+    public HP_Bar hpBar;
 
     //duplicated
     //also on ChooseElemental.cs 
@@ -109,12 +112,17 @@ public class Player : MonoBehaviour
         
 
         animator.SetInteger(PlayerColor, ElementalsTOColor[elementalsPossesed[actualElementalIndex]]);
-        healthBar.GetComponent<Image>().color = Color.green;
+        
+        hpBar.ElementalColorFill.GetComponent<Image>().color = Color.green;
+        hpBar.SetMaxHealth(health);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        hpBar.SetHealth(health);
         if (health <= 0.1)
         {
             die();

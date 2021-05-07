@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ChooseElemental : MonoBehaviour
 {
-    private bool DEBUG = false;
+    public bool DEBUG = false;
     private Player player;
 
 
-    private Image healthBar;
+    private Image hpBar; 
     private Animator animator;
 
 
@@ -17,8 +17,8 @@ public class ChooseElemental : MonoBehaviour
     void Start()
     {
         player = gameObject.GetComponent<Player>();
-
-        healthBar = player.GetComponent<Player>().healthBar; 
+        hpBar = player.hpBar.ElementalColorFill.GetComponent<Image>();
+        
         animator = player.GetComponent<Player>().animator;
     }
     private void Update()
@@ -93,11 +93,13 @@ public class ChooseElemental : MonoBehaviour
         {
             if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.HUMAN)
             {
-                healthBar.GetComponent<Image>().color = Color.green;
+                hpBar.color = Color.green;
+
             }
             if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.WATER)
             {
-                healthBar.GetComponent<Image>().color = Color.blue;
+
+                hpBar.color = Color.blue;
             }    
             animator.SetInteger(player.PlayerColor, player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
             if (DEBUG) Debug.Log("Shoud be color: " + player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);

@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    private Image healthBar;
+    private Image hpBar;
 
 
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = gameObject.GetComponent<Player>();
 
-        healthBar = player.GetComponent<Player>().healthBar;
+        hpBar = player.hpBar.ElementalColorFill.GetComponent<Image>();
     }
 
 
@@ -44,20 +44,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(player.playerCombination))
         {
+            hpBar.color = Color.yellow;
 
-            healthBar.GetComponent<Image>().color = Color.yellow;
-            
         }
         if (Input.GetKeyUp(player.playerCombination))
         {
             
             if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.HUMAN)
             {
-                healthBar.GetComponent<Image>().color = Color.green;
+                hpBar.color = Color.green;
             }
             if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.WATER)
             {
-                healthBar.GetComponent<Image>().color = Color.blue;
+                hpBar.color = Color.blue;
             }
 
         }
@@ -65,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        healthBar.fillAmount = player.health / 10f;
+        //healthBar.fillAmount = player.health / 10f;
+        
     }
 
 
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.tag == "Small Enemy Bullet")
         {
             player.health = player.health - 1;
-            healthBar.fillAmount = player.health / 10f;
+            //healthBar.fillAmount = player.health / 10f;
         }
     }
 
