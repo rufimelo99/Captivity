@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     private Player otherPlayer;
 
     private Player playerObject;
-    private int bulletColor = 0;
+    private Color bulletColor;
 
 	private Vector3 offset;
     private float distanceToOtherPlayer;
@@ -22,11 +22,18 @@ public class Weapon : MonoBehaviour
 
     private bool pressedKey = false;
     private float startTime = 0;
+    private float amountTimePressed = 0;
+    private HP_Bar chargingBar;
 
-	void Start()
+    void Start()
 	{
 		offset = new Vector3(2, 0, 0);
         playerObject = gameObject.GetComponent<Player>();
+
+        chargingBar = gameObject.GetComponent<Player>().chargingBar;
+        //1 sec max
+        chargingBar.SetMaxHealth(1);
+        chargingBar.SetHealth(0);
     }
 
     // Update is called once per frame
@@ -49,7 +56,7 @@ public class Weapon : MonoBehaviour
 
     void changeBulletColor()
     {
-        bulletColor = player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]];
+        bulletColor = player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
     }
 
     void chargeCombination()
@@ -65,13 +72,17 @@ public class Weapon : MonoBehaviour
         {
             player.tryingCombination = false;
             pressedKey = false;
-            startTime = 0; 
+            startTime = 0;
             //Debug.Log("canceled");
+            amountTimePressed = 0;
+            chargingBar.SetHealth(amountTimePressed);
         }
 
         if (pressedKey)
         {
-            if ((Time.time - startTime) >= 1)
+            amountTimePressed = (Time.time - startTime);
+            chargingBar.SetHealth(amountTimePressed);
+            if (amountTimePressed >= 1)
             {
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
@@ -81,11 +92,12 @@ public class Weapon : MonoBehaviour
                     otherPlayer.tryingCombination = false;
                     pressedKey = false;
                     startTime = 0;
-                    //Debug.Log("combine pls");
+
+                    chargingBar.SetHealth(amountTimePressed);
                 }
             }
         }
-
+        //chargingBar
     }
     void Shoot()
     {

@@ -17,15 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    private Image hpBar;
-
-
+    private bool isGoingLeft = false;
 
     void Start()
     {
         player = gameObject.GetComponent<Player>();
 
-        hpBar = player.hpBar.ElementalColorFill.GetComponent<Image>();
     }
 
 
@@ -34,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     {
         move();
         animate();
-        
 
     }
 
@@ -42,29 +38,11 @@ public class PlayerMovement : MonoBehaviour
     void animate()
     {
 
-        if (Input.GetKeyDown(player.playerCombination))
-        {
-            hpBar.color = Color.yellow;
-
-        }
-        if (Input.GetKeyUp(player.playerCombination))
-        {
-            
-            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.HUMAN)
-            {
-                hpBar.color = Color.green;
-            }
-            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.WATER)
-            {
-                hpBar.color = Color.blue;
-            }
-
-        }
-
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         //healthBar.fillAmount = player.health / 10f;
+
         
     }
 
@@ -73,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw(player.PlayerHorizontal);
         movement.y = Input.GetAxisRaw(player.PlayerVertical);
+        if(movement.x < 0){
+            transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+        }
+        if (movement.y != 0||movement.x>0)
+        {
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+        }
     }
 
 
@@ -94,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    
     void OnCollisionEnter2D(Collision2D obj)
     {
         if (obj.gameObject.tag == "Evil Touch")

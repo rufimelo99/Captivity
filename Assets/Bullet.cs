@@ -25,22 +25,10 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void makeColor(int bulletcolor)
+    public void makeColor(Color bulletcolor)
     {
-        color = bulletcolor;
-
-        if (bulletcolor == 1)
-        {
-            spriteRenderer.color = Color.blue;
-        }
-        if (bulletcolor == 0)
-        {
-            spriteRenderer.color = Color.green;
-        }
-        if (bulletcolor == 2)
-        {
-            spriteRenderer.color = Color.red;
-        }
+        spriteRenderer.color = bulletcolor;
+        
     }
 
     public void makeBigger()

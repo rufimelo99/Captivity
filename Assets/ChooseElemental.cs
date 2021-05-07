@@ -9,15 +9,14 @@ public class ChooseElemental : MonoBehaviour
     private Player player;
 
 
-    private Image hpBar; 
     private Animator animator;
-
+    [SerializeField]
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         player = gameObject.GetComponent<Player>();
-        hpBar = player.hpBar.ElementalColorFill.GetComponent<Image>();
         
         animator = player.GetComponent<Player>().animator;
     }
@@ -91,17 +90,9 @@ public class ChooseElemental : MonoBehaviour
     {
         if (!player.isCharging)
         {
-            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.HUMAN)
-            {
-                hpBar.color = Color.green;
-
-            }
-            if (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.WATER)
-            {
-
-                hpBar.color = Color.blue;
-            }    
-            animator.SetInteger(player.PlayerColor, player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
+           
+            //animator.SetInteger(player.PlayerColor, player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
+            sr.color = player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
             if (DEBUG) Debug.Log("Shoud be color: " + player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
         }
 
