@@ -49900,7 +49900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileMap: {fileID: 900951775}
-  doorsToUnlock: {fileID: 1515916484}
+  doorsToUnlock: {fileID: 2113619925}
   tilePlateNotActive: {fileID: 11400000, guid: d45e08d4ad7f290449f684776d2beb81, type: 2}
   tilePlateActive: {fileID: 11400000, guid: a94c00759956ce24a8315f3b434fb6a7, type: 2}
 --- !u!1 &2145939973
