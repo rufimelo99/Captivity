@@ -116,8 +116,6 @@ public class PressurePlates : MonoBehaviour
                 doorsToUnlock.SetTile(wallLocation0_7Doorlayer, null);
                 doorsToUnlock.SetTile(wallLocation0_8Doorlayer, null);
                 door0_opened = true;
-
-
             }
 
         }
