@@ -19,6 +19,7 @@ TagManager:
   - Room Changer Next
   - Room Changer Back
   - Hole
+  - PressurePlate
   layers:
   - Default
   - TransparentFX
