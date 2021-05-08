@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    private bool isGoingLeft = false;
 
     void Start()
     {

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public KeyCode selectPreviousElemental = KeyCode.K;
     [HideInInspector]
-    public KeyCode playerFire = KeyCode.Minus;
+    public KeyCode playerFire = KeyCode.Minus; //KeyCode
     [HideInInspector]
     public KeyCode playerCombination = KeyCode.RightShift;
 
@@ -92,22 +92,22 @@ public class Player : MonoBehaviour
         ElementalsTOColor.Add(ElementalsAvailable.LIGHT, 6);
 
 
-        ElementalsTOColorRGB.Add(ElementalsAvailable.HUMAN, Color.white);
+        ElementalsTOColorRGB.Add(ElementalsAvailable.HUMAN, Color.green);
         ElementalsTOColorRGB.Add(ElementalsAvailable.WATER, Color.blue );
-        ElementalsTOColorRGB.Add(ElementalsAvailable.FIRE, new Color(0.7f, 0.2f, 1)); //vermelho
-        ElementalsTOColorRGB.Add(ElementalsAvailable.GROUND, Color.gray /*new Color(0.9f, 0.3f, 0.3f)*/);//castanho
-        ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(0, 0.5f, 1)/*new Color(0, 0.9f, 0.1f)*/);//amarelo kinda
+        ElementalsTOColorRGB.Add(ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
+        ElementalsTOColorRGB.Add(ElementalsAvailable.GROUND, Color.green /*new Color(0.9f, 0.3f, 0.3f)*/);//castanho
+        ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(0.6f, 0.6f, 1)/*new Color(0, 0.9f, 0.1f)*/);//amarelo kinda
         ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black /*new Color(0.3f, 0.9f, 1)*/);//preto 
         ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow /*new Color(0, 0.1f, 1)*/);//branco
 
         //Elements that player have
         elementalsPossesed.Add(ElementalsAvailable.HUMAN);
         elementalsPossesed.Add(ElementalsAvailable.WATER);
-        elementalsPossesed.Add(ElementalsAvailable.FIRE);
-        elementalsPossesed.Add(ElementalsAvailable.GROUND);
-        elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
-        elementalsPossesed.Add(ElementalsAvailable.DARK);
-        elementalsPossesed.Add(ElementalsAvailable.LIGHT);
+        //elementalsPossesed.Add(ElementalsAvailable.FIRE);
+        //elementalsPossesed.Add(ElementalsAvailable.GROUND);
+        //elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
+        //elementalsPossesed.Add(ElementalsAvailable.DARK);
+        //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
         
         if (DEBUG)
         {

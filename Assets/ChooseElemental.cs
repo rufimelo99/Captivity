@@ -8,6 +8,9 @@ public class ChooseElemental : MonoBehaviour
     public bool DEBUG = false;
     private Player player;
 
+    private string previous = "Previous1";
+    private string next = "Next1";
+
 
     private Animator animator;
     [SerializeField]
@@ -19,6 +22,12 @@ public class ChooseElemental : MonoBehaviour
         player = gameObject.GetComponent<Player>();
         
         animator = player.GetComponent<Player>().animator;
+
+        if (player.playerId == 2)
+        {
+            previous = "Previous2";
+            next = "Next2";
+        }
     }
     private void Update()
     {
@@ -28,7 +37,8 @@ public class ChooseElemental : MonoBehaviour
     void ChangeElemental()
     {
         
-        if (Input.GetKeyDown(player.selectPreviousElemental))
+        //if (Input.GetKeyDown(player.selectPreviousElemental))
+        if(GameInputManager.GetKeyDown(previous))
         {
             if(DEBUG) Debug.Log("Changing to previous elemental"); 
             if (player.elementalsPossesed.Count == 1)
@@ -56,7 +66,8 @@ public class ChooseElemental : MonoBehaviour
 
             changeColor();
         }
-        if (Input.GetKeyDown(player.selectNextElemental))
+        //if (Input.GetKeyDown(player.selectNextElemental))
+        if (GameInputManager.GetKeyDown(next))
         {
             if (DEBUG) Debug.Log("Changing to next elemental");
             if (player.elementalsPossesed.Count == 1)

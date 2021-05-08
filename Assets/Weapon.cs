@@ -25,6 +25,9 @@ public class Weapon : MonoBehaviour
     private float amountTimePressed = 0;
     private HP_Bar chargingBar;
 
+    private string attack = "Attack1";
+    private string combine = "Combine1";
+
     void Start()
 	{
 		offset = new Vector3(2, 0, 0);
@@ -34,6 +37,13 @@ public class Weapon : MonoBehaviour
         //1 sec max
         chargingBar.SetMaxHealth(1);
         chargingBar.SetHealth(0);
+
+        if (player.playerId==1)
+        {
+            attack = "Attack2";
+            combine = "Combine2";
+        }
+
     }
 
     // Update is called once per frame
@@ -44,7 +54,8 @@ public class Weapon : MonoBehaviour
         changeBulletColor();
         chargeCombination();
 
-        if (Input.GetKeyDown(player.playerFire))
+        //if (Input.GetKeyDown(player.playerFire))
+        if (GameInputManager.GetKeyDown(attack))
         {
             Shoot();
         }
@@ -62,13 +73,13 @@ public class Weapon : MonoBehaviour
     void chargeCombination()
     {
         
-        if (Input.GetKeyDown(player.playerCombination))
+        if (GameInputManager.GetKeyDown(combine))
         {
             startTime = Time.time;
             pressedKey = true;
         }
         //cancel
-        if (Input.GetKeyUp(player.playerCombination))
+        if (GameInputManager.GetKeyUp(combine))
         {
             player.tryingCombination = false;
             pressedKey = false;
