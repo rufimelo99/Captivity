@@ -8,8 +8,8 @@ public class ChooseElemental : MonoBehaviour
     public bool DEBUG = false;
     private Player player;
 
-    private string previous = "Previous1";
-    private string next = "Next1";
+    //private string previous = "Previous1";
+    //private string next = "Next1";
 
 
     private Animator animator;
@@ -22,12 +22,6 @@ public class ChooseElemental : MonoBehaviour
         player = gameObject.GetComponent<Player>();
         
         animator = player.GetComponent<Player>().animator;
-
-        if (player.playerId == 2)
-        {
-            previous = "Previous2";
-            next = "Next2";
-        }
     }
     private void Update()
     {
@@ -37,10 +31,10 @@ public class ChooseElemental : MonoBehaviour
     void ChangeElemental()
     {
         
-        //if (Input.GetKeyDown(player.selectPreviousElemental))
-        if(GameInputManager.GetKeyDown(previous))
+        if (Input.GetKeyDown(player.selectPreviousElemental))
+        //if(GameInputManager.GetKeyDown(previous))
         {
-            if(DEBUG) Debug.Log("Changing to previous elemental"); 
+            //if(DEBUG) Debug.Log("Changing to previous elemental"); 
             if (player.elementalsPossesed.Count == 1)
             {
                 //do nothing cause that player only has 1 elemental available
@@ -56,20 +50,20 @@ public class ChooseElemental : MonoBehaviour
                     player.actualElementalIndex -= 1;
                 }
 
-                if (DEBUG)
-                {
-                    Debug.Log("ActualElementalIndex" + player.actualElementalIndex);
-                    Debug.Log("ActualElemental" + player.elementalsPossesed[player.actualElementalIndex]);
-
-                }
+                //if (DEBUG)
+                //{
+                //    Debug.Log("ActualElementalIndex" + player.actualElementalIndex);
+                //    Debug.Log("ActualElemental" + player.elementalsPossesed[player.actualElementalIndex]);
+                //
+                //}
             }
 
             changeColor();
         }
-        //if (Input.GetKeyDown(player.selectNextElemental))
-        if (GameInputManager.GetKeyDown(next))
+        if (Input.GetKeyDown(player.selectNextElemental))
+        //if (GameInputManager.GetKeyDown(next))
         {
-            if (DEBUG) Debug.Log("Changing to next elemental");
+            //if (DEBUG) Debug.Log("Changing to next elemental");
             if (player.elementalsPossesed.Count == 1)
             {
                 //do nothing cause that player only has 1 elemental available
@@ -85,12 +79,12 @@ public class ChooseElemental : MonoBehaviour
                     player.actualElementalIndex += 1;
                 }
             }
-            if (DEBUG)
-            {
-                Debug.Log("ActualElementalIndex" + player.actualElementalIndex);
-                Debug.Log("ActualElemental" + player.elementalsPossesed[player.actualElementalIndex]);
-
-            }
+            //if (DEBUG)
+            //{
+            //    Debug.Log("ActualElementalIndex" + player.actualElementalIndex);
+            //    Debug.Log("ActualElemental" + player.elementalsPossesed[player.actualElementalIndex]);
+            //
+            //}
             changeColor();
         }
 
@@ -103,8 +97,10 @@ public class ChooseElemental : MonoBehaviour
         {
            
             //animator.SetInteger(player.PlayerColor, player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
-            sr.color = player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
-            if (DEBUG) Debug.Log("Shoud be color: " + player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
+            // sr.color = player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
+            //int color = player.actualElementalIndex; //player.ElementalsTOColor[player.elementalsPossesed[ (i was here)]
+            animator.SetInteger("Color", player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
+            //if (DEBUG) Debug.Log("Shoud be color: " + player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
         }
 
 
