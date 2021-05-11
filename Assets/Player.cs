@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         ElementalsTOColorRGB.Add(ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
         ElementalsTOColorRGB.Add(ElementalsAvailable.GROUND, Color.green);//castanho
         ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0));//amarelo kinda
-        ElementalsTOColorRGB.Add(ElementalsAvailable.AIR, new Color(0, 0, 0));
+        ElementalsTOColorRGB.Add(ElementalsAvailable.AIR, new Color(255, 255, 255));
         //ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
         //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 

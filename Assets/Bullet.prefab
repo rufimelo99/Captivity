@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3671954925324085128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.0599, y: -1.9668, z: -0.4235026}
-  m_LocalScale: {x: 6.8961987, y: 3.288884, z: 1}
+  m_LocalPosition: {x: 8.9968, y: -1.7571, z: -0.4235026}
+  m_LocalScale: {x: 0.6425465, y: 0.49268967, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -136,5 +136,6 @@ MonoBehaviour:
   speed: 20
   damage: 40
   rb: {fileID: 3671954925324085129}
-  impactEffect: {fileID: 0}
   spriteRenderer: {fileID: 3671954925324085134}
+  color: 0
+  isBigger: 0
