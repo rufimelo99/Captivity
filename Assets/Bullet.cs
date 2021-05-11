@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
 
     public void makeBigger()
     {
-        transform.localScale = new Vector3(24.0f, 12.0f, 0);
+        transform.localScale = new Vector3(4.0f, 2.0f, 0);
         isBigger = true;
     }
 }
