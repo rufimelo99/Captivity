@@ -53,13 +53,13 @@ public class Player : MonoBehaviour
     public enum ElementalsAvailable
     {
         HUMAN, //0
-        FIRE, //1
-        WATER, //2
+        WATER, //1
+        FIRE, //2
         GROUND, //3
-        AIR, //4
-        ELECTRICITY, //5
-        DARK, //6
-        LIGHT //7
+        ELECTRICITY, //4
+        AIR //5
+        //DARK, //6
+        //LIGHT //7
     }
     public Dictionary<ElementalsAvailable, int> ElementalsTOColor = new Dictionary<ElementalsAvailable, int>();
 
@@ -88,17 +88,20 @@ public class Player : MonoBehaviour
         ElementalsTOColor.Add(ElementalsAvailable.FIRE, 2);
         ElementalsTOColor.Add(ElementalsAvailable.GROUND, 3);
         ElementalsTOColor.Add(ElementalsAvailable.ELECTRICITY, 4);
+        ElementalsTOColor.Add(ElementalsAvailable.AIR, 5);
+
         //ElementalsTOColor.Add(ElementalsAvailable.DARK, 5);
         //ElementalsTOColor.Add(ElementalsAvailable.LIGHT, 6);
 
 
-        ElementalsTOColorRGB.Add(ElementalsAvailable.HUMAN, Color.green);
-        ElementalsTOColorRGB.Add(ElementalsAvailable.WATER, Color.blue);
+        ElementalsTOColorRGB.Add(ElementalsAvailable.HUMAN, Color.grey);
+        ElementalsTOColorRGB.Add(ElementalsAvailable.WATER, new Color(0, 0, 233));
         ElementalsTOColorRGB.Add(ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
         ElementalsTOColorRGB.Add(ElementalsAvailable.GROUND, Color.green);//castanho
-        ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(0.6f, 0.6f, 1));//amarelo kinda
-        ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
-        ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
+        ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0));//amarelo kinda
+        ElementalsTOColorRGB.Add(ElementalsAvailable.AIR, new Color(0, 0, 0));
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 
         //Elements that player have
         elementalsPossesed.Add(ElementalsAvailable.HUMAN);
@@ -106,6 +109,8 @@ public class Player : MonoBehaviour
         elementalsPossesed.Add(ElementalsAvailable.FIRE);
         elementalsPossesed.Add(ElementalsAvailable.GROUND);
         elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
+        elementalsPossesed.Add(ElementalsAvailable.AIR);
+
         //elementalsPossesed.Add(ElementalsAvailable.DARK);
         //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
 
