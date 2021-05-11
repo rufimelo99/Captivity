@@ -48,7 +48,7 @@ public class Weapon : MonoBehaviour
         changeBulletColor();
         chargeCombination();
 
-        if (Input.GetKeyDown(player.playerFire))
+        if (Input.GetKeyDown(player.playerFire) && player.elementalsPossesed[player.actualElementalIndex]!=0)
         //if (GameInputManager.GetKeyDown(attack))
         {
             Shoot();
