@@ -111,6 +111,8 @@ public class Player : MonoBehaviour
         elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
         elementalsPossesed.Add(ElementalsAvailable.AIR);
 
+		
+
         //elementalsPossesed.Add(ElementalsAvailable.DARK);
         //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
 
