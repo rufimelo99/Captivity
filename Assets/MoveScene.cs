@@ -22,6 +22,10 @@ public class MoveScene : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void goMap()
+    {
+        SceneManager.LoadScene(5);
+    }
 
     public void goFirstLevel()
     {

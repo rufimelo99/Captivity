@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VariablesSaver : MonoBehaviour
+public class GlobalControl : MonoBehaviour
 {
 
-    public static VariablesSaver Instance;
-
+    public static GlobalControl Instance;
 
     void Awake()
     {
@@ -20,17 +19,5 @@ public class VariablesSaver : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+

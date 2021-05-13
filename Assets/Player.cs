@@ -104,14 +104,15 @@ public class Player : MonoBehaviour
         //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 
         //Elements that player have
+        //elementalsPossesed = GlobalControl.Instance.elementalsPossesed;
         elementalsPossesed.Add(ElementalsAvailable.HUMAN);
-        elementalsPossesed.Add(ElementalsAvailable.WATER);
-        elementalsPossesed.Add(ElementalsAvailable.FIRE);
-        elementalsPossesed.Add(ElementalsAvailable.GROUND);
-        elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
-        elementalsPossesed.Add(ElementalsAvailable.AIR);
+        //elementalsPossesed.Add(ElementalsAvailable.WATER);
+        //elementalsPossesed.Add(ElementalsAvailable.FIRE);
+        //elementalsPossesed.Add(ElementalsAvailable.GROUND);
+        //elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
+        //elementalsPossesed.Add(ElementalsAvailable.AIR);
 
-		
+
 
         //elementalsPossesed.Add(ElementalsAvailable.DARK);
         //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
@@ -134,6 +135,12 @@ public class Player : MonoBehaviour
         hpBar.SetMaxHealth(health);
 
     }
+
+
+    //void SavePlayer()
+    //{
+    //    GlobalControl.Instance.elementalsPossesed = elementalsPossesed;
+    //}
 
     // Update is called once per frame
     void Update()
