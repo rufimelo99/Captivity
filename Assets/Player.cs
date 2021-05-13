@@ -137,12 +137,6 @@ public class Player : MonoBehaviour
     }
 
 
-    //void SavePlayer()
-    //{
-    //    GlobalControl.Instance.elementalsPossesed = elementalsPossesed;
-    //}
-
-    // Update is called once per frame
     void Update()
     {
 
