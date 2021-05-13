@@ -9,18 +9,48 @@ EditorBuildSettings:
     path: Assets/Scenes/General/Menu.unity
     guid: 67343ea689524f947845bd2ed038acc2
   - enabled: 1
-    path: Assets/Scenes/Fire/FireLevel1.unity
-    guid: ee19713247c9c9040aa9621d22022a93
-  - enabled: 1
     path: Assets/Scenes/General/Controls.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/General/Instructions.unity
     guid: f1c18b906f32097439c452808bb76fcb
   - enabled: 1
+    path: Assets/Scenes/General/Map.unity
+    guid: b8b2b6c53246a144e915abf4340f93fd
+  - enabled: 1
     path: Assets/Scenes/Water/WaterLevel1.unity
     guid: 794eb7319bdd4144a8005345720cad78
   - enabled: 1
-    path: Assets/Scenes/General/Map.unity
-    guid: b8b2b6c53246a144e915abf4340f93fd
+    path: Assets/Scenes/Water/WaterLevel2.unity
+    guid: 35a81aef00785134e9f427c3e306d10a
+  - enabled: 1
+    path: Assets/Scenes/Earth/EarthLevel1.unity
+    guid: 2ea470110ecce98409c420a34b498b82
+  - enabled: 1
+    path: Assets/Scenes/Earth/EarthLevel2.unity
+    guid: 8c035d355edbec949acce85d76759120
+  - enabled: 1
+    path: Assets/Scenes/Fire/FireLevel1.unity
+    guid: ee19713247c9c9040aa9621d22022a93
+  - enabled: 1
+    path: Assets/Scenes/Fire/FireLevel2.unity
+    guid: f471069829d32224fa74aadbd15ede2c
+  - enabled: 1
+    path: Assets/Scenes/Air/AirLevel1.unity
+    guid: 700647ded91a2e449b18a767e709af2e
+  - enabled: 1
+    path: Assets/Scenes/Air/AirLevel2.unity
+    guid: c4c8bfa6aa8e721498fad8f6a06ac219
+  - enabled: 1
+    path: Assets/Scenes/Electricity/ElecLevel1.unity
+    guid: be1ab986a6ddb18449cc171b1536bb07
+  - enabled: 1
+    path: Assets/Scenes/Electricity/ElecLevel2.unity
+    guid: bdbcda6d51bf0ff42968a2f1cce2991b
+  - enabled: 1
+    path: Assets/Scenes/Wizard/WizardLevel1.unity
+    guid: c6dc57c95ef2340459c3847b2ab1e7f4
+  - enabled: 1
+    path: Assets/Scenes/Wizard/WizardLevel2.unity
+    guid: 9f2e71303ec6191488634a43d6c0bade
   m_configObjects: {}

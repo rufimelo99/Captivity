@@ -15,7 +15,7 @@ public class EndGame : MonoBehaviour
             GlobalControl.Instance.CompletedLevels = 1;
             //GlobalControl.Instance.player2.elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
 
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(3);
 
         }
 
