@@ -9,10 +9,15 @@ public class GlobalControl : MonoBehaviour
 
 
     public int CompletedLevels;
+    public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
 
+    //public List<Player.ElementalsAvailable> elementalsPossesed2 = new List<Player.ElementalsAvailable>();
 
     void Awake()
     {
+
+        elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
+
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);

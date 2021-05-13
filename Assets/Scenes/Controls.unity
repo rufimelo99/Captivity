@@ -2829,8 +2829,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 0}
   player2: {fileID: 0}
-  HP1: {fileID: 0}
-  HP2: {fileID: 0}
 --- !u!4 &1405658183
 Transform:
   m_ObjectHideFlags: 0
@@ -3591,6 +3589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31e6e68ead6da748a980ce615fb85f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CompletedLevels: 0
+  player1: {fileID: 155755649}
+  player2: {fileID: 658571250}
 --- !u!4 &1642012593
 Transform:
   m_ObjectHideFlags: 0

@@ -10,7 +10,14 @@ public class EndGame : MonoBehaviour
         if (obj.tag == "Player" || obj.tag == "Player2")
         {
             // SceneManager.LoadScene(0);
+
+            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+            GlobalControl.Instance.CompletedLevels = 1;
+            //GlobalControl.Instance.player2.elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+
             SceneManager.LoadScene(5);
+
         }
+
     }
 }

@@ -42,4 +42,13 @@ public class MoveScene : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void restart()
+    {
+        //GlobalControl.Instance.elementalsPossesed.Clear();
+        //GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
+        //GlobalControl.Instance.CompletedLevels = 0;
+        Destroy(GlobalControl.Instance);
+        goMap();
+    }
+
 }
