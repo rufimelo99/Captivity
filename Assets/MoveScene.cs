@@ -12,12 +12,23 @@ public class MoveScene : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     public void goControls()
     {
         SceneManager.LoadScene(2);
     }
 
-    public void goGame()
+
+    public void goFirstLevel()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void goSecondLevel()
     {
         SceneManager.LoadScene(1);
     }

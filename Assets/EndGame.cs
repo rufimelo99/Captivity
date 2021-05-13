@@ -9,7 +9,8 @@ public class EndGame : MonoBehaviour
     {
         if (obj.tag == "Player" || obj.tag == "Player2")
         {
-            SceneManager.LoadScene(0);
+            // SceneManager.LoadScene(0);
+            SceneManager.LoadScene(5);
         }
     }
 }
