@@ -7,6 +7,10 @@ public class GlobalControl : MonoBehaviour
 
     public static GlobalControl Instance;
 
+
+    public int CompletedLevels;
+
+
     void Awake()
     {
         if (Instance == null)

@@ -131,8 +131,9 @@ GameObject:
   m_Component:
   - component: {fileID: 116518722}
   - component: {fileID: 116518723}
+  - component: {fileID: 116518724}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +173,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c67c32f1278784bb1b8f92ab5e57f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &116518724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116518721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c894e48306d8b4793a76b8b649feb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletedLevels: 0
+  level2: {fileID: 1144729456}
 --- !u!1 &217730632
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31e6e68ead6da748a980ce615fb85f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CompletedLevels: 0
 --- !u!4 &1003927228
 Transform:
   m_ObjectHideFlags: 0
