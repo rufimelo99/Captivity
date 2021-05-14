@@ -9,19 +9,29 @@ public class BouncingBullet : MonoBehaviour
     public float speed = 20f;
     private Vector2 right;
     private Vector2 left;
+    private bool isLeft;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        right = new Vector2(-1f, 0f);
-        left = new Vector2(1f, 0f);
-
-        rb.velocity = right * speed;
+        right = new Vector2(1f, 0f) * speed;
+        left = new Vector2(-1f, 0f) * speed;
+        isLeft = false;
+        rb.velocity = right;
     }
 
     void OnCollisionEnter2D(Collision2D obj)
     {
-        rb.velocity = -1f * rb.velocity;
+        if(isLeft) {
+            rb.velocity = right;
+            isLeft = false;
+        }
+        else
+        {
+            rb.velocity = left;
+            isLeft = true;
+        }
+            
     }
 }
