@@ -50,7 +50,7 @@ public class Enemy2Main : MonoBehaviour
         {
             health = health - 1;
             
-            if (health <= 0)
+            if (health <= 0 && tileMap != null)
             {
 
           

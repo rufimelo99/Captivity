@@ -26,3 +26,4 @@ public class GreenObstacle : MonoBehaviour
         spriteRenderer.color = new Color(0f, 1f, 0f, health/5.0f);
     }
 }
+    
