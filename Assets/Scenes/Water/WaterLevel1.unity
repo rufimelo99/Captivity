@@ -13791,8 +13791,8 @@ GameObject:
   - component: {fileID: 196876676}
   - component: {fileID: 196876675}
   m_Layer: 0
-  m_Name: Room Changer 2
-  m_TagString: Room Changer Next
+  m_Name: Room Changer to 1
+  m_TagString: Room Changer Back
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13825,7 +13825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 1840883611}
   camera2: {fileID: 20639341}
-  nextPosition: {fileID: 1431885808}
+  nextPosition: {fileID: 2051914967}
   vertical: 0
 --- !u!61 &196876676
 BoxCollider2D:
@@ -24271,8 +24271,8 @@ GameObject:
   - component: {fileID: 1412624054}
   - component: {fileID: 1412624053}
   m_Layer: 0
-  m_Name: Room Changer back to 1
-  m_TagString: Room Changer Back
+  m_Name: Room Changer to 3
+  m_TagString: Room Changer Next
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24305,7 +24305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 1840883611}
   camera2: {fileID: 20639341}
-  nextPosition: {fileID: 2051914967}
+  nextPosition: {fileID: 1431885808}
   vertical: 0
 --- !u!61 &1412624054
 BoxCollider2D:
