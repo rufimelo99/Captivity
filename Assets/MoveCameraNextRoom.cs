@@ -14,18 +14,24 @@ public class MoveCameraNextRoom : MonoBehaviour
     [SerializeField]
     private bool vertical;
 
-    private Vector3 right;
-    private Vector3 left;
-    private Vector3 up;
-    private Vector3 down;
+    private Vector3 next;
+    private Vector3 previous;
 
 
     void Start()
     {
-        right = new Vector3(27, 0, 0);
-        left = new Vector3(-27, 0, 0);
-        up = new Vector3(0, 24, 0);
-        down = new Vector3(0, -24, 0);
+        if (vertical)
+        {
+            next = new Vector3(0, 24, 0);
+            previous = new Vector3(0, -24, 0);
+        }
+        else
+        {
+            next = new Vector3(27, 0, 0);
+            previous = new Vector3(-27, 0, 0);
+        }
+        
+        
     }
 
 
@@ -34,87 +40,47 @@ public class MoveCameraNextRoom : MonoBehaviour
        
         if (gameObject.tag == "Room Changer Next")
         {
-            if (vertical)
+            
+            
+            if (collision.tag == "Player")
             {
-                if (collision.tag == "Player")
-                {
 
-                    camera1.position += up;
-                    collision.gameObject.transform.position = nextPosition.position;
+                camera1.position += next;
+                collision.gameObject.transform.position = nextPosition.position;
 
-                }
-                if (collision.tag == "Player2")
-                {
-
-                    camera2.position += up;
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
             }
-            else
+            if (collision.tag == "Player2")
             {
-                if (collision.tag == "Player")
-                {
 
-                    camera1.position += right;
-                    collision.gameObject.transform.position = nextPosition.position;
+                camera2.position += next;
+                collision.gameObject.transform.position = nextPosition.position;
 
-                }
-                if (collision.tag == "Player2")
-                {
-
-                    camera2.position += right;
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
             }
+            
         }
         if (gameObject.tag == "Room Changer Back")
         {
-            if (vertical)
+            
+            if (collision.tag == "Player")
             {
-                if (collision.tag == "Player")
-                {
 
-                    camera1.position += down;
-                    collision.gameObject.transform.position = nextPosition.position;
+                camera1.position += previous;
+                collision.gameObject.transform.position = nextPosition.position;
 
-                }
-                if (collision.tag == "Player2")
-                {
-
-                    camera2.position += down;
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
-                if (collision.tag == "Evil Touch")
-                {
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
             }
-            else
+            if (collision.tag == "Player2")
             {
-                if (collision.tag == "Player")
-                {
 
-                    camera1.position += left;
-                    collision.gameObject.transform.position = nextPosition.position;
+                camera2.position +=  previous;
+                collision.gameObject.transform.position = nextPosition.position;
 
-                }
-                if (collision.tag == "Player2")
-                {
-
-                    camera2.position +=  left;
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
-                if (collision.tag == "Evil Touch")
-                {
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
             }
+            if (collision.tag == "Evil Touch")
+            {
+                collision.gameObject.transform.position = nextPosition.position;
+
+            }
+            
         }
 
     }
