@@ -42436,8 +42436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CompletedLevels: 0
-  player1: {fileID: 2168002739688113609}
-  player2: {fileID: 1402917943}
+  elementalsPossesed: 
 --- !u!4 &937612943
 Transform:
   m_ObjectHideFlags: 0
@@ -47107,6 +47106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492fefc545fee1141810a95fc1d26ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 5
+  element: 0
 --- !u!50 &1887243878
 Rigidbody2D:
   serializedVersion: 4
