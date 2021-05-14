@@ -55,8 +55,8 @@ public class PressurePlates : MonoBehaviour
             float distanceTofirstPressurePlate = Mathf.Sqrt((rb.position.x - (-4.0f)) * (rb.position.x - (-4.0f)) + (rb.position.y - (-20.0f + 1)) * (rb.position.y - (-20.0f + 1)));
             float distanceTofirstPressurePlate2 = Mathf.Sqrt((rb2.position.x - (-4.0f)) * (rb2.position.x - (-4.0f)) + (rb2.position.y - (-20.0f + 1)) * (rb2.position.y - (-20.0f + 1)));
 
-            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20 && player1.elementalsPossesed[player1.actualElementalIndex] == Player.ElementalsAvailable.HUMAN) ||
-                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20 && player2.elementalsPossesed[player2.actualElementalIndex] == Player.ElementalsAvailable.HUMAN))
+            if ((distanceTofirstPressurePlate <= 1.0f && rb.position.x > -4 && rb.position.y > -20 && player1.elementalsPossesed[player1.actualElementalIndex] == Player.ElementalsAvailable.GROUND) ||
+                (distanceTofirstPressurePlate2 <= 1.0f && rb2.position.x > -4 && rb2.position.y > -20 && player2.elementalsPossesed[player2.actualElementalIndex] == Player.ElementalsAvailable.GROUND))
             {
                 tileMap.SetTile(firstPressurePlateReal, null);
                 tileMap.SetTile(firstPressurePlateReal, tilePlateActive);
