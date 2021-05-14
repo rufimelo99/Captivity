@@ -9,6 +9,7 @@ public class BouncingBullet : MonoBehaviour
     public float speed = 20f;
     private Vector2 right;
     private Vector2 left;
+    [SerializeField]
     private bool isLeft;
 
     // Start is called before the first frame update
@@ -32,6 +33,11 @@ public class BouncingBullet : MonoBehaviour
             rb.velocity = left;
             isLeft = true;
         }
-            
+
+        if (obj.gameObject.tag == "Player" || obj.gameObject.tag == "Player2")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

@@ -86,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
         {
             player.health = player.health - 0.1f;
         }
+
+        if (obj.gameObject.tag == "Bounce")
+        {
+            player.health = player.health - 0.1f;
+        }
     }
 
     void OnCollisionStay2D(Collision2D obj)

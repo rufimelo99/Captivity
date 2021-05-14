@@ -20,6 +20,7 @@ TagManager:
   - Room Changer Back
   - Hole
   - PressurePlate
+  - Bounce
   layers:
   - Default
   - TransparentFX
