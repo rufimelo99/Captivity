@@ -115,7 +115,6 @@ public class PlayerMovement : MonoBehaviour
         if (col.tag == "Small Enemy Bullet")
         {
             player.health = player.health - 1;
-            //healthBar.fillAmount = player.health / 10f;
         }
     }
 

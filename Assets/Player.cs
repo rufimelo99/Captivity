@@ -104,8 +104,9 @@ public class Player : MonoBehaviour
         //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 
         //Elements that player have
-        //elementalsPossesed = GlobalControl.Instance.elementalsPossesed;
-        elementalsPossesed = GlobalControl.Instance.elementalsPossesed; //.Add(ElementalsAvailable.HUMAN);
+        
+        elementalsPossesed = GlobalControl.Instance.elementalsPossesed;
+        //elementalsPossesed.Add(ElementalsAvailable.HUMAN);
         //elementalsPossesed.Add(ElementalsAvailable.WATER);
         //elementalsPossesed.Add(ElementalsAvailable.FIRE);
         //elementalsPossesed.Add(ElementalsAvailable.GROUND);
