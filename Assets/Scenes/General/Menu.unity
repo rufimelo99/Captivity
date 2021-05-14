@@ -1236,7 +1236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9, y: 146}
+  m_AnchoredPosition: {x: -18, y: 145}
   m_SizeDelta: {x: 560.491, y: 107.74727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312704477
@@ -1267,15 +1267,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279361791
-  m_fontColor: {r: 1, g: 0.87997365, b: 0.06666666, a: 1}
+    rgba: 4279369597
+  m_fontColor: {r: 0.49190882, g: 1, b: 0.06666666, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 3
+  m_colorMode: 0
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.9245283, g: 0.83919936, b: 0, a: 1}
+    topRight: {r: 0.9245283, g: 0.83919936, b: 0, a: 1}
+    bottomLeft: {r: 0.9245283, g: 0.83919936, b: 0, a: 1}
+    bottomRight: {r: 0.9245283, g: 0.83919936, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2015533799}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1678334774
