@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (obj.gameObject.tag == "Bounce")
         {
-            player.health = player.health - 1;
+            player.health = player.health - 2;
         }
     }
 
