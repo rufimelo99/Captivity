@@ -25,22 +25,22 @@ public class PressurePlate_v2 : MonoBehaviour
         switch (elementalToUnlock)
         {
             case Player.ElementalsAvailable.HUMAN:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
                 break;
             case Player.ElementalsAvailable.GROUND:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.GROUND];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.GROUND];
                 break;
             case Player.ElementalsAvailable.WATER:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.WATER];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.WATER];
                 break;
             case Player.ElementalsAvailable.FIRE:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.FIRE];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.FIRE];
                 break;
             case Player.ElementalsAvailable.ELECTRICITY:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.ELECTRICITY];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.ELECTRICITY];
                 break;
             case Player.ElementalsAvailable.AIR:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.AIR];
+                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.AIR];
                 break;
             default:
                 break;

@@ -61,7 +61,7 @@ public class Weapon : MonoBehaviour
 
     void changeBulletColor()
     {
-        bulletColor = Player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
+        bulletColor = GlobalControl.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
     }
 
     void chargeCombination()
