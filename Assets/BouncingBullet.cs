@@ -36,7 +36,7 @@ public class BouncingBullet : MonoBehaviour
 
         if (obj.gameObject.tag == "Player" || obj.gameObject.tag == "Player2")
         {
-            Destroy(gameObject);
+            ;//Destroy(gameObject);
         }
 
     }
