@@ -12,35 +12,32 @@ public class PressurePlate_v2 : MonoBehaviour
     [SerializeField]
     private Sprite PressurePlateActivated_Sprite;
     [SerializeField]
-    private GameObject DoorToBeOpened;
-    [SerializeField]
     private Player.ElementalsAvailable elementalToUnlock; 
-
+    public bool activated = false;
     // Start is called before the first frame update
     void Start()
     {
         PressurePlate1_sr = gameObject.GetComponent<SpriteRenderer>();
-        Door_sr = DoorToBeOpened.GetComponent<SpriteRenderer>();
 
         switch (elementalToUnlock)
         {
             case Player.ElementalsAvailable.HUMAN:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
                 break;
             case Player.ElementalsAvailable.GROUND:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.GROUND];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.GROUND];
                 break;
             case Player.ElementalsAvailable.WATER:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.WATER];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.WATER];
                 break;
             case Player.ElementalsAvailable.FIRE:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.FIRE];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.FIRE];
                 break;
             case Player.ElementalsAvailable.ELECTRICITY:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.ELECTRICITY];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.ELECTRICITY];
                 break;
             case Player.ElementalsAvailable.AIR:
-                PressurePlate1_sr.color = GlobalControl.ElementalsTOColorRGB[Player.ElementalsAvailable.AIR];
+                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.AIR];
                 break;
             default:
                 break;
@@ -66,9 +63,7 @@ public class PressurePlate_v2 : MonoBehaviour
             if (playerElemental == elementalToUnlock)
             {
                 PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
-
-                DoorToBeOpened.GetComponent<BoxCollider2D>().enabled = false;
-                Door_sr.sprite = null;
+                activated = true;
             }
 
         }
@@ -84,8 +79,7 @@ public class PressurePlate_v2 : MonoBehaviour
             {
                 PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
 
-                DoorToBeOpened.GetComponent<BoxCollider2D>().enabled = false;
-                Door_sr.sprite = null;
+                activated = true;
             }
 
         }
@@ -96,5 +90,6 @@ public class PressurePlate_v2 : MonoBehaviour
 
         PressurePlate1_sr.sprite = PressurePlateNonActivated_Sprite;
 
+        activated = false;
     }
 }

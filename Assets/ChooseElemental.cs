@@ -99,7 +99,7 @@ public class ChooseElemental : MonoBehaviour
             //animator.SetInteger(player.PlayerColor, player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
             // sr.color = player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
             //int color = player.actualElementalIndex; //player.ElementalsTOColor[player.elementalsPossesed[ (i was here)]
-            animator.SetInteger("Color", player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
+            animator.SetInteger("Color", Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
             //if (DEBUG) Debug.Log("Shoud be color: " + player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]]);
         }
 

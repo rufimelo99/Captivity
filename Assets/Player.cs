@@ -61,8 +61,28 @@ public class Player : MonoBehaviour
         //DARK, //6
         //LIGHT //7
     }
-    public Dictionary<ElementalsAvailable, int> ElementalsTOColor = new Dictionary<ElementalsAvailable, int>();
+    public static Dictionary<ElementalsAvailable, int> ElementalsTOColor = new Dictionary<ElementalsAvailable, int> 
+    {
+        {ElementalsAvailable.HUMAN, 0 },
+        {ElementalsAvailable.WATER, 1 },
+        {ElementalsAvailable.FIRE, 2 },
+        {ElementalsAvailable.GROUND, 3 },
+        {ElementalsAvailable.ELECTRICITY, 4 },
+        {ElementalsAvailable.AIR, 5 },
 
+
+    };
+
+
+    public static Dictionary<Player.ElementalsAvailable, Color> ElementalsTOColorRGB = new Dictionary<Player.ElementalsAvailable, Color>
+    {
+        {ElementalsAvailable.HUMAN, Color.white},
+        {ElementalsAvailable.WATER, new Color(0, 0, 233)},
+        {ElementalsAvailable.FIRE, Color.red},
+        {ElementalsAvailable.GROUND, Color.green},
+        {ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0)},
+        {ElementalsAvailable.AIR, new Color(255, 255, 255)},
+    };
 
     // Start is called before the first frame update
     void Start()
@@ -82,20 +102,29 @@ public class Player : MonoBehaviour
         }
 
         //initialize dictionary that converts element to integer
-        ElementalsTOColor.Add(ElementalsAvailable.HUMAN, 0);
-        ElementalsTOColor.Add(ElementalsAvailable.WATER, 1);
-        ElementalsTOColor.Add(ElementalsAvailable.FIRE, 2);
-        ElementalsTOColor.Add(ElementalsAvailable.GROUND, 3);
-        ElementalsTOColor.Add(ElementalsAvailable.ELECTRICITY, 4);
-        ElementalsTOColor.Add(ElementalsAvailable.AIR, 5);
-
+        //ElementalsTOColor.Add(ElementalsAvailable.HUMAN, 0);
+        //ElementalsTOColor.Add(ElementalsAvailable.WATER, 1);
+        //ElementalsTOColor.Add(ElementalsAvailable.FIRE, 2);
+        //ElementalsTOColor.Add(ElementalsAvailable.GROUND, 3);
+        //ElementalsTOColor.Add(ElementalsAvailable.ELECTRICITY, 4);
+        //ElementalsTOColor.Add(ElementalsAvailable.AIR, 5);
         //ElementalsTOColor.Add(ElementalsAvailable.DARK, 5);
         //ElementalsTOColor.Add(ElementalsAvailable.LIGHT, 6);
+
+        /*
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.HUMAN, Color.grey);
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.WATER, new Color(0, 0, 233));
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.GROUND, Color.green);//castanho
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0));//amarelo kinda
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.AIR, new Color(255, 255, 255));*/
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 
 
 
         //Elements that player have
-        
+
         elementalsPossesed = GlobalControl.Instance.elementalsPossesed;
         //elementalsPossesed.Add(ElementalsAvailable.HUMAN);
         //elementalsPossesed.Add(ElementalsAvailable.WATER);
@@ -103,15 +132,12 @@ public class Player : MonoBehaviour
         //elementalsPossesed.Add(ElementalsAvailable.GROUND);
         //elementalsPossesed.Add(ElementalsAvailable.ELECTRICITY);
         //elementalsPossesed.Add(ElementalsAvailable.AIR);
-
-
-
         //elementalsPossesed.Add(ElementalsAvailable.DARK);
         //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
 
 
         //PlayerColor
-        animator.SetInteger("Color", ElementalsTOColor[elementalsPossesed[actualElementalIndex]]);
+        animator.SetInteger("Color", Player.ElementalsTOColor[elementalsPossesed[actualElementalIndex]]);
         
         hpBar.SetMaxHealth(health);
 

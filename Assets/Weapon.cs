@@ -61,7 +61,7 @@ public class Weapon : MonoBehaviour
 
     void changeBulletColor()
     {
-        bulletColor = GlobalControl.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
+        bulletColor = Player.ElementalsTOColorRGB[player.elementalsPossesed[player.actualElementalIndex]];
     }
 
     void chargeCombination()
@@ -115,7 +115,7 @@ public class Weapon : MonoBehaviour
     {
         if (distanceToOtherPlayer <= 5) {
             //check if their colors are different only
-            if (player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] != player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] )
+            if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] != Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] )
             {
                 GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
             }
