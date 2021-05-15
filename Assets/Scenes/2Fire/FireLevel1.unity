@@ -54949,7 +54949,7 @@ MonoBehaviour:
     type: 3}
   PressurePlateActivated_Sprite: {fileID: 21300032, guid: 9603be6d9ac69924f945566fb9497bde,
     type: 3}
-  elementalToUnlock: 2
+  elementalToUnlock: 3
   activated: 0
 --- !u!61 &988343785
 BoxCollider2D:
@@ -57842,7 +57842,6 @@ MonoBehaviour:
   pressurePlates:
   - {fileID: 988343784}
   - {fileID: 1470486317}
-  DoorToBeOpened: {fileID: 0}
   grid: {fileID: 590803606}
 --- !u!1 &1564686198
 GameObject:

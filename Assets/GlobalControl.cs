@@ -20,9 +20,9 @@ public class GlobalControl : MonoBehaviour
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
         //FOR FIRE TESTS
-        elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
-        elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
-        elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
+        //elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+        //elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
+        //elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
 
         if (Instance == null)
         {
