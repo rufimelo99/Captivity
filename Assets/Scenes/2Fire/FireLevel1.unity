@@ -54736,6 +54736,7 @@ MonoBehaviour:
   PressurePlateActivated_Sprite: {fileID: 21300032, guid: 9603be6d9ac69924f945566fb9497bde,
     type: 3}
   DoorToBeOpened: {fileID: 694749224}
+  elementalToUnlock: 2
 --- !u!61 &988343785
 BoxCollider2D:
   m_ObjectHideFlags: 0

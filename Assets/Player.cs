@@ -63,11 +63,19 @@ public class Player : MonoBehaviour
     }
     public Dictionary<ElementalsAvailable, int> ElementalsTOColor = new Dictionary<ElementalsAvailable, int>();
 
-    public Dictionary<ElementalsAvailable, Color> ElementalsTOColorRGB = new Dictionary<ElementalsAvailable, Color>();
+    public static Dictionary<Player.ElementalsAvailable, Color> ElementalsTOColorRGB = new Dictionary<Player.ElementalsAvailable, Color>();
 
     // Start is called before the first frame update
     void Start()
     {
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.HUMAN, Color.grey);
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.WATER, new Color(0, 0, 233));
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.GROUND, Color.green);//castanho
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0));//amarelo kinda
+        ElementalsTOColorRGB.Add(Player.ElementalsAvailable.AIR, new Color(255, 255, 255));
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
+        //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
         if (playerId == 2)
         {
             selectPreviousElemental = KeyCode.Q;
@@ -94,14 +102,6 @@ public class Player : MonoBehaviour
         //ElementalsTOColor.Add(ElementalsAvailable.LIGHT, 6);
 
 
-        ElementalsTOColorRGB.Add(ElementalsAvailable.HUMAN, Color.grey);
-        ElementalsTOColorRGB.Add(ElementalsAvailable.WATER, new Color(0, 0, 233));
-        ElementalsTOColorRGB.Add(ElementalsAvailable.FIRE, Color.red); //vermelho new Color(0.7f, 0.2f, 1)
-        ElementalsTOColorRGB.Add(ElementalsAvailable.GROUND, Color.green);//castanho
-        ElementalsTOColorRGB.Add(ElementalsAvailable.ELECTRICITY, new Color(255, 233, 0));//amarelo kinda
-        ElementalsTOColorRGB.Add(ElementalsAvailable.AIR, new Color(255, 255, 255));
-        //ElementalsTOColorRGB.Add(ElementalsAvailable.DARK, Color.black);//preto 
-        //ElementalsTOColorRGB.Add(ElementalsAvailable.LIGHT, Color.yellow);//branco
 
         //Elements that player have
         
@@ -117,17 +117,6 @@ public class Player : MonoBehaviour
 
         //elementalsPossesed.Add(ElementalsAvailable.DARK);
         //elementalsPossesed.Add(ElementalsAvailable.LIGHT);
-
-        /*if (DEBUG)
-        {
-            for(int i=0; i<elementalsPossesed.Count; i++)
-            {
-                Debug.Log("elemntalsPossesed: "+ elementalsPossesed[i]);
-            }
-            Debug.Log("ActualElementalIndex" + actualElementalIndex);
-            Debug.Log("ActualElemental" + elementalsPossesed[actualElementalIndex]);
-
-        }*/
 
 
         //PlayerColor
