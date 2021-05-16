@@ -483,6 +483,7 @@ MonoBehaviour:
   camera1: {fileID: 186504686}
   camera2: {fileID: 1798966670}
   nextPosition: {fileID: 1553418544}
+  vertical: 0
 --- !u!61 &54203953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -687,8 +688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: HorizontalMenu
+  m_VerticalAxis: VerticalMenu
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -35963,6 +35964,7 @@ MonoBehaviour:
   camera1: {fileID: 186504686}
   camera2: {fileID: 1798966670}
   nextPosition: {fileID: 226895423}
+  vertical: 0
 --- !u!61 &1332215083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36306,6 +36308,7 @@ MonoBehaviour:
   camera1: {fileID: 186504686}
   camera2: {fileID: 1798966670}
   nextPosition: {fileID: 746725322}
+  vertical: 0
 --- !u!61 &1429577761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49324,6 +49327,7 @@ MonoBehaviour:
   camera1: {fileID: 186504686}
   camera2: {fileID: 1798966670}
   nextPosition: {fileID: 765229998}
+  vertical: 0
 --- !u!61 &2081385252
 BoxCollider2D:
   m_ObjectHideFlags: 0
