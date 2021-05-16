@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.383, y: 20.132996}
-  m_SizeDelta: {x: -777.3773, y: -449.4114}
+  m_AnchoredPosition: {x: 16.257, y: 19.53}
+  m_SizeDelta: {x: -773.6294, y: -449.4114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108227885
 MonoBehaviour:
@@ -177,27 +177,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Each color represents a natural element. You can only have contact with
-    elements that match your current color.
-
-
-    When you see an enemy, avoid touching
-    him and his projectiles. You can kill enemies by shooting projectiles of your
-    own.
-
-
-    To use a combination of powers, the characters have to be together
-    and press their correspondent combination key for 1 second each.
-
-    The first
-    to press the combination key acts as a charger and the second as a trigger, who
-    determines the direction that the combination takes.
-
-    The effect depends
-    on the colors of each character.
-
-
-'
+  m_text: "Each color represents an elemental, the embodyment of the spirit of an
+    element, which the players will be able to turn into, after the end of each chapter.
+    \nYou can only have contact with elements that match your current color.\n\nWhen
+    you see an enemy, avoid touching him and his projectiles. You can kill enemies
+    by shooting projectiles of your own.\n\nTo use a combination of powers, the characters
+    have to be together and press their correspondent combination key for 1 second
+    each.\nThe first to press the combination key acts as a charger and the second
+    as a trigger, who determines the direction that the combination takes.\nThe effect
+    depends on the colors of each character.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
