@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resume_button: {fileID: 583198567}
+  menu: 1
 --- !u!1 &765121603
 GameObject:
   m_ObjectHideFlags: 0
