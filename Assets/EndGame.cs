@@ -9,18 +9,26 @@ public class EndGame : MonoBehaviour
     public int level;
     public int element;
 
+    private bool player1;
+    private bool player2;
+
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag == "Player" || obj.tag == "Player2")
+        if (obj.tag == "Player")
         {
-            // SceneManager.LoadScene(0);
+            player1 = true;
+        }
+            
+        if(obj.tag == "Player2")
+        {
+            player2 = true;
+        }
 
+        if(player1 && player2)
+        {
             giveElemental();
             GlobalControl.Instance.CompletedLevels = level;
-            //GlobalControl.Instance.player2.elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
-
             SceneManager.LoadScene(3);
-
         }
     }
 
