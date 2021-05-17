@@ -58,6 +58,21 @@ public class PlayerMovement : MonoBehaviour
             damage = 1f;
             moveSpeed = 5f;
         }
+        if (playerElemental == Player.ElementalsAvailable.WATER) // human is normal
+        {
+            damage = 1f;
+            moveSpeed = 5f;
+        }
+        if (playerElemental == Player.ElementalsAvailable.FIRE) // human is normal
+        {
+            damage = 1f;
+            moveSpeed = 5f;
+        }
+        if (playerElemental == Player.ElementalsAvailable.ELECTRICITY) // human is normal
+        {
+            damage = 1f;
+            moveSpeed = 5f;
+        }
 
     }
 
