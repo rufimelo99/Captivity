@@ -33,7 +33,7 @@ public class EndGame : MonoBehaviour
     }
 
 
-    void OnTriggerExit2D(Collider2D obj) //WE STILL NEED TO DISABLE THE PLAYER OR DO SOMETHING
+    void OnTriggerExit2D(Collider2D obj) //WE STILL NEED TO DISABLE THE PLAYER OR DO SOMETHING - maybe
     {
         if (obj.tag == "Player")
         {
