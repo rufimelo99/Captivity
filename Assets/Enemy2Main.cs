@@ -48,8 +48,8 @@ public class Enemy2Main : MonoBehaviour
     {
         if (obj.tag == "Bullet")
         {
-            health = health - 1;
-            
+            health = health - obj.GetComponent<Bullet>().damage;  // obj.gameObject.GetComponent<Bullet>().color == 0
+
             if (health <= 0 && tileMap != null)
             {
 

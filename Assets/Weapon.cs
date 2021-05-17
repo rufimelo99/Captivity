@@ -107,8 +107,17 @@ public class Weapon : MonoBehaviour
     }
     void Shoot()
     {
+        Player.ElementalsAvailable playerElemental = player.elementalsPossesed[player.actualElementalIndex];
         GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
+        if (playerElemental == Player.ElementalsAvailable.FIRE) // fire makes more damage
+        {
+            projectile.GetComponent<Bullet>().fire();
+        }
+        if (playerElemental == Player.ElementalsAvailable.ELECTRICITY) // electricity makes faster shots
+        {
+            projectile.GetComponent<Bullet>().electricity();
+        }
     }
 
     void Combine()

@@ -5,8 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float speed = 20f;
-    public int damage = 40;
+    // to change when you cahnge stuff
+    public float speed = 20f;  // faster when you are the elcetricyt guy
+    public float damage = 1f;  // more when you are the fire guy
+
+
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public int color;
@@ -28,12 +31,23 @@ public class Bullet : MonoBehaviour
     public void makeColor(Color bulletcolor)
     {
         spriteRenderer.color = bulletcolor;
-        
     }
 
     public void makeBigger()
     {
         transform.localScale = new Vector3(4.0f, 2.0f, 0);
         isBigger = true;
+        damage = 5f;
+    }
+
+    public void electricity()
+    {
+        speed = 30f;
+    }
+
+
+    public void fire()
+    {
+        damage = 2f;
     }
 }
