@@ -10,10 +10,14 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    public float moveSpeed = 5f;
+    
 
     public Rigidbody2D rb;
     public Animator animator;
+
+    // to change when you change elemental
+    private float damage = 0.1f; // damage that you take uppon inpact
+    private float moveSpeed = 5f; // speed at which you move
 
     Vector2 movement;
 
@@ -30,6 +34,30 @@ public class PlayerMovement : MonoBehaviour
     {
         move();
         animate();
+        changeFeatures();
+    }
+
+
+    void changeFeatures()
+    {
+        
+        Player.ElementalsAvailable playerElemental = player.elementalsPossesed[player.actualElementalIndex];
+            
+        if (playerElemental == Player.ElementalsAvailable.AIR) // air is faster but more fragile
+        {
+            damage = 0.15f;
+            moveSpeed = 10f;
+        }
+        if (playerElemental == Player.ElementalsAvailable.GROUND)  // ground is more resistant
+        {
+            damage = 0.05f;
+            moveSpeed = 5f;
+        }
+        if (playerElemental == Player.ElementalsAvailable.HUMAN) // human is normal
+        {
+            damage = 0.1f;
+            moveSpeed = 5f;
+        }
 
     }
 
@@ -84,12 +112,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            player.health = player.health - 0.1f;
+            player.health = player.health - damage;
         }
 
         if (obj.gameObject.tag == "Bounce")
         {
-            player.health = player.health - 5;
+            player.health = player.health - 50*damage;
         }
     }
 
@@ -97,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            player.health = player.health - 0.1f;
+            player.health = player.health - damage;
         }
     }
     private void OnTriggerStay2D(Collider2D col)
@@ -105,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         //river
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - 0.2f;
+            player.health = player.health - 2*damage;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -113,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         //river
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - 0.1f;
+            player.health = player.health - damage;
         }
 
        
