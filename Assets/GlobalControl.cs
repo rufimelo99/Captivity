@@ -34,5 +34,14 @@ public class GlobalControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+    public void addWithoutRepetition(Player.ElementalsAvailable elemental)
+    {
+        if (!elementalsPossesed.Contains(elemental))
+        {
+            elementalsPossesed.Add(elemental);
+        }
+    }
 }
 

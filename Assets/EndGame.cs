@@ -26,10 +26,19 @@ public class EndGame : MonoBehaviour
 
         if(player1 && player2)
         {
-            giveElemental();
-            GlobalControl.Instance.CompletedLevels = level;
-            SceneManager.LoadScene(3);
+            endTheLevel();
         }
+    }
+
+
+    void endTheLevel()
+    {
+        giveElemental();
+        if (GlobalControl.Instance.CompletedLevels <= level)
+        {
+            GlobalControl.Instance.CompletedLevels = level;
+        }
+        SceneManager.LoadScene(3);
     }
 
 
@@ -51,23 +60,23 @@ public class EndGame : MonoBehaviour
     {
         if (element == 1)
         {
-            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+            GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.WATER);
         }
         if (element == 2)
         {
-            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
+            GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.GROUND);
         }
         if (element == 3)
         {
-            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
+            GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.FIRE);
         }
         if (element == 4)
         {
-            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
+            GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.AIR);
         }
         if (element == 5)
         {
-            GlobalControl.Instance.elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
+            GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.ELECTRICITY);
         }
         else
         {
