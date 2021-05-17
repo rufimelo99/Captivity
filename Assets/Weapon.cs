@@ -112,6 +112,7 @@ public class Weapon : MonoBehaviour
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
         if (playerElemental == Player.ElementalsAvailable.FIRE) // fire makes more damage
         {
+            Debug.Log('h');
             projectile.GetComponent<Bullet>().fire();
         }
         if (playerElemental == Player.ElementalsAvailable.ELECTRICITY) // electricity makes faster shots

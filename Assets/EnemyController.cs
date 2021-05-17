@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
     {
         if (obj.tag == "Bullet")
         {
-            health = health - 1;
+            health = health - obj.GetComponent<Bullet>().damage;
             animator.SetFloat("Health", health);
             healthBar.fillAmount = health / 10f;
         }

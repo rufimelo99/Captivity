@@ -45,17 +45,17 @@ public class PlayerMovement : MonoBehaviour
             
         if (playerElemental == Player.ElementalsAvailable.AIR) // air is faster but more fragile
         {
-            damage = 0.15f;
+            damage = 1.5f;
             moveSpeed = 10f;
         }
         if (playerElemental == Player.ElementalsAvailable.GROUND)  // ground is more resistant
         {
-            damage = 0.05f;
+            damage = 0.5f;
             moveSpeed = 5f;
         }
         if (playerElemental == Player.ElementalsAvailable.HUMAN) // human is normal
         {
-            damage = 0.1f;
+            damage = 1f;
             moveSpeed = 5f;
         }
 
@@ -112,12 +112,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            player.health = player.health - damage;
+            player.health = player.health - 0.5f*damage;
         }
 
         if (obj.gameObject.tag == "Bounce")
         {
-            player.health = player.health - 50*damage;
+            player.health = player.health - 5f*damage;
         }
     }
 
@@ -125,20 +125,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (obj.gameObject.tag == "Evil Touch")
         {
-            player.health = player.health - damage;
+            player.health = player.health - 0.5f*damage;
         }
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        //river
+        //river - TODO - make this good
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - 2*damage;
+            player.health = player.health - 2f*damage;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        //river
+        //river  - TODO - check the above todo ya dingus
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
             player.health = player.health - damage;
@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
        
         if (col.tag == "Small Enemy Bullet")
         {
-            player.health = player.health - 1;
+            player.health = player.health - damage;
         }
     }
 

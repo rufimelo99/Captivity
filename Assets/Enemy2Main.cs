@@ -82,7 +82,7 @@ public class Enemy2Main : MonoBehaviour
 
     void Shoot()
     {
-        projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     void Rotate()
