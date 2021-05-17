@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
         damage = 1f;
+        color = 0;
     }
 
     void OnTriggerEnter2D(Collider2D obj)
@@ -52,5 +53,10 @@ public class Bullet : MonoBehaviour
     {
         transform.localScale = new Vector3(1.5f, 0.8f, 0);
         damage = 10f;
+    }
+
+    public void green()
+    {
+        color = 1;
     }
 }

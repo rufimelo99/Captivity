@@ -119,6 +119,10 @@ public class Weapon : MonoBehaviour
         {
             projectile.GetComponent<Bullet>().electricity();
         }
+        if (playerElemental == Player.ElementalsAvailable.GROUND) // this is dumb but its for the rock
+        {
+            projectile.GetComponent<Bullet>().green();
+        }
     }
 
     void Combine()
