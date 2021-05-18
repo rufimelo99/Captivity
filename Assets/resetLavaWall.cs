@@ -19,7 +19,6 @@ public class resetLavaWall : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ywi");
         lavaWall.GetComponent<BoxCollider2D>().enabled = true;
     }
 }
