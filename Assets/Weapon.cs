@@ -129,11 +129,22 @@ public class Weapon : MonoBehaviour
     {
         if (distanceToOtherPlayer <= 5) {
             //check if their colors are different only
-            if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] != Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] )
+            if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
             {
                 GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
             }
-            else
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+            {
+                
+                GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1 ||
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2 ||
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 ||
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 ||
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5)
             {
                 GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 projectile.GetComponent<Bullet>().makeColor(bulletColor);
