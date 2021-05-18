@@ -117,7 +117,6 @@ public class Weapon : MonoBehaviour
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
         if (playerElemental == Player.ElementalsAvailable.FIRE) // fire makes more damage
         {
-            Debug.Log('h');
             projectile.GetComponent<Bullet>().fire();
         }
         if (playerElemental == Player.ElementalsAvailable.ELECTRICITY) // electricity makes faster shots
@@ -126,7 +125,15 @@ public class Weapon : MonoBehaviour
         }
         if (playerElemental == Player.ElementalsAvailable.GROUND) // this is dumb but its for the rock
         {
-            projectile.GetComponent<Bullet>().green();
+            projectile.GetComponent<Bullet>().ground();
+        }
+        if (playerElemental == Player.ElementalsAvailable.AIR) // this is dumb but its for the rock
+        {
+            projectile.GetComponent<Bullet>().air();
+        }
+        if (playerElemental == Player.ElementalsAvailable.WATER) // this is dumb but its for the rock
+        {
+            projectile.GetComponent<Bullet>().water();
         }
     }
 

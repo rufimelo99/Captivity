@@ -11,7 +11,6 @@ public class GreenObstacle : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-
         if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == 1 && obj.gameObject.GetComponent<Bullet>().isBigger)
         {
             Destroy(gameObject);
