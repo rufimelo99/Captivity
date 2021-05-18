@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 	public GameObject combiningTreePrefab;
+	public GameObject fusionTornadoPrefab;
+	
 
     private bool pressedKey = false;
     private float startTime = 0;
@@ -27,6 +29,8 @@ public class Weapon : MonoBehaviour
 
     //private string attack = "Attack1";
     //private string combine = "Combine1";
+	
+	public float timer = 0.0f;
 
     void Start()
 	{
@@ -55,6 +59,7 @@ public class Weapon : MonoBehaviour
         }
 
         distanceToOtherPlayer = (transform.position - otherPlayer.transform.position).sqrMagnitude;
+
 
     }
 
@@ -137,8 +142,64 @@ public class Weapon : MonoBehaviour
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
             {
+                /*while (timer >= 0){*/
+					//Player.ElementalsTOColor[player.active] = false;
+					//Player.ElementalsTOColor[otherPlayer.active] = false;
+                	GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+					//tornado.active = true;
+				//}else{
+					//Player.ElementalsTOColor[player.active] = true;
+					//Player.ElementalsTOColor[otherPlayer.active] = true;
+					//tornado.active = false;
+				//}
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+            {
                 
                 GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+            }
+			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
+                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+            {
+                
+                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1 ||
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2 ||

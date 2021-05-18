@@ -409,6 +409,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
         type: 3}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: fusionTornadoPrefab
+      value: 
+      objectReference: {fileID: 9143729321265833516, guid: b244ed062fb3b2043997f990a6e9a338,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb711b64104ea704aa6ec6e871cfffd6, type: 3}
 --- !u!1 &121967401 stripped
@@ -26527,7 +26533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 1650714180}
   animator: {fileID: 1650714179}
 --- !u!114 &1650714186
@@ -26549,6 +26554,7 @@ MonoBehaviour:
     type: 3}
   combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
     type: 3}
+  fusionTornadoPrefab: {fileID: 0}
 --- !u!114 &1650714187
 MonoBehaviour:
   m_ObjectHideFlags: 0
