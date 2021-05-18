@@ -168,6 +168,6 @@ MonoBehaviour:
   rendTornado: {fileID: 9143729321265833504}
   speed: 5
   damage: 3
-  rb: {fileID: 0}
+  rb: {fileID: 9143729321265833505}
   color: 0
   finished: 0
