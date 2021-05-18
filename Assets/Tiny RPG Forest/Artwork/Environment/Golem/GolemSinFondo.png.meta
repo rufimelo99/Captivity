@@ -3,38 +3,47 @@ guid: 4290a9cc13f86d548a998a617e313e68
 TextureImporter:
   internalIDToNameTable:
   - first:
+      213: 2354207181962915437
+    second: GolemSinFondo_1
+  - first:
+      213: -2812678112789525175
+    second: GolemSinFondo_2
+  - first:
+      213: -3936613939122985605
+    second: GolemSinFondo_6
+  - first:
+      213: 7878280244973692199
+    second: GolemSinFondo_17
+  - first:
+      213: 1449207938549184572
+    second: GolemSinFondo_29
+  - first:
+      213: 7113164911273544191
+    second: GolemSinFondo_31
+  - first:
+      213: -8103866790417736763
+    second: GolemSinFondo_32
+  - first:
+      213: -497396640052162968
+    second: GolemSinFondo_34
+  - first:
+      213: 4326105594958766507
+    second: GolemSinFondo_37
+  - first:
+      213: -2634894357351984882
+    second: GolemSinFondo_38
+  - first:
+      213: -8050682109285567062
+    second: GolemSinFondo_33
+  - first:
+      213: 228504587863942876
+    second: GolemSinFondo_35
+  - first:
+      213: -8445448920332311657
+    second: GolemSinFondo_36
+  - first:
       213: 8068778525828799807
     second: GolemSinFondo_39
-  - first:
-      213: 2745049504775424711
-    second: GolemSinFondo_40
-  - first:
-      213: 7461438619389810737
-    second: GolemSinFondo_41
-  - first:
-      213: -8018695145611175080
-    second: GolemSinFondo_42
-  - first:
-      213: 8344229378599383754
-    second: GolemSinFondo_43
-  - first:
-      213: 2040778115633986512
-    second: GolemSinFondo_44
-  - first:
-      213: -3291353223274647759
-    second: GolemSinFondo_45
-  - first:
-      213: 6465511802462660353
-    second: GolemSinFondo_46
-  - first:
-      213: -6661271621087879438
-    second: GolemSinFondo_47
-  - first:
-      213: 7381063807631953350
-    second: GolemSinFondo_48
-  - first:
-      213: -429215914863924138
-    second: GolemSinFondo_49
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,27 +141,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GolemSinFondo_0
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 325
-        width: 87
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 708c1818a4ef88e90800000000000000
-      internalID: -7023084022930487289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_1
       rect:
         serializedVersion: 2
@@ -195,76 +183,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemSinFondo_3
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 456
-        width: 107
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f966fd26e2757dcf0800000000000000
-      internalID: -227617399420000609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_4
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 319
-        width: 86
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d93bb5c4ba8382880800000000000000
-      internalID: -8635589977111284835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_5
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 13
-        width: 114
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f67d5870a0fd9ed20800000000000000
-      internalID: 3308420635449218927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_6
       rect:
         serializedVersion: 2
-        x: 860
-        y: 9
-        width: 98
-        height: 113
+        x: 874
+        y: 13
+        width: 83
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,216 +199,6 @@ TextureImporter:
       bones: []
       spriteID: b7529bcba765e59c0800000000000000
       internalID: -3936613939122985605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_7
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 448
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d110912ee1fc0210800000000000000
-      internalID: 1300680397470831058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_8
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 326
-        width: 87
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a590f02fb31870570800000000000000
-      internalID: 8432850921738668378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_9
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 320
-        width: 99
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58644ea0f01e5e8c0800000000000000
-      internalID: -3970520041733732731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_10
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 385
-        width: 7
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 558bd2aa348eacfd0800000000000000
-      internalID: -2320787280640493483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_11
-      rect:
-        serializedVersion: 2
-        x: 502
-        y: 321
-        width: 115
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d1fc3e31f9b17390800000000000000
-      internalID: -7822266631983402541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_12
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 320
-        width: 116
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd44ad9a018284240800000000000000
-      internalID: 4776111456860652764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_13
-      rect:
-        serializedVersion: 2
-        x: 613
-        y: 343
-        width: 5
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b43b264c48377fe70800000000000000
-      internalID: 9148908182094132043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_14
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 258
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0e39178a2cc45060800000000000000
-      internalID: 6941397408712048140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_15
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 319
-        width: 21
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 679a3f9d8b8f2d850800000000000000
-      internalID: 6400451493261191542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_16
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 317
-        width: 24
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bc01e1afbecd5620800000000000000
-      internalID: 2764593068725308598
       vertices: []
       indices: 
       edges: []
@@ -510,223 +225,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemSinFondo_18
-      rect:
-        serializedVersion: 2
-        x: 519
-        y: 317
-        width: 21
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 295998770b16d9200800000000000000
-      internalID: 188414169967072658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_19
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 258
-        width: 65
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3661836d758922320800000000000000
-      internalID: 2531753443559216739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_21
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 258
-        width: 56
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b9b12f9c1d867790800000000000000
-      internalID: -7532678172662187600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_22
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 296
-        width: 4
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98a111b1a692fb1c0800000000000000
-      internalID: -4485821168140346743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_23
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 258
-        width: 64
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a26df549bb62a06a0800000000000000
-      internalID: -6482326126556359126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_24
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 289
-        width: 5
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b576f7b7454d6950800000000000000
-      internalID: 6443882816168424880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_25
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 257
-        width: 64
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf418542ddd9c29d0800000000000000
-      internalID: -2797687695380835077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_26
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 258
-        width: 57
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92e9af33595123ec0800000000000000
-      internalID: -3588782222494491095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_27
-      rect:
-        serializedVersion: 2
-        x: 503
-        y: 258
-        width: 57
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e64040710ab44e70800000000000000
-      internalID: 9098601662536238818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_28
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 257
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bc65549d162074a0800000000000000
-      internalID: -6597731545613243210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_29
       rect:
         serializedVersion: 2
-        x: 24
-        y: 14
-        width: 105
-        height: 110
+        x: 27
+        y: 13
+        width: 103
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,34 +246,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemSinFondo_30
-      rect:
-        serializedVersion: 2
-        x: 378
-        y: 17
-        width: 119
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60cb3f5d6415c8520800000000000000
-      internalID: 2705626840821906438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_31
       rect:
         serializedVersion: 2
-        x: 258
+        x: 262
         y: 15
-        width: 115
-        height: 105
+        width: 109
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,10 +270,10 @@ TextureImporter:
       name: GolemSinFondo_32
       rect:
         serializedVersion: 2
-        x: 762
-        y: 13
-        width: 94
-        height: 112
+        x: 765
+        y: 14
+        width: 93
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,33 +288,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemSinFondo_33
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 4
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa5f074a64b364090800000000000000
-      internalID: -8050682109285567062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_34
       rect:
         serializedVersion: 2
-        x: 136
+        x: 144
         y: 13
-        width: 113
+        width: 103
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -846,55 +309,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemSinFondo_35
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 4
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd66d2546bfcb2300800000000000000
-      internalID: 228504587863942876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_36
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 5
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 793e2eee3fcbbca80800000000000000
-      internalID: -8445448920332311657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GolemSinFondo_37
       rect:
         serializedVersion: 2
-        x: 645
-        y: 13
-        width: 104
-        height: 112
+        x: 648
+        y: 15
+        width: 101
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,10 +333,10 @@ TextureImporter:
       name: GolemSinFondo_38
       rect:
         serializedVersion: 2
-        x: 970
-        y: 12
-        width: 86
-        height: 110
+        x: 972
+        y: 15
+        width: 81
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -930,13 +351,76 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: GolemSinFondo_33
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 17
+        width: 116
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5f074a64b364090800000000000000
+      internalID: -8050682109285567062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemSinFondo_35
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 14
+        width: 111
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd66d2546bfcb2300800000000000000
+      internalID: 228504587863942876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemSinFondo_36
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 16
+        width: 79
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793e2eee3fcbbca80800000000000000
+      internalID: -8445448920332311657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: GolemSinFondo_39
       rect:
         serializedVersion: 2
-        x: 1064
+        x: 1175
         y: 9
-        width: 90
-        height: 113
+        width: 85
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -946,216 +430,6 @@ TextureImporter:
       bones: []
       spriteID: f3d535ba15f0aff60800000000000000
       internalID: 8068778525828799807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_40
-      rect:
-        serializedVersion: 2
-        x: 1175
-        y: 10
-        width: 87
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ca400f0bff581620800000000000000
-      internalID: 2745049504775424711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_41
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 141
-        width: 104
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1385c1654ea5c8760800000000000000
-      internalID: 7461438619389810737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_42
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 141
-        width: 104
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85b52bbff3fd7b090800000000000000
-      internalID: -8018695145611175080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_43
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 141
-        width: 108
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac27bc30968acc370800000000000000
-      internalID: 8344229378599383754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_44
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 144
-        width: 111
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0db31c732ec425c10800000000000000
-      internalID: 2040778115633986512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_45
-      rect:
-        serializedVersion: 2
-        x: 514
-        y: 144
-        width: 115
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13fa0688ea3c252d0800000000000000
-      internalID: -3291353223274647759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_46
-      rect:
-        serializedVersion: 2
-        x: 741
-        y: 323
-        width: 106
-        height: 111
-      alignment: 9
-      pivot: {x: 0.5088754, y: 0.49152437}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 107e1e48abc1ab950800000000000000
-      internalID: 6465511802462660353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_47
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 457
-        width: 109
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fe9aa8e0c86e83a0800000000000000
-      internalID: -6661271621087879438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_48
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 458
-        width: 101
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cd056e2d6ece6660800000000000000
-      internalID: 7381063807631953350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemSinFondo_49
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 453
-        width: 106
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65c6796466e1b0af0800000000000000
-      internalID: -429215914863924138
       vertices: []
       indices: 
       edges: []
