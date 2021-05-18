@@ -217,6 +217,11 @@ public class Weapon : MonoBehaviour
                 GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 projectile.GetComponent<Bullet>().makeColor(bulletColor);
                 projectile.GetComponent<Bullet>().makeBigger();
+
+                if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3)
+                {
+                    projectile.GetComponent<Bullet>().ground();
+                }
             }
         }
     }

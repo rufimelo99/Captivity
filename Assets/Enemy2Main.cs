@@ -34,7 +34,7 @@ public class Enemy2Main : MonoBehaviour
 
     IEnumerator ShotTimer()
     {
-        WaitForSeconds pause = new WaitForSeconds(0.5f);
+        WaitForSeconds pause = new WaitForSeconds(0.1f);
         while (true)
         {
             yield return pause;

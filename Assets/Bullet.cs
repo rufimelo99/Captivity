@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
 
     public void air()
     {
-        damage = 1f;
+        damage = 0.9f;
     }
 
     public void water()

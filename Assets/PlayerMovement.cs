@@ -56,22 +56,22 @@ public class PlayerMovement : MonoBehaviour
         if (playerElemental == Player.ElementalsAvailable.HUMAN) // human is normal
         {
             damage = 1f;
-            moveSpeed = 5f;
+            moveSpeed = 5.5f;
         }
-        if (playerElemental == Player.ElementalsAvailable.WATER) // human is normal
+        if (playerElemental == Player.ElementalsAvailable.WATER) // water is normal
         {
             damage = 1f;
-            moveSpeed = 5f;
+            moveSpeed = 5.5f;
         }
         if (playerElemental == Player.ElementalsAvailable.FIRE) // human is normal
         {
             damage = 1f;
-            moveSpeed = 5f;
+            moveSpeed = 5.5f;
         }
         if (playerElemental == Player.ElementalsAvailable.ELECTRICITY) // human is normal
         {
             damage = 1f;
-            moveSpeed = 5f;
+            moveSpeed = 6f;
         }
 
     }
@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
         //river - TODO - make this good
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - 2f*damage;
+            player.health = player.health - damage;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
        
         if (col.tag == "Small Enemy Bullet")
         {
-            player.health = player.health - damage;
+            player.health = player.health - 2f*damage;
         }
     }
 
