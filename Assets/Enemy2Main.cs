@@ -18,6 +18,8 @@ public class Enemy2Main : MonoBehaviour
     public Transform firePoint;
     public int rotation;
 
+    private bool shock = false;
+
     void Start()
     {
         firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
@@ -38,7 +40,10 @@ public class Enemy2Main : MonoBehaviour
         while (true)
         {
             yield return pause;
-            Shoot();
+            if (!shock)
+            {
+                Shoot();
+            }
             Rotate();
         }
     }
@@ -48,6 +53,14 @@ public class Enemy2Main : MonoBehaviour
     {
         if (obj.tag == "Bullet")
         {
+
+            if (obj.GetComponent<Bullet>().shock)
+            {
+                StartCoroutine(freeze());
+            }
+
+
+
             health = health - obj.GetComponent<Bullet>().damage;  // obj.gameObject.GetComponent<Bullet>().color == 0
 
             if (health <= 0 && tileMap != null)
@@ -78,6 +91,14 @@ public class Enemy2Main : MonoBehaviour
             animator.SetFloat("enemyHealth", health);
             healthBar.fillAmount = health / 10f;
         }
+    }
+
+    IEnumerator freeze()
+    {
+        shock = true;
+        yield return new WaitForSeconds(2f);
+        shock = false;
+        Debug.Log('e');
     }
 
     void Shoot()

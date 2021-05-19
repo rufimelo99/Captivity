@@ -45,7 +45,7 @@ public class Bullet : MonoBehaviour
     {
         transform.localScale = new Vector3(2f, 0.5f, 0);
         speed = 50f;
-        damage = 1.5f
+        damage = 1.5f;
         shock = true;
     }
 

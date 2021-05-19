@@ -10,6 +10,8 @@ public class EnemyMole : MonoBehaviour
     public float speed;
     public float range;
 
+    private bool frozen = false;
+
     public Animator animator;
 
     public Transform Player1;
@@ -21,9 +23,6 @@ public class EnemyMole : MonoBehaviour
 
     public float health = 10f;
     public Image healthBar;
-
-    public Rigidbody2D rb;
-
 
     void Start()
     {
@@ -59,7 +58,7 @@ public class EnemyMole : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (distance1 <= range || distance2 <= range)
+        if ((distance1 <= range || distance2 <= range) && !frozen)
         {
             animator.SetFloat("Speed", 2);
             speed = 2.0f;
@@ -87,8 +86,7 @@ public class EnemyMole : MonoBehaviour
 
             if (obj.GetComponent<Bullet>().shock)
             {
-                Debug.Log('f');
-                freezePosition();
+                StartCoroutine(freeze());
             }
 
             health = health - obj.GetComponent<Bullet>().damage;
@@ -98,11 +96,13 @@ public class EnemyMole : MonoBehaviour
     }
 
 
-    IEnumerator freezePosition()
+    IEnumerator freeze()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        yield return new WaitForSeconds(1f);
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        frozen = true;
+        speed = 0f;
+        yield return new WaitForSeconds(1.5f);
+        frozen = false;
+        speed = 2f;
     }
 
 
