@@ -2572,6 +2572,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158027977}
   m_CullTransparentMesh: 0
+--- !u!1001 &220431180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 41067904530303525, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.6260214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.816149
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8417969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad8045492e995f14ba9ba336ffdb164a, type: 3}
 --- !u!1 &287273220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,6 +4166,7 @@ MonoBehaviour:
   camera1: {fileID: 114644775}
   camera2: {fileID: 397350886}
   nextPosition: {fileID: 1681461749}
+  vertical: 0
 --- !u!61 &615452797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4888,6 +4958,7 @@ MonoBehaviour:
   camera1: {fileID: 114644775}
   camera2: {fileID: 397350886}
   nextPosition: {fileID: 1735486668}
+  vertical: 0
 --- !u!61 &850012216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34520,6 +34591,7 @@ MonoBehaviour:
   camera1: {fileID: 114644775}
   camera2: {fileID: 397350886}
   nextPosition: {fileID: 1496581321}
+  vertical: 0
 --- !u!61 &1011968473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39283,6 +39355,7 @@ MonoBehaviour:
   camera1: {fileID: 114644775}
   camera2: {fileID: 397350886}
   nextPosition: {fileID: 1145594485}
+  vertical: 0
 --- !u!61 &1727956082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46241,6 +46314,8 @@ MonoBehaviour:
     type: 3}
   combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
     type: 3}
+  fusionTornadoPrefab: {fileID: 0}
+  timer: 0
 --- !u!114 &1767033105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46253,7 +46328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 1767033101}
   animator: {fileID: 1767033100}
 --- !u!114 &1767033106

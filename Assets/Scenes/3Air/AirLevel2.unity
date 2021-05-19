@@ -8259,7 +8259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 645946826}
   animator: {fileID: 645946825}
 --- !u!114 &645946832
@@ -8281,6 +8280,8 @@ MonoBehaviour:
     type: 3}
   combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
     type: 3}
+  fusionTornadoPrefab: {fileID: 0}
+  timer: 0
 --- !u!114 &645946833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8372,6 +8373,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &738980032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 41067904530303525, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.6260214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.816149
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8417969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315725623125672134, guid: ad8045492e995f14ba9ba336ffdb164a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad8045492e995f14ba9ba336ffdb164a, type: 3}
 --- !u!1 &772959798
 GameObject:
   m_ObjectHideFlags: 0
@@ -10867,6 +10937,7 @@ MonoBehaviour:
   camera1: {fileID: 1108595477}
   camera2: {fileID: 493372661}
   nextPosition: {fileID: 1213442263}
+  vertical: 0
 --- !u!61 &1136435929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10984,6 +11055,7 @@ MonoBehaviour:
   camera1: {fileID: 1108595477}
   camera2: {fileID: 493372661}
   nextPosition: {fileID: 514488622}
+  vertical: 0
 --- !u!61 &1178403824
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11694,6 +11766,7 @@ MonoBehaviour:
   camera1: {fileID: 1108595477}
   camera2: {fileID: 493372661}
   nextPosition: {fileID: 265029530}
+  vertical: 0
 --- !u!61 &1390679573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12179,6 +12252,7 @@ MonoBehaviour:
   camera1: {fileID: 1108595477}
   camera2: {fileID: 493372661}
   nextPosition: {fileID: 1520543460}
+  vertical: 0
 --- !u!61 &1548746095
 BoxCollider2D:
   m_ObjectHideFlags: 0
