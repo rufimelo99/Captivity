@@ -96,7 +96,7 @@ public class Enemy2Main : MonoBehaviour
     IEnumerator freeze()
     {
         shock = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         shock = false;
         Debug.Log('e');
     }

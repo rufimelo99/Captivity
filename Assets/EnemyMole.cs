@@ -100,7 +100,7 @@ public class EnemyMole : MonoBehaviour
     {
         frozen = true;
         speed = 0f;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         frozen = false;
         speed = 2f;
     }
