@@ -22,6 +22,8 @@ public class EnemyMole : MonoBehaviour
     public float health = 10f;
     public Image healthBar;
 
+    public Rigidbody2D rb;
+
 
     void Start()
     {
@@ -82,10 +84,25 @@ public class EnemyMole : MonoBehaviour
     {
         if (obj.tag == "Bullet")
         {
+
+            if (obj.GetComponent<Bullet>().shock)
+            {
+                Debug.Log('f');
+                freezePosition();
+            }
+
             health = health - obj.GetComponent<Bullet>().damage;
             animator.SetFloat("Health", health);
             healthBar.fillAmount = health / 10f;
         }
+    }
+
+
+    IEnumerator freezePosition()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(1f);
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
 

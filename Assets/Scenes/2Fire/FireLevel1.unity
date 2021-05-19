@@ -55541,6 +55541,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   health: 10
   healthBar: {fileID: 69368063}
+  rb: {fileID: 1315714719}
 --- !u!50 &1315714719
 Rigidbody2D:
   serializedVersion: 4
@@ -55786,6 +55787,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   health: 10
   healthBar: {fileID: 1111438070}
+  rb: {fileID: 1390475050}
 --- !u!50 &1390475050
 Rigidbody2D:
   serializedVersion: 4

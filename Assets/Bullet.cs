@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int color;
     public bool isBigger = false;
+    public bool shock = false;
     // Start is called
     void Start()
     {
@@ -44,6 +45,8 @@ public class Bullet : MonoBehaviour
     {
         transform.localScale = new Vector3(2f, 0.5f, 0);
         speed = 50f;
+        damage = 1.5f
+        shock = true;
     }
 
 
