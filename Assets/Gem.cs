@@ -6,7 +6,7 @@ public class Gem : MonoBehaviour
 {
 
 
-    [SerializeField] private int color;
+    //[SerializeField] private int color;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private bool player1 = false;
@@ -17,7 +17,7 @@ public class Gem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        color = 0;
+        //color = 0;
         /*switch (color)
         {
             case 0:
