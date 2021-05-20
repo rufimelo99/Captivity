@@ -130,10 +130,16 @@ public class PlayerMovement : MonoBehaviour
             player.health = player.health - 0.5f*damage;
         }
 
+        if (obj.gameObject.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
+        {
+            player.health = player.health - damage;
+        }
+
         if (obj.gameObject.tag == "Bounce")
         {
             player.health = player.health - 5f*damage;
         }
+
     }
 
     void OnCollisionStay2D(Collision2D obj)
@@ -150,6 +156,12 @@ public class PlayerMovement : MonoBehaviour
         {
             player.health = player.health - damage;
         }
+
+        if (col.tag == "Magma" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.FIRE &&
+            player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.GROUND)
+        {
+            player.health = player.health - 0.2f*damage;
+        }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -163,6 +175,12 @@ public class PlayerMovement : MonoBehaviour
         if (col.tag == "Small Enemy Bullet")
         {
             player.health = player.health - 2f*damage;
+        }
+
+        if (col.tag == "Magma" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.FIRE &&
+            player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.GROUND)
+        {
+            player.health = player.health - 0.2f*damage;
         }
     }
 

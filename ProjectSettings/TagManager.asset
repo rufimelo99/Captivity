@@ -21,6 +21,7 @@ TagManager:
   - Hole
   - PressurePlate
   - Bounce
+  - Magma
   layers:
   - Default
   - TransparentFX

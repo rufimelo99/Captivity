@@ -183,7 +183,7 @@ public class Weapon : MonoBehaviour
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
             {
-                Instantiate(magmaPrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(magmaPrefab, firePoint.position + offset + offset, Quaternion.Euler(0f, 0f, 0f));
             }
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
