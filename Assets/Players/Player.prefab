@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c8608e7491ca4f8be5203b5eae912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 2168002739416069405}
   animator: {fileID: 2168002739416069407}
 --- !u!95 &2168002739416069407
@@ -189,7 +188,13 @@ MonoBehaviour:
   firePoint: {fileID: 2168002738634747895}
   bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
     type: 3}
-  combiningTreePrefab: {fileID: 0}
+  combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
+    type: 3}
+  fusionTornadoPrefab: {fileID: 9143729321265833516, guid: b244ed062fb3b2043997f990a6e9a338,
+    type: 3}
+  magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
+    type: 3}
+  timer: 0
 --- !u!61 &2168002739416069393
 BoxCollider2D:
   m_ObjectHideFlags: 0

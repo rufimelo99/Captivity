@@ -45260,6 +45260,8 @@ MonoBehaviour:
     type: 3}
   fusionTornadoPrefab: {fileID: 9143729321265833516, guid: b244ed062fb3b2043997f990a6e9a338,
     type: 3}
+  magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
+    type: 3}
   timer: 0
 --- !u!114 &871239291
 MonoBehaviour:
@@ -46036,6 +46038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CompletedLevels: 0
   elementalsPossesed: 
+  gemsCollected: 
 --- !u!4 &1238133072
 Transform:
   m_ObjectHideFlags: 0

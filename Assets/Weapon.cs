@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
 	public GameObject combiningTreePrefab;
 	public GameObject fusionTornadoPrefab;
+    public GameObject magmaPrefab;
 	
 
     private bool pressedKey = false;
@@ -34,7 +35,8 @@ public class Weapon : MonoBehaviour
 
     void Start()
 	{
-		offset = new Vector3(2, 0, 0);
+
+        offset = new Vector3(2, 0, 0);
         playerObject = gameObject.GetComponent<Player>();
 
         chargingBar = gameObject.GetComponent<Player>().chargingBar;
@@ -181,8 +183,7 @@ public class Weapon : MonoBehaviour
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
             {
-                
-                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(magmaPrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
             }
 			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
                 Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
