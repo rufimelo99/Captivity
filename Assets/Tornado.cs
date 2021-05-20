@@ -11,10 +11,15 @@ public class Tornado : MonoBehaviour
 
     public float speed = 5f;  
     public float damage = 3f;
+    public float moveSpeed = 8f;
     public Rigidbody2D rb;
     public int color;
     public bool finished = false;
     // Start is called
+
+    private Vector2 movement;
+
+
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -30,6 +35,14 @@ public class Tornado : MonoBehaviour
             Destroy(gameObject);
         }
     }*/
+
+        
+    void FixedUpdate()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
 
 
     IEnumerator destoryAfterAFewSecond(float seconds)

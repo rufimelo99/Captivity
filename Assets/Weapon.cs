@@ -242,6 +242,8 @@ public class Weapon : MonoBehaviour
     {
         player.gameObject.SetActive(true);
         otherPlayer.gameObject.SetActive(true);
+        player.putTheRightColor();
+        otherPlayer.putTheRightColor();
     }
 
 

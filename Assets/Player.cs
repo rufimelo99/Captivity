@@ -140,7 +140,12 @@ public class Player : MonoBehaviour
         animator.SetInteger("Color", Player.ElementalsTOColor[elementalsPossesed[actualElementalIndex]]);
         
         hpBar.SetMaxHealth(health);
+    }
 
+
+    public void putTheRightColor()
+    {
+        animator.SetInteger("Color", Player.ElementalsTOColor[elementalsPossesed[actualElementalIndex]]);
     }
 
 
