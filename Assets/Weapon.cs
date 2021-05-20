@@ -170,7 +170,7 @@ public class Weapon : MonoBehaviour
 			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.FIRE)
             {
-                
+                HideAndShow(10.0f);
                 GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
 			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
