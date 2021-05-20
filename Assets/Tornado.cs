@@ -20,6 +20,7 @@ public class Tornado : MonoBehaviour
         rb.velocity = transform.right * speed;
         damage = 3f;
         color = 0;
+        StartCoroutine(destoryAfterAFewSecond(10.0f));
     }
 
     /*void OnTriggerEnter2D(Collider2D obj)
@@ -29,6 +30,13 @@ public class Tornado : MonoBehaviour
             Destroy(gameObject);
         }
     }*/
+
+
+    IEnumerator destoryAfterAFewSecond(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Destroy(gameObject);
+    }
 
     public void makeColor(Color tornadoColor)
     {
