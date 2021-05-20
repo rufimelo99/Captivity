@@ -154,13 +154,13 @@ public class PlayerMovement : MonoBehaviour
         //river - TODO - make this good
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - damage;
+            player.health = player.health - 0.2f*damage;
         }
 
         if (col.tag == "Magma" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.FIRE &&
             player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.GROUND)
         {
-            player.health = player.health - 0.2f*damage;
+            player.health = player.health - 0.1f*damage;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
         //river  - TODO - check the above todo ya dingus
         if (col.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
-            player.health = player.health - damage;
+            player.health = player.health - 0.2f*damage;
         }
 
        
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.tag == "Magma" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.FIRE &&
             player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.GROUND)
         {
-            player.health = player.health - 0.2f*damage;
+            player.health = player.health - 0.1f*damage;
         }
     }
 
