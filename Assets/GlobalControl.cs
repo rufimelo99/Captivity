@@ -10,7 +10,6 @@ public class GlobalControl : MonoBehaviour
 
     public int CompletedLevels;
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
-    public List<GameObject> gemsCollected = new List<GameObject>();
 
     //public List<Player.ElementalsAvailable> elementalsPossesed2 = new List<Player.ElementalsAvailable>();
 

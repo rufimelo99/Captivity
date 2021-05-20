@@ -42,7 +42,7 @@ public class Gem : MonoBehaviour
     {
         if(player1 && player2)
         {
-            GlobalControl.Instance.gemsCollected.Add(gameObject);
+            //GlobalControl.Instance.gemsCollected.Add(gameObject);
             Destroy(gameObject);
         }
     }
@@ -59,6 +59,20 @@ public class Gem : MonoBehaviour
         if(col.gameObject.tag == "Player2")
         {
             player2 = true;//
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        //river  - TODO - check the above todo ya dingus
+        if (col.gameObject.tag == "Player")
+        {
+            player1 = false;
+
+        }
+        if (col.gameObject.tag == "Player2")
+        {
+            player2 = false;//
         }
     }
 }
