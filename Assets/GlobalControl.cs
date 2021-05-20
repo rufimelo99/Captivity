@@ -10,6 +10,7 @@ public class GlobalControl : MonoBehaviour
 
     public int CompletedLevels;
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
+    public List<GameObject> gemsCollected = new List<GameObject>();
 
     //public List<Player.ElementalsAvailable> elementalsPossesed2 = new List<Player.ElementalsAvailable>();
 
@@ -19,7 +20,7 @@ public class GlobalControl : MonoBehaviour
     {
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
-        //FOR TESTS
+        //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
         elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
         elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
         elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
