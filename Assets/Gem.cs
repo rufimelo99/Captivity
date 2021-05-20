@@ -12,6 +12,8 @@ public class Gem : MonoBehaviour
     private bool player1 = false;
     private bool player2 = false;
 
+    public GlobalControl.GemsAvailable gemType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class Gem : MonoBehaviour
     {
         if(player1 && player2)
         {
-            //GlobalControl.Instance.gemsCollected.Add(gameObject);
+            GlobalControl.Instance.gemsCollected.Add(gemType);
             Destroy(gameObject);
         }
     }

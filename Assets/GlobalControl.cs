@@ -11,13 +11,27 @@ public class GlobalControl : MonoBehaviour
     public int CompletedLevels;
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
 
-    //public List<Player.ElementalsAvailable> elementalsPossesed2 = new List<Player.ElementalsAvailable>();
-
+    public List<GemsAvailable> gemsCollected = new List<GemsAvailable>();
     
+    [HideInInspector]
+    public enum GemsAvailable
+    {
+        WATER, //1
+        FIRE, //2
+        GROUND, //3
+        ELECTRICITY, //4
+        AIR,
+        WIZARD
+    }
+
+
 
     void Awake()
     {
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
+
+        gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
+
 
         //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
         elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
