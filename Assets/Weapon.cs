@@ -156,9 +156,10 @@ public class Weapon : MonoBehaviour
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.WATER)
             {
                 /*while (timer >= 0){*/
-					//Player.ElementalsTOColor[player.active] = false;
-					//Player.ElementalsTOColor[otherPlayer.active] = false;
-                	GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                //Player.ElementalsTOColor[player.active] = false;
+                //Player.ElementalsTOColor[otherPlayer.active] = false;
+                HideAndShow(10.0f);
+                GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
 					//tornado.active = true;
 				//}else{
 					//Player.ElementalsTOColor[player.active] = true;
@@ -225,6 +226,22 @@ public class Weapon : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    private void HideAndShow(float delay)
+    {
+        player.gameObject.SetActive(false);
+        otherPlayer.gameObject.SetActive(false);
+
+        // Call Show after delay seconds
+        Invoke(nameof(Show), delay);
+    }
+
+    private void Show()
+    {
+        player.gameObject.SetActive(true);
+        otherPlayer.gameObject.SetActive(true);
     }
 
 
