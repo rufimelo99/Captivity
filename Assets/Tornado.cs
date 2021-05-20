@@ -11,7 +11,7 @@ public class Tornado : MonoBehaviour
 
     public float speed = 5f;  
     public float damage = 3f;
-    public float moveSpeed = 8f;
+    private float moveSpeed = 15f;
     public Rigidbody2D rb;
     public int color;
     public bool finished = false;

@@ -33,6 +33,8 @@ public class Weapon : MonoBehaviour
 	
 	public float timer = 0.0f;
 
+    private GameObject tornado;
+
     void Start()
 	{
 
@@ -158,20 +160,21 @@ public class Weapon : MonoBehaviour
                 /*while (timer >= 0){*/
                 //Player.ElementalsTOColor[player.active] = false;
                 //Player.ElementalsTOColor[otherPlayer.active] = false;
+                
+                tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
                 HideAndShow(10.0f);
-                GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
-					//tornado.active = true;
-				//}else{
-					//Player.ElementalsTOColor[player.active] = true;
-					//Player.ElementalsTOColor[otherPlayer.active] = true;
-					//tornado.active = false;
-				//}
+                //tornado.active = true;
+                //}else{
+                //Player.ElementalsTOColor[player.active] = true;
+                //Player.ElementalsTOColor[otherPlayer.active] = true;
+                //tornado.active = false;
+                //}
             }
 			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.FIRE)
-            {
+            {               
+                tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
                 HideAndShow(10.0f);
-                GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
 			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.GROUND)
@@ -240,9 +243,12 @@ public class Weapon : MonoBehaviour
 
     private void Show()
     {
-        player.gameObject.SetActive(true);
-        otherPlayer.gameObject.SetActive(true);
+        player.gameObject.SetActive(true); //put back player 1
+        player.gameObject.transform.position = tornado.transform.position;
         player.putTheRightColor();
+
+        otherPlayer.gameObject.SetActive(true);  //put back player 1
+        otherPlayer.gameObject.transform.position = tornado.transform.position;
         otherPlayer.putTheRightColor();
     }
 

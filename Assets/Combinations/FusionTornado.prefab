@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9014270274371250142}
   m_Layer: 0
   m_Name: FusionTornado
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,6 +169,7 @@ MonoBehaviour:
   rendTornado: {fileID: 9143729321265833504}
   speed: 5
   damage: 3
+  moveSpeed: 6
   rb: {fileID: 9143729321265833505}
   color: 0
   finished: 0
