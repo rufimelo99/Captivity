@@ -28,7 +28,10 @@ namespace QuantumTek.QuantumDialogue.Demo
         {
             // Don't do anything if the conversation is over
             if (ended)
+            {
+                Destroy(gameObject);
                 return;
+            }
 
             // Check if the space key is pressed and the current message is not a choice
             if (handler.currentMessageInfo.Type == QD_NodeType.Message && Input.GetKeyUp(KeyCode.Space))
