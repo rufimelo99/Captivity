@@ -141,15 +141,19 @@ public class Weapon : MonoBehaviour
 
     void Combine()
     {
+
+        Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
+        Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
+
         if (distanceToOtherPlayer <= 5) {
             //check if their colors are different only
-            if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+            if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
+                myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
             {
                 GameObject tree = Instantiate(combiningTreePrefab, firePoint.position + offset, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+			if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.AIR ||
+                myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.WATER)
             {
                 /*while (timer >= 0){*/
 					//Player.ElementalsTOColor[player.active] = false;
@@ -162,64 +166,60 @@ public class Weapon : MonoBehaviour
 					//tornado.active = false;
 				//}
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.AIR ||
+                myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.FIRE)
             {
                 
                 GameObject tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
+			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
+                myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.GROUND)
             {
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4)
+			if (myElement == Player.ElementalsAvailable.ELECTRICITY && otherElement == Player.ElementalsAvailable.AIR ||
+                myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.ELECTRICITY)
             {
-                
+
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+            if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.FIRE ||
+                myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.GROUND)
             {
                 Instantiate(magmaPrefab, firePoint.position + offset + offset, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3)
+			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.ELECTRICITY ||
+                myElement == Player.ElementalsAvailable.ELECTRICITY && otherElement == Player.ElementalsAvailable.GROUND)
             {
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+			if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.FIRE ||
+                myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.WATER)
             {
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2)
+			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.ELECTRICITY ||
+                myElement == Player.ElementalsAvailable.ELECTRICITY && otherElement == Player.ElementalsAvailable.FIRE)
             {
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 || 
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1)
+			if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.ELECTRICITY ||
+                myElement == Player.ElementalsAvailable.ELECTRICITY && otherElement == Player.ElementalsAvailable.WATER)
             {
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 1 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 1 ||
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 2 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 2 ||
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 3 ||
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 4 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 4 ||
-                Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 5 && Player.ElementalsTOColor[otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex]] == 5)
+			if (myElement == otherElement)
             {
                 GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 projectile.GetComponent<Bullet>().makeColor(bulletColor);
                 projectile.GetComponent<Bullet>().makeBigger();
 
-                if (Player.ElementalsTOColor[player.elementalsPossesed[player.actualElementalIndex]] == 3)
+                if (myElement == Player.ElementalsAvailable.GROUND)
                 {
                     projectile.GetComponent<Bullet>().ground();
                 }
