@@ -17,7 +17,8 @@ public class Gem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (color)
+        color = 0;
+        /*switch (color)
         {
             case 0:
                 spriteRenderer.color = Color.blue;  //blue color
@@ -37,7 +38,7 @@ public class Gem : MonoBehaviour
             case 5:
                 spriteRenderer.color = new Color(210, 81, 176);//purple color
                 break;
-        }
+        }*/
     }
 
     void Update()
