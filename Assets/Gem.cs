@@ -47,6 +47,12 @@ public class Gem : MonoBehaviour
         {
             GlobalControl.Instance.gemsCollected.Add(gemType);
             Destroy(gameObject);
+
+            DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
+            if (displayDialogue)
+            {
+                displayDialogue.displayDialogue();
+            }
         }
     }
 
