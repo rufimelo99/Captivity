@@ -14,6 +14,8 @@ public class PressurePlate_v2 : MonoBehaviour
     [SerializeField]
     private Player.ElementalsAvailable elementalToUnlock; 
     public bool activated = false;
+
+    private bool normal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,8 @@ public class PressurePlate_v2 : MonoBehaviour
         switch (elementalToUnlock)
         {
             case Player.ElementalsAvailable.HUMAN:
-                PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
+                //PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.HUMAN];
+                normal = true;
                 break;
             case Player.ElementalsAvailable.GROUND:
                 PressurePlate1_sr.color = Player.ElementalsTOColorRGB[Player.ElementalsAvailable.GROUND];
@@ -56,7 +59,14 @@ public class PressurePlate_v2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if(obj.tag == "Player" || obj.tag == "Player2")
+
+        if (normal)
+        {
+            PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
+            activated = true;
+        }
+
+        else if(obj.tag == "Player" || obj.tag == "Player2")
         {
             Player.ElementalsAvailable playerElemental = obj.GetComponent<Player>().elementalsPossesed[obj.GetComponent<Player>().actualElementalIndex];
 
@@ -71,7 +81,13 @@ public class PressurePlate_v2 : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D obj)
     {
-        if (obj.tag == "Player" || obj.tag == "Player2")
+        if (normal)
+        {
+            PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
+            activated = true;
+        }
+
+        else if (obj.tag == "Player" || obj.tag == "Player2")
         {
             Player.ElementalsAvailable playerElemental = obj.GetComponent<Player>().elementalsPossesed[obj.GetComponent<Player>().actualElementalIndex];
 
