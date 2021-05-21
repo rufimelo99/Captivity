@@ -32,9 +32,9 @@ namespace QuantumTek.QuantumDialogue.Demo
                 Destroy(gameObject);
                 return;
             }
-
+            
             // Check if the space key is pressed and the current message is not a choice
-            if (handler.currentMessageInfo.Type == QD_NodeType.Message && Input.GetKeyUp(KeyCode.Space))
+            if (handler.currentMessageInfo.Type == QD_NodeType.Message && Input.GetKeyUp("return"))
                 Next();
         }
 
