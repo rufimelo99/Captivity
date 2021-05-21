@@ -8280,7 +8280,10 @@ MonoBehaviour:
     type: 3}
   combiningTreePrefab: {fileID: 69380416721110857, guid: d940c267a11f1744da32826edc384666,
     type: 3}
-  fusionTornadoPrefab: {fileID: 0}
+  fusionTornadoPrefab: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
+    type: 3}
+  magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
+    type: 3}
   timer: 0
 --- !u!114 &645946833
 MonoBehaviour:
@@ -49716,6 +49719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CompletedLevels: 0
   elementalsPossesed: 
+  gemsCollected: 
 --- !u!4 &2060071117
 Transform:
   m_ObjectHideFlags: 0

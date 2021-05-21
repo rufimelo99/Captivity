@@ -56,7 +56,15 @@ public class MoveCameraNextRoom : MonoBehaviour
                 collision.gameObject.transform.position = nextPosition.position;
 
             }
-            
+
+            if (collision.tag == "Fusion")
+            {
+                camera1.position += next;
+                camera2.position += next;
+                collision.gameObject.transform.position = nextPosition.position;
+
+            }
+
         }
         if (gameObject.tag == "Room Changer Back")
         {
@@ -80,7 +88,14 @@ public class MoveCameraNextRoom : MonoBehaviour
                 collision.gameObject.transform.position = nextPosition.position;
 
             }
-            
+            if (collision.tag == "Fusion")
+            {
+                camera1.position += previous;
+                camera2.position += previous;
+                collision.gameObject.transform.position = nextPosition.position;
+
+            }
+
         }
 
     }

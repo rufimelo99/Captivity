@@ -15,6 +15,8 @@ public class Tornado : MonoBehaviour
     public Rigidbody2D rb;
     public int color;
     public bool finished = false;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     // Start is called
 
     private Vector2 movement;
@@ -36,8 +38,21 @@ public class Tornado : MonoBehaviour
         }
     }*/
 
-        
-    void FixedUpdate()
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        projectile.GetComponent<Bullet>().makeColor(Color.blue);
+    }
+
+        void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
