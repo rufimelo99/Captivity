@@ -16,7 +16,13 @@ public class Tornado : MonoBehaviour
     public int color;
     public bool finished = false;
     public GameObject bulletPrefab;
-    public Transform firePoint;
+
+    private Quaternion angle = Quaternion.Euler(0, 0, 0);
+    private Quaternion angle2 = Quaternion.Euler(0, 180, 0);
+
+    private int rotation = 0;
+
+    private bool blue = true;
     // Start is called
 
     private Vector2 movement;
@@ -27,6 +33,7 @@ public class Tornado : MonoBehaviour
         rb.velocity = transform.right * speed;
         damage = 3f;
         color = 0;
+        StartCoroutine(ShotTimer());
         StartCoroutine(destoryAfterAFewSecond(10.0f));
     }
 
@@ -48,11 +55,28 @@ public class Tornado : MonoBehaviour
 
     void Shoot()
     {
-        GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject projectile = Instantiate(bulletPrefab, transform.position, angle);
+        GameObject projectile2 = Instantiate(bulletPrefab, transform.position, angle2);
+        
+        angle *= Quaternion.Euler(0,0, 10);
+        angle2 *= Quaternion.Euler(0, 0, -10);
+
         projectile.GetComponent<Bullet>().makeColor(Color.blue);
+        projectile2.GetComponent<Bullet>().makeColor(Color.red);
     }
 
-        void FixedUpdate()
+    IEnumerator ShotTimer()
+    {
+        WaitForSeconds pause = new WaitForSeconds(0.05f);
+        while (true)
+        {
+            yield return pause;
+            Shoot();
+            //Rotate();
+        }
+    }
+
+    void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -70,5 +94,40 @@ public class Tornado : MonoBehaviour
     {
         rendTornado.color = tornadoColor;
     }
+
+    /*void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }*/
+
+    /*void Rotate()
+    {
+        if (rotation == 0)
+        {
+            angle = Quaternion.Euler(0f, 180f, 0f);
+            rotation = 1;
+        }
+        else
+        {
+            if (rotation == 1)
+            {
+                angle = Quaternion.Euler(0f, 180f, 330f);
+                rotation = 2;
+            }
+            else
+            {
+                if (rotation == 2)
+                {
+                    angle = Quaternion.Euler(0f, 180f, 290f);
+                    rotation = 3;
+                }
+                else
+                {
+                    angle = Quaternion.Euler(0f, 0f, 270f);
+                    rotation = 0;
+                }
+            }
+        }
+    }*/
 
 }

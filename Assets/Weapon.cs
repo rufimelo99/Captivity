@@ -157,23 +157,14 @@ public class Weapon : MonoBehaviour
 			if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.WATER)
             {
-                /*while (timer >= 0){*/
-                //Player.ElementalsTOColor[player.active] = false;
-                //Player.ElementalsTOColor[otherPlayer.active] = false;
-                
-                tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                               
+                tornado = Instantiate(fusionTornadoPrefab, player.transform.position, Quaternion.Euler(0f, 0f, 0f));
                 HideAndShow(10.0f);
-                //tornado.active = true;
-                //}else{
-                //Player.ElementalsTOColor[player.active] = true;
-                //Player.ElementalsTOColor[otherPlayer.active] = true;
-                //tornado.active = false;
-                //}
             }
 			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.FIRE)
             {               
-                tornado = Instantiate(fusionTornadoPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                tornado = Instantiate(fusionTornadoPrefab, player.transform.position, Quaternion.Euler(0f, 0f, 0f));
                 HideAndShow(10.0f);
             }
 			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
