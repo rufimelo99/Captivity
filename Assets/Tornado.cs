@@ -20,9 +20,8 @@ public class Tornado : MonoBehaviour
     private Quaternion angle = Quaternion.Euler(0, 0, 0);
     private Quaternion angle2 = Quaternion.Euler(0, 180, 0);
 
-    private int rotation = 0;
+    public bool noMoreTornados = false; // so we can instantiate the players and destroy the torando
 
-    private bool blue = true;
     // Start is called
 
     private Vector2 movement;
@@ -37,13 +36,21 @@ public class Tornado : MonoBehaviour
         StartCoroutine(destoryAfterAFewSecond(10.0f));
     }
 
-    /*void OnTriggerEnter2D(Collider2D obj)
+    void OnTriggerEnter2D(Collider2D obj) //maybe comment this one still dont know
     {
-        if (obj.tag != "Player" && obj.tag!="Player2")
+        if (obj.tag == "Small Enemy Bullet" || obj.tag == "Bounce")
         {
-            Destroy(gameObject);
+            noMoreTornados = true;
         }
-    }*/
+    }
+
+    void OnCollisionEnter2D(Collision2D obj)
+    {
+        if (obj.gameObject.tag == "Small Enemy Bullet" || obj.gameObject.tag == "Bounce")
+        {
+            noMoreTornados = true;
+        }
+    }
 
     void Update()
     {
@@ -72,14 +79,13 @@ public class Tornado : MonoBehaviour
         {
             yield return pause;
             Shoot();
-            //Rotate();
         }
     }
 
     void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.y = Input.GetAxisRaw("Vertical2");
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -87,6 +93,12 @@ public class Tornado : MonoBehaviour
     IEnumerator destoryAfterAFewSecond(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+        GenocideBaby();
+    }
+
+
+    public void GenocideBaby()
+    {
         Destroy(gameObject);
     }
 
@@ -94,40 +106,5 @@ public class Tornado : MonoBehaviour
     {
         rendTornado.color = tornadoColor;
     }
-
-    /*void Shoot()
-    {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }*/
-
-    /*void Rotate()
-    {
-        if (rotation == 0)
-        {
-            angle = Quaternion.Euler(0f, 180f, 0f);
-            rotation = 1;
-        }
-        else
-        {
-            if (rotation == 1)
-            {
-                angle = Quaternion.Euler(0f, 180f, 330f);
-                rotation = 2;
-            }
-            else
-            {
-                if (rotation == 2)
-                {
-                    angle = Quaternion.Euler(0f, 180f, 290f);
-                    rotation = 3;
-                }
-                else
-                {
-                    angle = Quaternion.Euler(0f, 0f, 270f);
-                    rotation = 0;
-                }
-            }
-        }
-    }*/
 
 }

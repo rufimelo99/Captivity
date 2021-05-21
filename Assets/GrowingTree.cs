@@ -10,6 +10,24 @@ public class GrowingTree : MonoBehaviour
     [SerializeField] private SpriteRenderer rend;
 
 
+    void Start()
+    {
+        StartCoroutine(destoryAfterAFewSecond(10f));
+    }
+
+    IEnumerator destoryAfterAFewSecond(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        GenocideBaby();
+    }
+
+
+    public void GenocideBaby()
+    {
+        Destroy(gameObject);
+    }
+
+
 
     void OnCollisionEnter2D(Collision2D obj)
     {

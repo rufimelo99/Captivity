@@ -7,12 +7,18 @@ public class Magma : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(freeze());
+        StartCoroutine(destoryAfterAFewSecond(10f));
     }
 
-    IEnumerator freeze()
+    IEnumerator destoryAfterAFewSecond(float seconds)
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(seconds);
+        GenocideBaby();
+    }
+
+
+    public void GenocideBaby()
+    {
         Destroy(gameObject);
     }
 }
