@@ -13,7 +13,7 @@ public class Tornado : MonoBehaviour
     public float damage = 3f;
     private float moveSpeed = 15f;
     public Rigidbody2D rb;
-    public int color;
+    public int color = 0;
     public bool finished = false;
     public GameObject bulletPrefab;
 
@@ -31,7 +31,6 @@ public class Tornado : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
         damage = 3f;
-        color = 0;
         StartCoroutine(ShotTimer());
         StartCoroutine(destoryAfterAFewSecond(10.0f));
     }
@@ -68,8 +67,21 @@ public class Tornado : MonoBehaviour
         angle *= Quaternion.Euler(0,0, 10);
         angle2 *= Quaternion.Euler(0, 0, -10);
 
-        projectile.GetComponent<Bullet>().makeColor(Color.blue);
-        projectile2.GetComponent<Bullet>().makeColor(Color.red);
+        if (color == 0)
+        {
+            projectile.GetComponent<Bullet>().makeColor(Color.blue);
+            projectile2.GetComponent<Bullet>().makeColor(Color.white);
+        }
+        else{
+            projectile.GetComponent<Bullet>().makeColor(Color.red);
+            projectile2.GetComponent<Bullet>().makeColor(Color.white);
+        }
+    }
+
+
+    public void red() // its just to change the colors of the bullets so what
+    {
+        color = 1;
     }
 
     IEnumerator ShotTimer()

@@ -174,6 +174,7 @@ public class Weapon : MonoBehaviour
             {
                 isThereATornado = true;
                 tornado = Instantiate(fusionTornadoPrefab, player.transform.position, Quaternion.Euler(0f, 0f, 0f));
+                tornado.GetComponent<Tornado>().red();
                 HideAndShow(10.0f);
             }
 			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
