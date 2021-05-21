@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: WaterLevel1_NewStart
+  m_Name: WaterLevel1_NewStartPaper
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -24,57 +24,36 @@ MonoBehaviour:
     Name: Hero 1
     Icon: {fileID: 21300000, guid: 42fb2e73bb89f6045a28901688a95070, type: 3}
   - ID: 2
-    Name: Hero 2
+    Name: Note
     Icon: {fileID: 21300000, guid: 42fb2e73bb89f6045a28901688a95070, type: 3}
   Messages:
   - ID: 1
-    Speaker: 1
-    SpeakerName: Hero 1
+    Speaker: 2
+    SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: What?!? Where am I?
+    MessageText: March 12th, 1987
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
-    SpeakerName: Hero 2
+    SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: Hey! I can hear you! I think I'm in the next room...
+    MessageText: I've held captive for quite a while now...
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
-    SpeakerName: '  ?'
+    SpeakerName: Note
     PreviousMessage: 2
     NextMessage: 4
-    MessageText: 'I see both of you are finally awake... '
+    MessageText: It is time to attemp to leave this place, whatever this is...
     Clip: {fileID: 0}
   - ID: 4
     Speaker: 2
-    SpeakerName: '  ?'
+    SpeakerName: Note
     PreviousMessage: 3
-    NextMessage: 5
-    MessageText: I am a prisoner... *coof coof*  And so are you...
-    Clip: {fileID: 0}
-  - ID: 5
-    Speaker: 2
-    SpeakerName: '  ?'
-    PreviousMessage: 4
-    NextMessage: 6
-    MessageText: But I believe you can set us free...
-    Clip: {fileID: 0}
-  - ID: 6
-    Speaker: 0
-    SpeakerName: Hero 1
-    PreviousMessage: 5
-    NextMessage: 7
-    MessageText: Ok ok, let's figure out a way out of here
-    Clip: {fileID: 0}
-  - ID: 7
-    Speaker: 0
-    SpeakerName: Hero 2
-    PreviousMessage: 6
     NextMessage: -1
-    MessageText: Wait!! I found a note on the ground
+    MessageText: If these note find someone, hope it can help them
     Clip: {fileID: 0}
   Choices:
   - ID: 4
