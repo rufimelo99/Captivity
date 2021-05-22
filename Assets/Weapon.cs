@@ -52,6 +52,7 @@ public class Weapon : MonoBehaviour
     {
 
         turnWeapon();
+        createOffset();
         changeBulletColor();
         chargeCombination();
 
@@ -75,7 +76,10 @@ public class Weapon : MonoBehaviour
     {
 
         //if (GameInputManager.GetKeyDown(combine))
-        if(Input.GetKeyDown(player.playerCombination))
+        if(Input.GetKeyDown(player.playerCombination) &&
+            player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
+            distanceToOtherPlayer <= 5)
         {
             startTime = Time.time;
             pressedKey = true;
@@ -93,7 +97,10 @@ public class Weapon : MonoBehaviour
             
         }
 
-        if (pressedKey)
+        if (pressedKey && 
+            player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
+            distanceToOtherPlayer <= 5)
         {
             amountTimePressed = (Time.time - startTime);
             chargingBar.SetHealth(amountTimePressed);
@@ -148,7 +155,7 @@ public class Weapon : MonoBehaviour
         Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
 
         if (distanceToOtherPlayer <= 5) {
-            //check if their colors are different only
+
             if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
                 myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
             {
@@ -208,7 +215,7 @@ public class Weapon : MonoBehaviour
                 
                 //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
             }
-			if (myElement == otherElement)
+			if (myElement == otherElement && myElement != Player.ElementalsAvailable.HUMAN)
             {
                 GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 projectile.GetComponent<Bullet>().makeColor(bulletColor);
@@ -230,24 +237,44 @@ public class Weapon : MonoBehaviour
         if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
-            offset = new Vector3(2, 0, 0);
         }
 
         if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-            offset = new Vector3(-2, 0, 0);
         }
 
         if (Input.GetAxisRaw(playerObject.PlayerVertical) == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
-            offset = new Vector3(0, 2, 0);
         }
 
         if (Input.GetAxisRaw(playerObject.PlayerVertical) == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
+        }
+    }
+
+
+    void createOffset()
+    {
+        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == 1)
+        {
+            offset = new Vector3(2, 0, 0);
+        }
+
+        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == -1)
+        {
+            offset = new Vector3(-2, 0, 0);
+        }
+
+        if (Input.GetAxisRaw(playerObject.PlayerVertical) == 1)
+        {
+            offset = new Vector3(0, 2, 0);
+        }
+
+        if (Input.GetAxisRaw(playerObject.PlayerVertical) == -1)
+        {
             offset = new Vector3(0, -2, 0);
         }
     }
