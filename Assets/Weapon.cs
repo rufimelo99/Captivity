@@ -256,26 +256,19 @@ public class Weapon : MonoBehaviour
     }
 
 
+    // I wanted a more personalized offset
     void createOffset()
     {
-        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == 1)
-        {
-            offset = new Vector3(2, 0, 0);
-        }
+        float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
+        float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
 
-        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == -1)
+        if (horizontal != 0)
         {
-            offset = new Vector3(-2, 0, 0);
+            offset = new Vector3(2* horizontal, 0, 0);
         }
-
-        if (Input.GetAxisRaw(playerObject.PlayerVertical) == 1)
+        if (vertical != 0)
         {
-            offset = new Vector3(0, 2, 0);
-        }
-
-        if (Input.GetAxisRaw(playerObject.PlayerVertical) == -1)
-        {
-            offset = new Vector3(0, -2, 0);
+            offset = new Vector3(0, 2*vertical, 0);
         }
     }
 }
