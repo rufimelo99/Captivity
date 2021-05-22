@@ -124,7 +124,12 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
         Player.ElementalsAvailable playerElemental = player.elementalsPossesed[player.actualElementalIndex];
-        GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
+        float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
+
+        Vector3 littleOffsetCalledHarry = new Vector3(horizontal, vertical, 0);
+
+        GameObject projectile = Instantiate(bulletPrefab, firePoint.position + littleOffsetCalledHarry, firePoint.rotation);
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
         if (playerElemental == Player.ElementalsAvailable.FIRE) // fire makes more damage
         {
@@ -234,22 +239,26 @@ public class Weapon : MonoBehaviour
 
     void turnWeapon()
     {
-        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == 1)
+
+        float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
+        float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
+
+        if (horizontal == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
 
-        if (Input.GetAxisRaw(playerObject.PlayerHorizontal) == -1)
+        if (horizontal == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
-        if (Input.GetAxisRaw(playerObject.PlayerVertical) == 1)
+        if (vertical == 1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
         }
 
-        if (Input.GetAxisRaw(playerObject.PlayerVertical) == -1)
+        if (vertical == -1)
         {
             firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
         }
@@ -283,8 +292,10 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        if ((myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.GROUND) ||
-            (otherElement == Player.ElementalsAvailable.FIRE && myElement == Player.ElementalsAvailable.GROUND))
+        //LIKE, FOR NOW IT CAN BE AN ELSE CAUSE THERE ARE NO OTHER BUT WE'LL CHECK
+        //if ((myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.GROUND) ||
+        //    (otherElement == Player.ElementalsAvailable.FIRE && myElement == Player.ElementalsAvailable.GROUND))
+        else
         {
             if (horizontal != 0)
             {
