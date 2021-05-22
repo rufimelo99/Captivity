@@ -28,12 +28,15 @@ public class Weapon : MonoBehaviour
     private float amountTimePressed = 0;
     private HP_Bar chargingBar;
 
+    private bool wasCombination = false;  // this is to be able to combine without shooting
+
     //private string attack = "Attack1";
     //private string combine = "Combine1";
 	
 	public float timer = 0.0f;
 
-    private GameObject tornado;
+    private Vector3 littleOffsetCalledHarry = new Vector3(0, 0, 0); //so you don't shoot of of your freaking belly
+    private GameObject tornado; // this is to change the color of the tornado cause it might be white and blue or white and red
 
     void Start()
 	{
@@ -56,7 +59,13 @@ public class Weapon : MonoBehaviour
         changeBulletColor();
         chargeCombination();
 
-        if (Input.GetKeyDown(player.playerFire) && player.elementalsPossesed[player.actualElementalIndex]!=0)
+
+        if (Input.GetKeyDown(player.playerFire))
+        {
+            wasCombination = false;
+        }
+
+        if (Input.GetKeyUp(player.playerFire) && !wasCombination && player.elementalsPossesed[player.actualElementalIndex]!=0)
         //if (GameInputManager.GetKeyDown(attack))
         {
             Shoot();
@@ -92,9 +101,7 @@ public class Weapon : MonoBehaviour
             startTime = 0;
             //Debug.Log("canceled");
             amountTimePressed = 0;
-            chargingBar.SetHealth(amountTimePressed);
-            
-            
+            chargingBar.SetHealth(amountTimePressed);            
         }
 
         if (pressedKey && 
@@ -121,13 +128,11 @@ public class Weapon : MonoBehaviour
         }
         //chargingBar
     }
+
+
     void Shoot()
     {
         Player.ElementalsAvailable playerElemental = player.elementalsPossesed[player.actualElementalIndex];
-        float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
-        float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
-
-        Vector3 littleOffsetCalledHarry = new Vector3(horizontal, vertical, 0);
 
         GameObject projectile = Instantiate(bulletPrefab, firePoint.position + littleOffsetCalledHarry, firePoint.rotation);
         projectile.GetComponent<Bullet>().makeColor(bulletColor);
@@ -242,6 +247,11 @@ public class Weapon : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
         float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
+
+        if(horizontal!=0 || vertical != 0)
+        {
+            littleOffsetCalledHarry = new Vector3(horizontal, vertical, 0);
+        }
 
         if (horizontal == 1)
         {
