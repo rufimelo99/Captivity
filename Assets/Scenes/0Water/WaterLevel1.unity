@@ -66804,6 +66804,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem
       objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713596, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.241879
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713596, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.653944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713596, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0266
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713596, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.85071
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713596, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713599, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_Constraints
