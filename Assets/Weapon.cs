@@ -28,7 +28,7 @@ public class Weapon : MonoBehaviour
     private float amountTimePressed = 0;
     private HP_Bar chargingBar;
 
-    private bool wasCombination = false;  // this is to be able to combine without shooting
+    //private bool wasCombination = false;  // this is to be able to combine without shooting
 
     //private string attack = "Attack1";
     //private string combine = "Combine1";
@@ -59,14 +59,13 @@ public class Weapon : MonoBehaviour
         changeBulletColor();
         chargeCombination();
 
-
         if (Input.GetKeyDown(player.playerFire))
         {
-            wasCombination = false;
+            startTime = Time.time;
         }
 
-        if (Input.GetKeyUp(player.playerFire) && !wasCombination && player.elementalsPossesed[player.actualElementalIndex]!=0)
-        //if (GameInputManager.GetKeyDown(attack))
+        if (Input.GetKeyUp(player.playerFire) && Time.time - startTime < 0.5f &&
+            player.elementalsPossesed[player.actualElementalIndex]!=0)
         {
             Shoot();
         }
@@ -111,6 +110,7 @@ public class Weapon : MonoBehaviour
         {
             amountTimePressed = (Time.time - startTime);
             chargingBar.SetHealth(amountTimePressed);
+            
             if (amountTimePressed >= 1)
             {
                 player.tryingCombination = true;

@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
             selectPreviousElemental = KeyCode.Q;
             selectNextElemental = KeyCode.E;
             playerFire = KeyCode.Space;
-            playerCombination = KeyCode.V;
+            playerCombination = KeyCode.V; // V
 
 
             PlayerColor = "Color2";
