@@ -34,7 +34,6 @@ public class Weapon : MonoBehaviour
 	public float timer = 0.0f;
 
     private GameObject tornado;
-    private bool isThereATornado = false;  // to know if there is a tornado daaa
 
     void Start()
 	{
@@ -64,15 +63,6 @@ public class Weapon : MonoBehaviour
 
         distanceToOtherPlayer = (transform.position - otherPlayer.transform.position).sqrMagnitude;
 
-        if (isThereATornado)  // THIS STIL DOESN'T WORK BU I DONNON WHY DAFUCK
-        {
-            if (tornado.GetComponent<Tornado>().noMoreTornados) // set the players to active again and then destory the sucker
-            {
-                tornado.GetComponent<Tornado>().GenocideBaby();
-                ShowPlayers();      
-            }
-        }
-
     }
 
 
@@ -99,6 +89,8 @@ public class Weapon : MonoBehaviour
             //Debug.Log("canceled");
             amountTimePressed = 0;
             chargingBar.SetHealth(amountTimePressed);
+            
+            
         }
 
         if (pressedKey)
@@ -165,17 +157,15 @@ public class Weapon : MonoBehaviour
 			if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.WATER)
             {
-                isThereATornado = true;
                 tornado = Instantiate(fusionTornadoPrefab, player.transform.position, Quaternion.Euler(0f, 0f, 0f));
-                HideAndShow(10.0f);
+                tornado.GetComponent<Tornado>().assignPlayers(player, otherPlayer);
             }
 			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.FIRE)
             {
-                isThereATornado = true;
                 tornado = Instantiate(fusionTornadoPrefab, player.transform.position, Quaternion.Euler(0f, 0f, 0f));
                 tornado.GetComponent<Tornado>().red();
-                HideAndShow(10.0f);
+                tornado.GetComponent<Tornado>().assignPlayers(player, otherPlayer);
             }
 			if (myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.AIR ||
                 myElement == Player.ElementalsAvailable.AIR && otherElement == Player.ElementalsAvailable.GROUND)
@@ -233,30 +223,6 @@ public class Weapon : MonoBehaviour
     }
 
 
-    private void HideAndShow(float delay)
-    {
-        player.gameObject.SetActive(false);
-        otherPlayer.gameObject.SetActive(false);
-
-        // Call Show after delay seconds
-        if (isThereATornado)
-        {
-            Invoke(nameof(ShowPlayers), delay);
-        }
-    }
-
-    private void ShowPlayers()
-    {
-        isThereATornado = false;
-
-        player.gameObject.SetActive(true); //put back player 1
-        player.gameObject.transform.position = tornado.transform.position;
-        player.putTheRightColor();
-
-        otherPlayer.gameObject.SetActive(true);  //put back player 1
-        otherPlayer.gameObject.transform.position = tornado.transform.position;
-        otherPlayer.putTheRightColor();
-    }
 
 
     void turnWeapon()

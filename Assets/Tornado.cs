@@ -20,7 +20,8 @@ public class Tornado : MonoBehaviour
     private Quaternion angle = Quaternion.Euler(0, 0, 0);
     private Quaternion angle2 = Quaternion.Euler(0, 180, 0);
 
-    public bool noMoreTornados = false; // so we can instantiate the players and destroy the torando
+    private Player player1;
+    private Player player2;
 
     // Start is called
 
@@ -39,7 +40,7 @@ public class Tornado : MonoBehaviour
     {
         if (obj.tag == "Small Enemy Bullet" || obj.tag == "Bounce")
         {
-            noMoreTornados = true;
+            GenocideBaby();
         }
     }
 
@@ -47,7 +48,7 @@ public class Tornado : MonoBehaviour
     {
         if (obj.gameObject.tag == "Small Enemy Bullet" || obj.gameObject.tag == "Bounce")
         {
-            noMoreTornados = true;
+            GenocideBaby();
         }
     }
 
@@ -108,9 +109,26 @@ public class Tornado : MonoBehaviour
         GenocideBaby();
     }
 
+    public void assignPlayers(Player player, Player otherPlayer)
+    {
+        player1 = player;
+        player2 = otherPlayer;
+
+        player1.gameObject.SetActive(false);
+        player2.gameObject.SetActive(false);
+    }
+
 
     public void GenocideBaby()
     {
+        player1.gameObject.SetActive(true); //put back player 1
+        player1.gameObject.transform.position = tornado.transform.position;
+        player1.putTheRightColor();
+
+        player2.gameObject.SetActive(true);  //put back player 1
+        player2.gameObject.transform.position = tornado.transform.position;
+        player2.putTheRightColor();
+
         Destroy(gameObject);
     }
 
