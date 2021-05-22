@@ -36,7 +36,8 @@ public class EnemyMole : MonoBehaviour
     {
         distance1 = (Player1.position - transform.position).sqrMagnitude;
         distance2 = (Player2.position - transform.position).sqrMagnitude;
-        if(distance1 <= distance2)
+
+        if (distance1 <= distance2)
         {
             direction = Player1.position - transform.position;
         }
@@ -87,6 +88,11 @@ public class EnemyMole : MonoBehaviour
             if (obj.GetComponent<Bullet>().shock)
             {
                 StartCoroutine(freeze());
+            }
+
+            if (health <= 0)
+            {
+                frozen = true;
             }
 
             health = health - obj.GetComponent<Bullet>().damage;
