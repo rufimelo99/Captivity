@@ -259,16 +259,37 @@ public class Weapon : MonoBehaviour
     // I wanted a more personalized offset
     void createOffset()
     {
+
+        Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
+        Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
+
         float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
         float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
 
-        if (horizontal != 0)
+        if ((myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND) ||
+            (otherElement == Player.ElementalsAvailable.WATER && myElement == Player.ElementalsAvailable.GROUND))
         {
-            offset = new Vector3(2* horizontal, 0, 0);
+            if (horizontal != 0)
+            {
+                offset = new Vector3(2 * horizontal, 0.8f, 0);
+            }
+            if (vertical != 0)
+            {
+                offset = new Vector3(0, 2 * vertical, 0);
+            }
         }
-        if (vertical != 0)
+
+        if ((myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.GROUND) ||
+            (otherElement == Player.ElementalsAvailable.FIRE && myElement == Player.ElementalsAvailable.GROUND))
         {
-            offset = new Vector3(0, 2*vertical, 0);
+            if (horizontal != 0)
+            {
+                offset = new Vector3(2 * horizontal, 0, 0);
+            }
+            if (vertical != 0)
+            {
+                offset = new Vector3(0, 2 * vertical, 0);
+            }
         }
     }
 }
