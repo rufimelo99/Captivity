@@ -271,11 +271,15 @@ public class Weapon : MonoBehaviour
         {
             if (horizontal != 0)
             {
-                offset = new Vector3(2 * horizontal, 0.8f, 0);
+                offset = new Vector3(horizontal, 0.8f, 0);
             }
-            if (vertical != 0)
+            if (vertical < 0)
             {
-                offset = new Vector3(0, 2 * vertical, 0);
+                offset = new Vector3(0, vertical, 0);
+            }
+            if (vertical > 0)
+            {
+                offset = new Vector3(0, 2*vertical, 0);
             }
         }
 
