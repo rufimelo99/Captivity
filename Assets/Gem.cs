@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gem : MonoBehaviour
 {
@@ -17,6 +18,16 @@ public class Gem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        if (GlobalControl.Instance.gemsCollected.Contains(gemType) && SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            gameObject.SetActive(false); //Destroy(gameObject);
+        }
+
+        if (GlobalControl.Instance.gemsCollected.Contains(gemType) && SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            gameObject.SetActive(true);
+        }
         //color = 0;
         /*switch (color)
         {
@@ -45,7 +56,7 @@ public class Gem : MonoBehaviour
     {
         if(player1 && player2)
         {
-            GlobalControl.Instance.gemsCollected.Add(gemType);
+            GlobalControl.Instance.addGemWithoutRepetition(gemType);
             Destroy(gameObject);
 
             DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
@@ -59,7 +70,6 @@ public class Gem : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        //river  - TODO - check the above todo ya dingus
         if (col.gameObject.tag == "Player")
         {
             player1 = true;
@@ -73,7 +83,6 @@ public class Gem : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D col)
     {
-        //river  - TODO - check the above todo ya dingus
         if (col.gameObject.tag == "Player")
         {
             player1 = false;

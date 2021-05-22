@@ -26,11 +26,23 @@ public class GlobalControl : MonoBehaviour
 
 
 
+    public void addGemWithoutRepetition(GemsAvailable gem)
+    {
+        //if (!gemsCollected.Contains(gem))
+        //{
+        Debug.Log('g');
+        gemsCollected.Add(gem);
+        //}
+    }
+
+
+
     void Awake()
     {
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
-        gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
+        //THESE ARE NOT THE GEMS YOU ARE LOOKING FOR
+        //gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
 
 
         //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
