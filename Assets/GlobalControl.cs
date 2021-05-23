@@ -52,12 +52,12 @@ public class GlobalControl : MonoBehaviour
         */
 
         //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
-        //elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
-        /*elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
+        elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+        elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
         elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
         elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
         elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
-        */
+        
 
         if (Instance == null)
         {
