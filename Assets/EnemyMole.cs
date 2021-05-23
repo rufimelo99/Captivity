@@ -48,6 +48,11 @@ public class EnemyMole : MonoBehaviour
 
         animate();
 
+        if (health <= 0)
+        {
+            StartCoroutine(freeze());
+        }
+
     }
 
     void animate()
