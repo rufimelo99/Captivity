@@ -31,9 +31,9 @@ public class Tornado : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
-        damage = 3f;
+        damage = 1f;
         StartCoroutine(ShotTimer());
-        StartCoroutine(destoryAfterAFewSecond(10.0f));
+        StartCoroutine(destoryAfterAFewSecond(5.0f));
     }
 
     void OnTriggerEnter2D(Collider2D obj) //maybe comment this one still dont know
