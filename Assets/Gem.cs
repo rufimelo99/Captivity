@@ -20,9 +20,12 @@ public class Gem : MonoBehaviour
         spriteRenderer.color = Color.black;
     }
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        assignColor();
 
         spriteRenderer.color = Color.white;
 
@@ -57,6 +60,33 @@ public class Gem : MonoBehaviour
                 spriteRenderer.color = new Color(210, 81, 176);//purple color
                 break;
         }*/
+    }
+
+    void assignColor()
+    {
+        int color = 0;
+        switch (gemType)
+        {
+            case GlobalControl.GemsAvailable.WATER:
+                color = 0;  //blue color
+                break;
+            case GlobalControl.GemsAvailable.GROUND:
+                color = 1;  //blue color
+                break;
+            case GlobalControl.GemsAvailable.FIRE:
+                color = 2;  //blue color
+                break;
+            case GlobalControl.GemsAvailable.AIR:
+                color = 3;  //blue color
+                break;
+            case GlobalControl.GemsAvailable.ELECTRICITY:
+                color = 4;  //blue color
+                break;
+            case GlobalControl.GemsAvailable.WIZARD:
+                color = 5;  //blue color
+                break;
+        }
+        animator.SetInteger("Color", color);
     }
 
     void Update()

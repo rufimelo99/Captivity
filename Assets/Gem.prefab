@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5231569563846713598}
   gemType: 0
+  animator: {fileID: -7571885441266123663}
+  color: 0
 --- !u!95 &-7571885441266123663
 Animator:
   serializedVersion: 3

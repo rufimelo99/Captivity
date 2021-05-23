@@ -3382,7 +3382,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -3448,6 +3448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ELEc
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: gemType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713598, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -3623,7 +3628,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -3689,6 +3694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Air
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: gemType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713598, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -32404,7 +32414,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -113015,7 +113025,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -113081,6 +113091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Harry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: gemType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713598, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -115634,7 +115649,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -115700,6 +115715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FIre
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: gemType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713598, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -116074,12 +116094,12 @@ RectTransform:
   - {fileID: 2079866398}
   - {fileID: 611854467}
   - {fileID: 1444116411}
-  - {fileID: 757885796}
   - {fileID: 1960146397}
   - {fileID: 1313707099}
   - {fileID: 432462723}
   - {fileID: 367582612}
   - {fileID: 1114820991}
+  - {fileID: 757885796}
   m_Father: {fileID: 2133963413}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117373,7 +117393,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
@@ -117439,6 +117459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: gemType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713598, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}

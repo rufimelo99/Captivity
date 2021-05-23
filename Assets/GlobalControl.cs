@@ -42,9 +42,10 @@ public class GlobalControl : MonoBehaviour
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
         //THESE ARE NOT THE GEMS YOU ARE LOOKING FOR
+        gemsCollected.Add(GlobalControl.GemsAvailable.GROUND);
+
         /*gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
         gemsCollected.Add(GlobalControl.GemsAvailable.FIRE);
-        gemsCollected.Add(GlobalControl.GemsAvailable.GROUND);
         gemsCollected.Add(GlobalControl.GemsAvailable.AIR);
         gemsCollected.Add(GlobalControl.GemsAvailable.ELECTRICITY);
         gemsCollected.Add(GlobalControl.GemsAvailable.WIZARD);
