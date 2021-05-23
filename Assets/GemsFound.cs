@@ -18,27 +18,27 @@ public class GemsFound : MonoBehaviour
     void Start()
     {
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.WATER)){
-            Destroy(gem1);
+            gem1.GetComponent<Gem>().notFoundShowInMenu();   //Destroy(gem1);
         }
 
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.GROUND)){
-            Destroy(gem2);
+            gem2.GetComponent<Gem>().notFoundShowInMenu(); // Destroy(gem2);
         }
 
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.FIRE)){
-            Destroy(gem3);
+            gem3.GetComponent<Gem>().notFoundShowInMenu();
         }
 
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.AIR)){
-            Destroy(gem4);
+            gem4.GetComponent<Gem>().notFoundShowInMenu();
         }
 
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.ELECTRICITY)){
-            Destroy(gem5);
+            gem5.GetComponent<Gem>().notFoundShowInMenu();
         }
 
         if (!GlobalControl.Instance.gemsCollected.Contains(GlobalControl.GemsAvailable.WIZARD)){
-            Destroy(gem6);
+            gem6.GetComponent<Gem>().notFoundShowInMenu();
         }
     }
 

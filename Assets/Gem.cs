@@ -15,9 +15,16 @@ public class Gem : MonoBehaviour
 
     public GlobalControl.GemsAvailable gemType;
 
+    public void notFoundShowInMenu()
+    {
+        spriteRenderer.color = Color.black;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+
+        spriteRenderer.color = Color.white;
 
         if (GlobalControl.Instance.gemsCollected.Contains(gemType) && SceneManager.GetActiveScene().buildIndex != 3)
         {
@@ -57,7 +64,7 @@ public class Gem : MonoBehaviour
         if(player1 && player2)
         {
             GlobalControl.Instance.addGemWithoutRepetition(gemType);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
             DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
             if (displayDialogue)
