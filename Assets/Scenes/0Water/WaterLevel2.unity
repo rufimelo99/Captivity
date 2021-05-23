@@ -12077,6 +12077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cba26767c6e1e49b03c2ba3ad5def6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 135416972}
   DEBUG: 0
   playerId: 1
   actualElementalIndex: 0
@@ -45206,6 +45207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cba26767c6e1e49b03c2ba3ad5def6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 871239287}
   DEBUG: 0
   playerId: 2
   actualElementalIndex: 0

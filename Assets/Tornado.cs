@@ -20,8 +20,8 @@ public class Tornado : MonoBehaviour
     private Quaternion angle = Quaternion.Euler(0, 0, 0);
     private Quaternion angle2 = Quaternion.Euler(0, 180, 0);
 
-    private Player player1;
-    private Player player2;
+    private GameObject player1;
+    private GameObject player2;
 
     // Start is called
 
@@ -54,10 +54,8 @@ public class Tornado : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shoot();
-        }
+        player1.gameObject.transform.position = tornado.transform.position;
+        player2.gameObject.transform.position = tornado.transform.position;
     }
 
     void Shoot()
@@ -111,23 +109,34 @@ public class Tornado : MonoBehaviour
 
     public void assignPlayers(Player player, Player otherPlayer)
     {
-        player1 = player;
-        player2 = otherPlayer;
+        player1 = player.gameObject;
+        player2 = otherPlayer.gameObject;
 
-        player1.gameObject.SetActive(false);
-        player2.gameObject.SetActive(false);
+
+        player1.GetComponent<SpriteRenderer>().enabled = false; //make them invisible
+        player2.GetComponent<SpriteRenderer>().enabled = false;
+
+        player1.GetComponent<Collider2D>().enabled = false; //make them ghosts
+        player2.GetComponent<Collider2D>().enabled = false;
+
+        //player1.gameObject.SetActive(false);
+        //player2.gameObject.SetActive(false);
     }
 
 
     public void GenocideBaby()
     {
-        player1.gameObject.SetActive(true); //put back player 1
-        player1.gameObject.transform.position = tornado.transform.position;
-        player1.putTheRightColor();
+        player1.GetComponent<SpriteRenderer>().enabled = true; //player1.gameObject.SetActive(true); //put back player 1
+        player1.transform.position = tornado.transform.position;
+        player1.GetComponent<Player>().putTheRightColor();
+        player1.GetComponent<Collider2D>().enabled = true;
 
-        player2.gameObject.SetActive(true);  //put back player 1
-        player2.gameObject.transform.position = tornado.transform.position;
-        player2.putTheRightColor();
+
+        player2.GetComponent<SpriteRenderer>().enabled = true;  //put back player 1
+        player2.transform.position = tornado.transform.position;
+        player2.GetComponent<Player>().putTheRightColor();
+        player2.GetComponent<Collider2D>().enabled = true;
+
 
         Destroy(gameObject);
     }

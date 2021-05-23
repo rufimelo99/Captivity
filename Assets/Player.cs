@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+
     public bool DEBUG = false;
     public int playerId;
     [HideInInspector]
