@@ -40,6 +40,7 @@ public class Weapon : MonoBehaviour
 	public float timer = 0.0f;
 
     private Vector3 littleOffsetCalledHarry = new Vector3(0, 0, 0); //so you don't shoot of of your freaking belly
+    private Vector3 targetOffset = new Vector3(0, 0, 0); //so you don't shoot of of your freaking belly
     private GameObject tornado; // this is to change the color of the tornado cause it might be white and blue or white and red
     private GameObject landingArea;
 
@@ -63,6 +64,7 @@ public class Weapon : MonoBehaviour
         createOffset();
         changeBulletColor();
         chargeCombination();
+        createTargetOffset();
 
         if (Input.GetKeyDown(player.playerFire))
         {
@@ -107,7 +109,8 @@ public class Weapon : MonoBehaviour
             amountTimePressed = 0;
             chargingBar.SetHealth(amountTimePressed);
 
-            Destroy(landingArea); // for the target to dissapear
+            Destroy(otherPlayer.gameObject.GetComponent<Weapon>().landingArea); // for the target to dissapear
+            Destroy(landingArea);
             isThereATarget = false;
             otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = false;
         }
@@ -185,14 +188,15 @@ public class Weapon : MonoBehaviour
         if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
                 myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
         {
-            landingArea = Instantiate(landingAreaPrefab, firePoint.position + littleOffsetCalledHarry, Quaternion.Euler(0f, 0f, 0f));
+            landingArea = Instantiate(landingAreaPrefab, firePoint.position + targetOffset, Quaternion.Euler(0f, 0f, 0f));
             landingArea.SetActive(true);
         }
     }
 
     void Combine()
     {
-        Destroy(landingArea); // for the target to dissapear
+        Destroy(otherPlayer.gameObject.GetComponent<Weapon>().landingArea); // for the target to dissapear
+        Destroy(landingArea);
         isThereATarget = false;
         otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = false;
 
@@ -310,6 +314,48 @@ public class Weapon : MonoBehaviour
         }
     }
 
+
+    void createTargetOffset()
+    {
+        Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
+        Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
+
+        float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
+        float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
+
+        // For the tree combination
+        if ((myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND) ||
+            (otherElement == Player.ElementalsAvailable.WATER && myElement == Player.ElementalsAvailable.GROUND))
+        {
+            if (horizontal != 0)
+            {
+                targetOffset = new Vector3(1.5f * horizontal, 0, 0);
+            }
+            if (vertical < 0)
+            {
+                targetOffset = new Vector3(0, 2*vertical, 0);
+            }
+            if (vertical > 0)
+            {
+                targetOffset = new Vector3(0, vertical, 0);
+            }
+        }
+
+        //LIKE, FOR NOW IT CAN BE AN ELSE CAUSE THERE ARE NO OTHER BUT WE'LL CHECK
+        //if ((myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.GROUND) ||
+        //    (otherElement == Player.ElementalsAvailable.FIRE && myElement == Player.ElementalsAvailable.GROUND))
+        else
+        {
+            if (horizontal != 0)
+            {
+                targetOffset = new Vector3(2 * horizontal, 0, 0);
+            }
+            if (vertical != 0)
+            {
+                targetOffset = new Vector3(0, 2 * vertical, 0);
+            }
+        }
+    }
 
     // I wanted a more personalized offset
     void createOffset()
