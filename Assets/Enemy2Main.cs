@@ -98,7 +98,6 @@ public class Enemy2Main : MonoBehaviour
         shock = true;
         yield return new WaitForSeconds(1f);
         shock = false;
-        Debug.Log('e');
     }
 
     void Shoot()
