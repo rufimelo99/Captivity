@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     private Player playerObject;
     private Color bulletColor;
 
-	private Vector3 offset;
+    private Vector3 offset;
     private float distanceToOtherPlayer;
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
     void Start()
 	{
 
-        offset = new Vector3(2, 0, 0);
+        offset = new Vector3(1.5f, 0.8f, 0);  // beacuse the players start facing the right but this isn't very good
         playerObject = gameObject.GetComponent<Player>();
 
         chargingBar = gameObject.GetComponent<Player>().chargingBar;
@@ -285,12 +285,13 @@ public class Weapon : MonoBehaviour
         float horizontal = Input.GetAxisRaw(playerObject.PlayerHorizontal);
         float vertical = Input.GetAxisRaw(playerObject.PlayerVertical);
 
+        // For the tree combination
         if ((myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND) ||
             (otherElement == Player.ElementalsAvailable.WATER && myElement == Player.ElementalsAvailable.GROUND))
         {
             if (horizontal != 0)
             {
-                offset = new Vector3(horizontal, 0.8f, 0);
+                offset = new Vector3(1.5f*horizontal, 0.8f, 0);
             }
             if (vertical < 0)
             {
