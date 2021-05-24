@@ -125,6 +125,13 @@ public class Weapon : MonoBehaviour
 
             if (!isThereATarget && !otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget)
             {
+                isThereATarget = true;
+                otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = false;
+                //ShowLandingArea();
+            }
+
+            if (!isThereATarget)
+            {
                 ShowLandingArea();
             }
 
