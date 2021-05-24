@@ -199,10 +199,9 @@ MonoBehaviour:
   myColliderTornado: {fileID: 1358532180800591745}
   rendTornado: {fileID: 3063110595740601320}
   speed: 5
-  damage: 3
+  damage: 0.5
   rb: {fileID: 6273342792300954423}
   color: 0
   finished: 0
   bulletPrefab: {fileID: 3671954925324085128, guid: 91d69078389650543ae95e2748860e9f,
     type: 3}
-  firePoint: {fileID: 0}
