@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
     public GameObject magmaPrefab;
     public GameObject landingAreaPrefab;
 
-    private bool isThereATarget = false; // so the targets don't go crazy
+    public bool isThereATarget = false; // so the targets don't go crazy
 
 
     private bool pressedKey = false;
@@ -109,6 +109,7 @@ public class Weapon : MonoBehaviour
 
             Destroy(landingArea); // for the target to dissapear
             isThereATarget = false;
+            otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = false;
         }
 
         if (pressedKey && 
@@ -119,10 +120,9 @@ public class Weapon : MonoBehaviour
             amountTimePressed = (Time.time - startTime);
             chargingBar.SetHealth(amountTimePressed);
 
-            if (!isThereATarget)
+            if (!isThereATarget && !otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget)
             {
                 ShowLandingArea();
-                isThereATarget = true;
             }
 
             if (amountTimePressed >= 1)
@@ -131,9 +131,6 @@ public class Weapon : MonoBehaviour
                 if (otherPlayer.tryingCombination)
                 {
                     Combine();
-
-                    Destroy(landingArea); // for the target to dissapear
-                    isThereATarget = false;
 
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
@@ -179,9 +176,12 @@ public class Weapon : MonoBehaviour
 
     void ShowLandingArea()
     {
-        Debug.Log("I made it here");
+        //Debug.Log("I made it here");
         Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
         Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
+        isThereATarget = true;
+        otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = true; // so the other player doesn't make a target
+
         if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
                 myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
         {
@@ -192,6 +192,10 @@ public class Weapon : MonoBehaviour
 
     void Combine()
     {
+        Destroy(landingArea); // for the target to dissapear
+        isThereATarget = false;
+        otherPlayer.gameObject.GetComponent<Weapon>().isThereATarget = false;
+
 
         Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
         Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
