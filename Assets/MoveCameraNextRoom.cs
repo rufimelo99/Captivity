@@ -17,6 +17,8 @@ public class MoveCameraNextRoom : MonoBehaviour
     private Vector3 next;
     private Vector3 previous;
 
+    public int color = 0; // so it only works with a specific element
+
 
     void Start()
     {
@@ -37,8 +39,15 @@ public class MoveCameraNextRoom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if(color == 1 && (collision.tag=="Player" || collision.tag=="Player2") &&
+            collision.GetComponent<Player>().elementalsPossesed[collision.GetComponent<Player>().actualElementalIndex] !=
+            Player.ElementalsAvailable.WATER)
+        {
+            ;
+        }
        
-        if (gameObject.tag == "Room Changer Next")
+        else if (gameObject.tag == "Room Changer Next")
         {
             
             
