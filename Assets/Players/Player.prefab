@@ -194,6 +194,8 @@ MonoBehaviour:
     type: 3}
   magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
     type: 3}
+  landingArea: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
+    type: 3}
   timer: 0
 --- !u!61 &2168002739416069393
 BoxCollider2D:

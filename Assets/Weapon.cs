@@ -21,12 +21,16 @@ public class Weapon : MonoBehaviour
 	public GameObject combiningTreePrefab;
 	public GameObject fusionTornadoPrefab;
     public GameObject magmaPrefab;
-	
+    public GameObject landingArea;
+
+    private bool isThereATarget = false; // so the targets don't go crazy
+
 
     private bool pressedKey = false;
     private float startTime = 0;
     private float amountTimePressed = 0;
     private HP_Bar chargingBar;
+
 
     //private bool wasCombination = false;  // this is to be able to combine without shooting
 
@@ -83,7 +87,6 @@ public class Weapon : MonoBehaviour
     void chargeCombination()
     {
 
-        //if (GameInputManager.GetKeyDown(combine))
         if(Input.GetKeyDown(player.playerCombination) &&
             player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
             otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
@@ -91,6 +94,7 @@ public class Weapon : MonoBehaviour
         {
             startTime = Time.time;
             pressedKey = true;
+
         }
         //cancel
         if (Input.GetKeyUp(player.playerCombination))
@@ -110,13 +114,20 @@ public class Weapon : MonoBehaviour
         {
             amountTimePressed = (Time.time - startTime);
             chargingBar.SetHealth(amountTimePressed);
-            
+
+            if (!isThereATarget)
+            {
+                ShowLandingArea();
+                isThereATarget = true;
+            }
+
             if (amountTimePressed >= 1)
             {
                 player.tryingCombination = true;
                 if (otherPlayer.tryingCombination)
                 {
                     Combine();
+                    isThereATarget = false;
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
                     pressedKey = false;
@@ -155,6 +166,20 @@ public class Weapon : MonoBehaviour
         if (playerElemental == Player.ElementalsAvailable.WATER) // this is dumb but its for the rock
         {
             projectile.GetComponent<Bullet>().water();
+        }
+    }
+
+
+    void ShowLandingArea()
+    {
+        Debug.Log("I made it here");
+        Player.ElementalsAvailable myElement = player.elementalsPossesed[player.actualElementalIndex];
+        Player.ElementalsAvailable otherElement = player.elementalsPossesed[otherPlayer.actualElementalIndex];
+        if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
+                myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
+        {
+            Instantiate(landingArea, firePoint.position + littleOffsetCalledHarry, Quaternion.Euler(0f, 0f, 0f));
+            landingArea.SetActive(true);
         }
     }
 
