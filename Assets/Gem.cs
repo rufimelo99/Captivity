@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Gem : MonoBehaviour
 {
 
 
     //[SerializeField] private int color;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Image image;
 
     private bool player1 = false;
     private bool player2 = false;
@@ -17,7 +18,7 @@ public class Gem : MonoBehaviour
 
     public void notFoundShowInMenu()
     {
-        spriteRenderer.color = Color.black;
+        image.color = Color.black;
     }
 
     public Animator animator;
@@ -26,8 +27,6 @@ public class Gem : MonoBehaviour
     void Start()
     {
         assignColor();
-
-        spriteRenderer.color = Color.white;
 
         if (GlobalControl.Instance.gemsCollected.Contains(gemType) && SceneManager.GetActiveScene().buildIndex != 3)
         {
@@ -38,28 +37,6 @@ public class Gem : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
-        //color = 0;
-        /*switch (color)
-        {
-            case 0:
-                spriteRenderer.color = Color.blue;  //blue color
-                break;
-            case 1:
-                spriteRenderer.color = Color.green;  //green color
-                break;
-            case 2:
-                spriteRenderer.color = Color.red;  //red color
-                break;
-            case 3:
-                spriteRenderer.color = Color.gray;  //white-gray color
-                break;
-            case 4:
-                spriteRenderer.color = Color.yellow;  //yellow color
-                break;
-            case 5:
-                spriteRenderer.color = new Color(210, 81, 176);//purple color
-                break;
-        }*/
     }
 
     void assignColor()
