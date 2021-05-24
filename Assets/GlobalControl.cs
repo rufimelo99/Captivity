@@ -41,7 +41,7 @@ public class GlobalControl : MonoBehaviour
     {
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
-        CompletedLevels = 11;
+        CompletedLevels = 0;
 
         //THESE ARE NOT THE GEMS YOU ARE LOOKING FOR
         /*gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
