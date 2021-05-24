@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
 	public GameObject combiningTreePrefab;
 	public GameObject fusionTornadoPrefab;
     public GameObject magmaPrefab;
-    public GameObject landingArea;
+    public GameObject landingAreaPrefab;
 
     private bool isThereATarget = false; // so the targets don't go crazy
 
@@ -41,6 +41,7 @@ public class Weapon : MonoBehaviour
 
     private Vector3 littleOffsetCalledHarry = new Vector3(0, 0, 0); //so you don't shoot of of your freaking belly
     private GameObject tornado; // this is to change the color of the tornado cause it might be white and blue or white and red
+    private GameObject landingArea;
 
     void Start()
 	{
@@ -104,7 +105,10 @@ public class Weapon : MonoBehaviour
             startTime = 0;
             //Debug.Log("canceled");
             amountTimePressed = 0;
-            chargingBar.SetHealth(amountTimePressed);            
+            chargingBar.SetHealth(amountTimePressed);
+
+            Destroy(landingArea); // for the target to dissapear
+            isThereATarget = false;
         }
 
         if (pressedKey && 
@@ -127,7 +131,10 @@ public class Weapon : MonoBehaviour
                 if (otherPlayer.tryingCombination)
                 {
                     Combine();
+
+                    Destroy(landingArea); // for the target to dissapear
                     isThereATarget = false;
+
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
                     pressedKey = false;
@@ -178,7 +185,7 @@ public class Weapon : MonoBehaviour
         if (myElement == Player.ElementalsAvailable.WATER && otherElement == Player.ElementalsAvailable.GROUND ||
                 myElement == Player.ElementalsAvailable.GROUND && otherElement == Player.ElementalsAvailable.WATER)
         {
-            Instantiate(landingArea, firePoint.position + littleOffsetCalledHarry, Quaternion.Euler(0f, 0f, 0f));
+            landingArea = Instantiate(landingAreaPrefab, firePoint.position + littleOffsetCalledHarry, Quaternion.Euler(0f, 0f, 0f));
             landingArea.SetActive(true);
         }
     }
