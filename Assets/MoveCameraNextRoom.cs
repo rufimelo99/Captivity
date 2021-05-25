@@ -75,7 +75,7 @@ public class MoveCameraNextRoom : MonoBehaviour
             }
 
         }
-        if (gameObject.tag == "Room Changer Back")
+        else if (gameObject.tag == "Room Changer Back")
         {
             
             if (collision.tag == "Player")
