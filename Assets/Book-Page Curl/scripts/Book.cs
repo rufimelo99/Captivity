@@ -12,12 +12,14 @@ public enum FlipMode
     LeftToRight
 }
 [ExecuteInEditMode]
-public class Book : MonoBehaviour {
+public class Book : MonoBehaviour
+{
     public Canvas canvas;
     [SerializeField]
     RectTransform BookPanel;
     public Sprite background;
     public Sprite[] bookPages;
+    public Sprite[] bookPagesCompleted;
     public bool interactable=true;
     public bool enableShadowEffect=true;
     //represent the index of the sprite shown in the right page
@@ -94,8 +96,18 @@ public class Book : MonoBehaviour {
         ShadowLTR.rectTransform.sizeDelta = new Vector2(pageWidth, shadowPageHeight);
         ShadowLTR.rectTransform.pivot = new Vector2(0, (pageWidth / 2) / shadowPageHeight);
 
-    }
+        for (int i = 0; i < GlobalControl.Instance.pagesCollected.Length; i++)
+        {
+            Debug.Log(GlobalControl.Instance.pagesCollected[i]);
+            if (GlobalControl.Instance.pagesCollected[i])
+            {
+                gameObject.GetComponent<Book>().bookPages[i] = gameObject.GetComponent<Book>().bookPagesCompleted[i];
+            }
+        }
 
+
+    }
+   
     private void CalcCurlCriticalPoints()
     {
         sb = new Vector3(0, -BookPanel.rect.height / 2);
@@ -141,6 +153,9 @@ public class Book : MonoBehaviour {
         if (pageDragging && interactable)
         {
             UpdateBook();
+
+            
+
         }
     }
     public void UpdateBook()
@@ -324,7 +339,7 @@ public class Book : MonoBehaviour {
 
         if (currentPage >= bookPages.Length)
         {
-            currentPage = bookPages.Length - 2;
+            currentPage = bookPages.Length - 1;
         }
         Right.sprite = bookPages[currentPage - 1];
         Right.transform.eulerAngles = new Vector3(0, 0, 0);

@@ -10,9 +10,9 @@ public class PagesCollected : MonoBehaviour
     {
         for (int i=0; i<globalControl.pagesCollected.Length; i++)
         {
-            if (!globalControl.pagesCollected[i])
+            if (globalControl.pagesCollected[i])
             {
-                gameObject.GetComponent<Book>().bookPages[i] = gameObject.GetComponent<Book>().background;
+                gameObject.GetComponent<Book>().bookPages[i] = gameObject.GetComponent<Book>().bookPagesCompleted[i];
             }
         }        
     }
@@ -20,9 +20,9 @@ public class PagesCollected : MonoBehaviour
     {
         for (int i = 0; i < globalControl.pagesCollected.Length; i++)
         {
-            if (!globalControl.pagesCollected[i])
+            if (globalControl.pagesCollected[i])
             {
-                gameObject.GetComponent<Book>().bookPages[i] = gameObject.GetComponent<Book>().background;
+                gameObject.GetComponent<Book>().bookPages[i] = gameObject.GetComponent<Book>().bookPagesCompleted[i];
             }
         }
     }

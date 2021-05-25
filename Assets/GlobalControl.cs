@@ -58,7 +58,7 @@ public class GlobalControl : MonoBehaviour
         elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
         elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
         elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
-        pagesCollected = new bool[5];
+        pagesCollected = new bool[16]; //needs to be equal to the number of pages on the book
         /*#To allow all the pages on the diary
         for (int i=0; i<pagesCollected.Length; i++)
         {
