@@ -295,8 +295,18 @@ public class Book : MonoBehaviour {
         Right.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
-        Right.sprite = (currentPage < bookPages.Length - 1) ? bookPages[currentPage + 1] : background;
+        /*
+        if (bookPages.Length % 2 == 0)
+        {
+            //even
 
+            
+        }
+        else
+        {
+            //odd
+        }*/
+        Right.sprite = (currentPage < bookPages.Length - 1) ? bookPages[currentPage + 1] : background;
         RightNext.sprite = (currentPage < bookPages.Length - 2) ? bookPages[currentPage + 2] : background;
 
         LeftNext.transform.SetAsFirstSibling();
@@ -321,10 +331,6 @@ public class Book : MonoBehaviour {
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
-        if(currentPage == bookPages.Length - 1)
-        {
-            currentPage = currentPage - 1;
-        }
         Right.sprite = bookPages[currentPage - 1];
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetAsFirstSibling();
