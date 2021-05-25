@@ -5,13 +5,12 @@ using UnityEngine;
 public class GreenObstacle : MonoBehaviour
 {
 
-    public float health = 5.0f;
-    public SpriteRenderer spriteRenderer;
+    public int color;
 
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == 1 && obj.gameObject.GetComponent<Bullet>().isBigger)
+        if (obj.tag == "Bullet" && obj.gameObject.GetComponent<Bullet>().color == color && obj.gameObject.GetComponent<Bullet>().isBigger)
         {
             Destroy(gameObject);
         }

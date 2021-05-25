@@ -12,6 +12,8 @@ public class BouncingBullet : MonoBehaviour
     [SerializeField]
     private bool isLeft;
 
+    public int color;
+
     // Start is called before the first frame update
     void Start()
     {

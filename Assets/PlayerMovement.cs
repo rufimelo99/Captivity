@@ -137,7 +137,40 @@ public class PlayerMovement : MonoBehaviour
 
         if (obj.gameObject.tag == "Bounce")
         {
-            player.health = player.health - 5f*damage;
+            if(obj.gameObject.GetComponent<BouncingBullet>().color == 0 && 
+                player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
+            {
+                player.health = player.health - 5f * damage;
+
+            }
+
+            if (obj.gameObject.GetComponent<BouncingBullet>().color == 1 &&
+                player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.GROUND)
+            {
+                player.health = player.health - 5f * damage;
+
+            }
+
+            if (obj.gameObject.GetComponent<BouncingBullet>().color == 2 &&
+                player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.FIRE)
+            {
+                player.health = player.health - 5f * damage;
+
+            }
+
+            if (obj.gameObject.GetComponent<BouncingBullet>().color == 3 &&
+                player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.AIR)
+            {
+                player.health = player.health - 5f * damage;
+
+            }
+
+            if (obj.gameObject.GetComponent<BouncingBullet>().color == 4 &&
+                player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.ELECTRICITY)
+            {
+                player.health = player.health - 5f * damage;
+
+            }
         }
 
     }

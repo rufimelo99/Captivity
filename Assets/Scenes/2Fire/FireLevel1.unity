@@ -9621,6 +9621,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 202199820}
   vertical: 1
+  color: 0
 --- !u!61 &333325109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10152,6 +10153,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 70881287}
   vertical: 0
+  color: 0
 --- !u!61 &459608267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10387,6 +10389,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 390842086}
   vertical: 1
+  color: 0
 --- !u!61 &495297880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55896,8 +55899,10 @@ MonoBehaviour:
   distance1: 0
   distance2: 0
   direction: {x: 0, y: 0, z: 0}
+  bulletPrefab: {fileID: 0}
   health: 10
   healthBar: {fileID: 69368063}
+  shoot: 0
 --- !u!50 &1315714719
 Rigidbody2D:
   serializedVersion: 4
@@ -56141,8 +56146,10 @@ MonoBehaviour:
   distance1: 0
   distance2: 0
   direction: {x: 0, y: 0, z: 0}
+  bulletPrefab: {fileID: 0}
   health: 10
   healthBar: {fileID: 1111438070}
+  shoot: 0
 --- !u!50 &1390475050
 Rigidbody2D:
   serializedVersion: 4
@@ -56334,6 +56341,8 @@ MonoBehaviour:
     type: 3}
   magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
     type: 3}
+  landingAreaPrefab: {fileID: 0}
+  isThereATarget: 0
   timer: 0
 --- !u!114 &1402917945
 MonoBehaviour:
@@ -56946,6 +56955,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 2018484614}
   vertical: 0
+  color: 0
 --- !u!61 &1416909517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58344,6 +58354,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 493257557}
   vertical: 0
+  color: 0
 --- !u!61 &1564686201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58975,7 +58986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  spriteRenderer: {fileID: 1741040586}
+  color: 1
 --- !u!1 &1776735674
 GameObject:
   m_ObjectHideFlags: 0
@@ -59024,6 +59035,7 @@ MonoBehaviour:
   camera2: {fileID: 930752507}
   nextPosition: {fileID: 985150986}
   vertical: 0
+  color: 0
 --- !u!61 &1776735677
 BoxCollider2D:
   m_ObjectHideFlags: 0
