@@ -17,7 +17,11 @@ public class EnemyBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag != "Enemies")
+        if (obj.tag == "Enemies" || obj.tag == "Evil Touch" || obj.tag=="Small Enemy Bullet")
+        {
+            ;
+        }
+        else
         {
             Destroy(gameObject);
         }

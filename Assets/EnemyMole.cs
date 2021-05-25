@@ -8,7 +8,7 @@ public class EnemyMole : MonoBehaviour
 
 
     public float speed;
-    public float range;
+    public float range = 150f;
 
     private bool frozen = false;
 
@@ -21,13 +21,46 @@ public class EnemyMole : MonoBehaviour
     public float distance2;
     public Vector3 direction;
 
+    public GameObject bulletPrefab;
+
     public float health = 10f;
     public Image healthBar;
+
+    public int shoot;
 
     void Start()
     {
         animator.SetFloat("Health", 10);
         animator.SetFloat("Speed", 0);
+        speed = 2.0f;
+
+        if (shoot == 1)
+        {
+            speed = 1.0f;
+            StartCoroutine(ShotTimer());
+        }
+    }
+
+
+    IEnumerator ShotTimer()
+    {
+        WaitForSeconds pause = new WaitForSeconds(2f);
+        while (true)
+        {
+            yield return pause;
+            if (!frozen)
+            {
+                Shoot();
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0f, 180f, 0f));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0f, 0f, 90f));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270f));
     }
 
 
@@ -66,8 +99,7 @@ public class EnemyMole : MonoBehaviour
     {
         if ((distance1 <= range || distance2 <= range) && !frozen)
         {
-            animator.SetFloat("Speed", 2);
-            speed = 2.0f;
+            animator.SetFloat("Speed", speed);
             if (distance1 <= distance2)
             {
                 transform.position = Vector2.MoveTowards(transform.position, Player1.position, Time.deltaTime * speed);
@@ -80,7 +112,7 @@ public class EnemyMole : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0);
-            speed = 0f;
+            //speed = 0f;
         }
     }
 
