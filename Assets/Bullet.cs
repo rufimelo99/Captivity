@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
     {
         transform.localScale = new Vector3(4.0f, 2.0f, 0);
         isBigger = true;
-        damage = 5f;
+        damage = 10f;
     }
 
     public void electricity()

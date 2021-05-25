@@ -129,12 +129,12 @@ public class EnemyMole : MonoBehaviour
 
             if (health <= 0)
             {
-                frozen = true;
+                StartCoroutine(freeze());
             }
 
             health = health - obj.GetComponent<Bullet>().damage;
-            animator.SetFloat("Health", health);
             healthBar.fillAmount = health / 10f;
+            animator.SetFloat("Health", health);
         }
     }
 
