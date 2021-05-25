@@ -91,6 +91,10 @@ public class MoveScene : MonoBehaviour
     {
         go(16);
     }
+    public void goDiary()
+    {
+        go(17);
+    }
 
     public void restart()
     {

@@ -12,7 +12,7 @@ public class GlobalControl : MonoBehaviour
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
 
     public List<GemsAvailable> gemsCollected = new List<GemsAvailable>();
-    
+    public bool[] pagesCollected;
     [HideInInspector]
     public enum GemsAvailable
     {
@@ -35,7 +35,7 @@ public class GlobalControl : MonoBehaviour
         //}
     }
 
-
+    
 
     void Awake()
     {
@@ -58,6 +58,12 @@ public class GlobalControl : MonoBehaviour
         elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
         elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
         elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
+        pagesCollected = new bool[5];
+        /*#To allow all the pages on the diary
+        for (int i=0; i<pagesCollected.Length; i++)
+        {
+            pagesCollected[i] = true;
+        }*/
         
 
         if (Instance == null)

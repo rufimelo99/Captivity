@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wizard/WizardLevel2.unity
     guid: 9f2e71303ec6191488634a43d6c0bade
+  - enabled: 1
+    path: Assets/Scenes/General/Diary.unity
+    guid: 2c9bbb08660fff442a822f2b896a518f
   m_configObjects: {}
