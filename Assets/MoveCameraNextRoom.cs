@@ -19,6 +19,10 @@ public class MoveCameraNextRoom : MonoBehaviour
 
     public int color = 0; // so it only works with a specific element
 
+    public bool onlyTrigger = false;
+
+    public int amountRoomsX = 0;
+    public int amountRoomsY = 0; 
 
     void Start()
     {
@@ -35,78 +39,91 @@ public class MoveCameraNextRoom : MonoBehaviour
         
         
     }
-
+    public void TpHero(GameObject gameObject)
+    {
+        if (gameObject.tag == "Player")
+        {
+            camera1.position += (amountRoomsX * new Vector3(27, 0, 0)) + (amountRoomsY * new Vector3(0, 24, 0));
+        }
+        if (gameObject.tag == "Player2")
+        {
+            camera2.position += (amountRoomsX * new Vector3(27, 0, 0)) + (amountRoomsY * new Vector3(0, 24, 0));
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if(color == 1 && (collision.tag=="Player" || collision.tag=="Player2") &&
+        if (!onlyTrigger)
+        {
+            if(color == 1 && (collision.tag=="Player" || collision.tag=="Player2") &&
             collision.GetComponent<Player>().elementalsPossesed[collision.GetComponent<Player>().actualElementalIndex] !=
             Player.ElementalsAvailable.WATER)
-        {
-            ;
-        }
+            {
+                ;
+            }
        
-        else if (gameObject.tag == "Room Changer Next")
-        {
+            else if (gameObject.tag == "Room Changer Next")
+            {
             
             
-            if (collision.tag == "Player")
-            {
+                if (collision.tag == "Player")
+                {
 
-                camera1.position += next;
-                collision.gameObject.transform.position = nextPosition.position;
+                    camera1.position += next;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
+                if (collision.tag == "Player2")
+                {
+
+                    camera2.position += next;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
+
+                if (collision.tag == "Fusion")
+                {
+                    camera1.position += next;
+                    camera2.position += next;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
 
             }
-            if (collision.tag == "Player2")
+            else if (gameObject.tag == "Room Changer Back")
             {
-
-                camera2.position += next;
-                collision.gameObject.transform.position = nextPosition.position;
-
-            }
-
-            if (collision.tag == "Fusion")
-            {
-                camera1.position += next;
-                camera2.position += next;
-                collision.gameObject.transform.position = nextPosition.position;
-
-            }
-
-        }
-        else if (gameObject.tag == "Room Changer Back")
-        {
             
-            if (collision.tag == "Player")
-            {
+                if (collision.tag == "Player")
+                {
 
-                camera1.position += previous;
-                collision.gameObject.transform.position = nextPosition.position;
+                    camera1.position += previous;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
+                if (collision.tag == "Player2")
+                {
+
+                    camera2.position +=  previous;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
+                if (collision.tag == "Evil Touch")
+                {
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
+                if (collision.tag == "Fusion")
+                {
+                    camera1.position += previous;
+                    camera2.position += previous;
+                    collision.gameObject.transform.position = nextPosition.position;
+
+                }
 
             }
-            if (collision.tag == "Player2")
-            {
-
-                camera2.position +=  previous;
-                collision.gameObject.transform.position = nextPosition.position;
 
             }
-            if (collision.tag == "Evil Touch")
-            {
-                collision.gameObject.transform.position = nextPosition.position;
-
-            }
-            if (collision.tag == "Fusion")
-            {
-                camera1.position += previous;
-                camera2.position += previous;
-                collision.gameObject.transform.position = nextPosition.position;
-
-            }
-
-        }
-
+       
     }
 
        

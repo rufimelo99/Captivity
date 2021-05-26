@@ -49,6 +49,10 @@ public class LightTeleporter : MonoBehaviour
         {
             otherLight.GetComponent<LightTeleporter>().disableForAFewSeconds();
             obj.gameObject.transform.position = otherLight.transform.position;
+            if (GetComponent<MoveCameraNextRoom>() != null)
+            {
+                GetComponent<MoveCameraNextRoom>().TpHero(obj.gameObject);
+            }
         }
     }
 
