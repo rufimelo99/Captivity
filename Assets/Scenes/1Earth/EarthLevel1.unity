@@ -1771,6 +1771,7 @@ MonoBehaviour:
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
+  pagesCollected: 
 --- !u!4 &305243908
 Transform:
   m_ObjectHideFlags: 0
@@ -43952,8 +43953,8 @@ GameObject:
   - component: {fileID: 1815687757}
   - component: {fileID: 1815687761}
   - component: {fileID: 1815687760}
-  - component: {fileID: 1815687759}
   - component: {fileID: 1815687758}
+  - component: {fileID: 1815687759}
   m_Layer: 0
   m_Name: rock-cave (1)
   m_TagString: Untagged
@@ -43969,8 +43970,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815687756}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.4, y: 12.3, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalPosition: {x: -12.427, y: 12.73, z: 0}
+  m_LocalScale: {x: 21.558437, y: 19.667393, z: 1}
   m_Children: []
   m_Father: {fileID: 1289883448}
   m_RootOrder: 8
@@ -44001,7 +44002,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006792918, y: -0.0010909587}
+  m_Offset: {x: 0.0064433515, y: -0.037136823}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -44012,7 +44013,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17476577, y: 0.16218191}
+  m_Size: {x: 0.1728867, y: 0.08572635}
   m_EdgeRadius: 0
 --- !u!50 &1815687760
 Rigidbody2D:

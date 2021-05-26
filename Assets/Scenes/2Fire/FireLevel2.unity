@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8089,8 +8089,10 @@ MonoBehaviour:
   distance1: 0
   distance2: 0
   direction: {x: 0, y: 0, z: 0}
+  bulletPrefab: {fileID: 0}
   health: 10
   healthBar: {fileID: 78571294}
+  shoot: 0
 --- !u!50 &507219487
 Rigidbody2D:
   serializedVersion: 4
@@ -8262,6 +8264,7 @@ MonoBehaviour:
   camera2: {fileID: 1438949836}
   nextPosition: {fileID: 1552791385}
   vertical: 0
+  color: 0
 --- !u!61 &526634626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37569,6 +37572,7 @@ MonoBehaviour:
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
+  pagesCollected: 
 --- !u!4 &922782545
 Transform:
   m_ObjectHideFlags: 0
@@ -40195,8 +40199,10 @@ MonoBehaviour:
   distance1: 0
   distance2: 0
   direction: {x: 0, y: 0, z: 0}
+  bulletPrefab: {fileID: 0}
   health: 10
   healthBar: {fileID: 456903528}
+  shoot: 0
 --- !u!50 &1076930652
 Rigidbody2D:
   serializedVersion: 4
@@ -40416,6 +40422,7 @@ MonoBehaviour:
   camera2: {fileID: 1438949836}
   nextPosition: {fileID: 1665452411}
   vertical: 0
+  color: 0
 --- !u!61 &1135498488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45206,6 +45213,7 @@ MonoBehaviour:
   camera2: {fileID: 1438949836}
   nextPosition: {fileID: 716811455}
   vertical: 0
+  color: 0
 --- !u!61 &1401634419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54399,6 +54407,7 @@ MonoBehaviour:
   camera2: {fileID: 1438949836}
   nextPosition: {fileID: 1608725143}
   vertical: 0
+  color: 0
 --- !u!61 &1798168851
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54785,6 +54794,9 @@ MonoBehaviour:
     type: 3}
   magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
     type: 3}
+  landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
+    type: 3}
+  isThereATarget: 0
   timer: 0
 --- !u!114 &1849565222
 MonoBehaviour:
@@ -55047,6 +55059,12 @@ PrefabInstance:
       propertyPath: combinationBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: landingAreaPrefab
+      value: 
+      objectReference: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
+        type: 3}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: combiningTreePrefab
