@@ -56,7 +56,7 @@ public class Enemy2Main : MonoBehaviour
 
     IEnumerator ShotTimer()
     {
-        WaitForSeconds pause = new WaitForSeconds(0.5f);
+        WaitForSeconds pause = new WaitForSeconds(0.9f);
         while (true)
         {
             yield return pause;
@@ -124,11 +124,7 @@ public class Enemy2Main : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-    /*
-     0
-     
-     
-     */
+    
     void Rotate()
     {
 
