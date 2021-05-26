@@ -6,8 +6,12 @@ using UnityEngine.Tilemaps;
 public class PressureClockGroup : MonoBehaviour
 {
     public List<PressurePlate_v2> pressurePlates;
+    
     [SerializeField]
     private GameObject Chest;
+    [SerializeField]
+    private GameObject Key;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +29,16 @@ public class PressureClockGroup : MonoBehaviour
                 break;
             }
         }
+        
         if (allPressurePlatesActivated)
         {
             Chest.GetComponent<Animator>().Play("ChestOpen");
+            Key.GetComponent<Animator>().Play("KeyOpening"); 
         }
-        else{
+        else
+        {
             Chest.GetComponent<Animator>().Play("ChestClose");
+            Key.GetComponent<Animator>().Play("KeyClose");
         }
     }
 }
