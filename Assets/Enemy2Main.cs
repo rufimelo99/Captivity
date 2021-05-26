@@ -16,14 +16,34 @@ public class Enemy2Main : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject projectile;
     public Transform firePoint;
-    public int rotation;
-
+    private int actualDirection;
     private bool shock = false;
+    public List<Direction> DirectionsSupported = new List<Direction>();
+    public enum Direction
+    {
+        N,
+        N_E,
+        N_E1,
+        N_E2,
+        E,
+        E_S1,
+        E_S2,
+        E_S,
+        S,
+        S_W1,
+        S_W2,
+        S_W,
+        W,
+        W_N1,
+        W_N2,
+        W_N,
+    }
+
 
     void Start()
     {
         firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-        rotation = 1;
+        actualDirection = 0;
         StartCoroutine(ShotTimer());
     }
 
@@ -104,34 +124,103 @@ public class Enemy2Main : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-
+    /*
+     0
+     
+     
+     */
     void Rotate()
     {
-        if (rotation == 0)
+
+
+        //clockwise
+
+        if (DirectionsSupported[actualDirection] == Direction.N)
         {
-            firePoint.rotation = Quaternion.Euler(0f, 180f, 0f);
-            rotation = 1;
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 90f);
+        }
+        
+        else if (DirectionsSupported[actualDirection] == Direction.N_E1)
+        {
+
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 60f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.N_E)
+        {
+
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 45f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.N_E2)
+        {
+
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 30f);
+        }
+        else if(DirectionsSupported[actualDirection] == Direction.E)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+        //correct
+
+        else if (DirectionsSupported[actualDirection] == Direction.E_S1)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, -30f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.E_S)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, -45f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.E_S2)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, -60f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.S)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 270);
+        }
+
+
+
+        else if (DirectionsSupported[actualDirection] == Direction.W_N1)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 330f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.W_N)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 315f);
+
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.W_N2)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 300f);
+
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.W)
+        {
+
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 180f);
+        }
+
+
+        else if (DirectionsSupported[actualDirection] == Direction.S_W1)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 240f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.S_W)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 225f);
+        }
+        else if (DirectionsSupported[actualDirection] == Direction.S_W2)
+        {
+            firePoint.rotation = Quaternion.Euler(0f, 0f, 205f);
+        }
+        if (actualDirection == DirectionsSupported.Count - 1)
+        {
+            actualDirection = 0;
         }
         else
         {
-            if (rotation == 1)
-            {
-                firePoint.rotation = Quaternion.Euler(0f, 180f, 330f);
-                rotation = 2;
-            }
-            else
-            {
-                if (rotation==2)
-                {
-                    firePoint.rotation = Quaternion.Euler(0f, 180f, 290f);
-                    rotation = 3;
-                }
-                else 
-                {
-                    firePoint.rotation = Quaternion.Euler(0f, 0f, 270f);
-                    rotation = 0;
-                }
-            }
+            actualDirection++;
         }
+
     }
 }
