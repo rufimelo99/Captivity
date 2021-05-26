@@ -48,6 +48,11 @@ public class GlobalControl : MonoBehaviour
         keysCollected.Add(key);
     }
 
+    public void deleteKey(KeysAvailable key)
+    {
+        keysCollected.Remove(key);
+    }
+
 
     
 
