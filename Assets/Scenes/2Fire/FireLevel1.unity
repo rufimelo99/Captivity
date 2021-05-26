@@ -54300,6 +54300,7 @@ MonoBehaviour:
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
+  pagesCollected: 
 --- !u!4 &937612943
 Transform:
   m_ObjectHideFlags: 0
@@ -56341,7 +56342,8 @@ MonoBehaviour:
     type: 3}
   magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
     type: 3}
-  landingAreaPrefab: {fileID: 0}
+  landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
+    type: 3}
   isThereATarget: 0
   timer: 0
 --- !u!114 &1402917945
@@ -58985,7 +58987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba2e5bfb6a8b8f45943c884f64cea5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
   color: 1
 --- !u!1 &1776735674
 GameObject:
@@ -64160,6 +64161,12 @@ PrefabInstance:
       propertyPath: combinationBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: landingAreaPrefab
+      value: 
+      objectReference: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
+        type: 3}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: combiningTreePrefab
