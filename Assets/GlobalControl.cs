@@ -12,6 +12,7 @@ public class GlobalControl : MonoBehaviour
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
 
     public List<GemsAvailable> gemsCollected = new List<GemsAvailable>();
+    public List<KeysAvailable> keysCollected = new List<KeysAvailable>();
     public bool[] pagesCollected;
     [HideInInspector]
     public enum GemsAvailable
@@ -24,6 +25,13 @@ public class GlobalControl : MonoBehaviour
         WIZARD
     }
 
+    [HideInInspector]
+    public enum KeysAvailable
+    {
+        KEYELECT1
+    }
+
+
 
 
     public void addGemWithoutRepetition(GemsAvailable gem)
@@ -34,6 +42,12 @@ public class GlobalControl : MonoBehaviour
         gemsCollected.Add(gem);
         //}
     }
+
+    public void addKey(KeysAvailable key)
+    {
+        keysCollected.Add(key);
+    }
+
 
     
 

@@ -15,6 +15,7 @@ public class PressureClockGroup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bool allPressurePlatesActivated = false;
     }
 
     // Update is called once per frame
@@ -27,18 +28,16 @@ public class PressureClockGroup : MonoBehaviour
             {
                 allPressurePlatesActivated = false;
                 break;
-            }
+            }   
         }
-        
-        if (allPressurePlatesActivated)
-        {
+
+        if (allPressurePlatesActivated == false){
             Chest.GetComponent<Animator>().Play("ChestOpen");
-            Key.GetComponent<Animator>().Play("KeyOpening"); 
-        }
-        else
-        {
-            Chest.GetComponent<Animator>().Play("ChestClose");
             Key.GetComponent<Animator>().Play("KeyClose");
+        }
+        else {
+            Chest.GetComponent<Animator>().Play("ChestClose");
+            Key.GetComponent<Animator>().Play("KeyOpening");
         }
     }
 }
