@@ -73,8 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1304208510633726333, guid: 1e5dd229c82a78e42b434b9a3af4dbac,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1f4efec8afe6f14c9dbd79d545eb370, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,9 +143,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fb9be32ea7e68479a686dc274e1792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fusionVapourPrefab: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
-    type: 3}
-  pipe: {fileID: 160075416973292390}
-  animiate: {fileID: 0}
-  myCollider: {fileID: 4840122325773002735}
-  rend: {fileID: 8048125966741462398}

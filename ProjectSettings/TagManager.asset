@@ -23,6 +23,8 @@ TagManager:
   - Bounce
   - Magma
   - Fusion
+  - Pipe
+  - PipeOut
   layers:
   - Default
   - TransparentFX
