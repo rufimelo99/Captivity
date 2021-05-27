@@ -6,12 +6,22 @@ public class PipeTeletransportation : MonoBehaviour
 {
     /*private float distanceToVapourPrefab;
     [SerializeField] public GameObject fusionVapourPrefab;*/
-
+    [SerializeField]
+    private Player player;
     [SerializeField] private Animator pipe;
     [SerializeField] private Collider2D myColliderPipe;
     [SerializeField] private SpriteRenderer rendPipe;
+    
+    
+    public Collider2D roomChanger;
 
-    [SerializeField] public GameObject pipeGameObject;
+    public GameObject pipeGameObject;
+
+    //public GameObject fusionTornado;
+
+    //private float distanceToVapourPrefab;
+    private float distanceToPlayer1;
+
     /*
     [SerializeField] public GameObject roomChangerToMistery;
     [SerializeField] private Collider2D myCollider;
@@ -34,9 +44,25 @@ public class PipeTeletransportation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*distanceToVapourPrefab = (pipe.transform.position - tornado.transform.position).sqrMagnitude;
-        if(distanceToVapourPrefab < 3 && tornado.transform.position == roomChangerToMistery.transform.position){
-            roomChangerToMistery.transform.position = roomChangerToMistery.transform.position+new Vector3(0,0,1f);
-        }*/
+        
+        //distanceToVapourPrefab = (fusionTornado.transform.position - transform.position).sqrMagnitude;
+        distanceToPlayer1 = (player.transform.position - pipeGameObject.transform.position).sqrMagnitude;
+
+        if(distanceToPlayer1 < 20 && pipeGameObject.tag == "PipeIn"){
+            SetActive(roomChanger);
+            Debug.Log(distanceToPlayer1);
+        }else{
+            SetInActive(roomChanger);
+        }
+    }
+
+    //turn off
+    void SetInActive (Collider2D col) {
+        col.enabled = false;
+    } 
+ 
+    //turn on
+    void SetActive (Collider2D col) {
+         col.enabled = true;
     }
 }

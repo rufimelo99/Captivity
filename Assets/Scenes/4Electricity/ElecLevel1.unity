@@ -7173,7 +7173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260681532}
   m_LocalRotation: {x: -0, y: -0, z: -0.7046025, w: 0.70960224}
-  m_LocalPosition: {x: -12.134, y: -7.491, z: -1}
+  m_LocalPosition: {x: -12.134, y: -7.491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1649096706}
@@ -7212,7 +7212,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8100017, y: -0.059357263}
+  m_Offset: {x: 0.8100017, y: 0.49506313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7223,7 +7223,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0524899, y: 0.17895506}
+  m_Size: {x: 1.0524899, y: 1.11846}
   m_EdgeRadius: 0
 --- !u!1 &263944807
 GameObject:
@@ -8218,7 +8218,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023883194, y: 0.34905258}
+  m_Offset: {x: -0.009480834, y: -0.21251684}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8229,7 +8229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2550194, y: 0.15824229}
+  m_Size: {x: 1.0245783, y: 0.9934335}
   m_EdgeRadius: 0
 --- !u!1 &394253092
 GameObject:
@@ -18420,6 +18420,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1920066690}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1276357438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 160075416973292390, guid: a0909504f4114eb45a4cfac60d75466b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1588795689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1290362683
 GameObject:
   m_ObjectHideFlags: 0
@@ -21473,12 +21479,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1565867168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 160075416973292390, guid: a0909504f4114eb45a4cfac60d75466b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1588795689}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1567744826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49487,9 +49487,25 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 777a3125e64f74c44a34268d549463d4, type: 2}
     - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 212879272}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: roomChanger
+      value: 
+      objectReference: {fileID: 260681535}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: fusionTornado
+      value: 
+      objectReference: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
+        type: 3}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
       propertyPath: pipeGameObject
       value: 
-      objectReference: {fileID: 1565867168}
+      objectReference: {fileID: 1276357438}
     - target: {fileID: 4840122325773002735, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
       propertyPath: m_Size.x
@@ -64767,9 +64783,25 @@ PrefabInstance:
       objectReference: {fileID: 2145280004}
     - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 212879272}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
       propertyPath: myCollider
       value: 
       objectReference: {fileID: 2145280003}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: roomChanger
+      value: 
+      objectReference: {fileID: 260681535}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: fusionTornado
+      value: 
+      objectReference: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
+        type: 3}
     - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
       propertyPath: pipeGameObject
@@ -64899,6 +64931,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 777a3125e64f74c44a34268d549463d4, type: 2}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 212879272}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: roomChanger
+      value: 
+      objectReference: {fileID: 394215713}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: fusionTornado
+      value: 
+      objectReference: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
+        type: 3}
     - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
       propertyPath: pipeGameObject
@@ -70832,6 +70880,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 777a3125e64f74c44a34268d549463d4, type: 2}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 212879272}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: roomChanger
+      value: 
+      objectReference: {fileID: 394215713}
+    - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
+        type: 3}
+      propertyPath: fusionTornado
+      value: 
+      objectReference: {fileID: 8468425777507669873, guid: b244ed062fb3b2043997f990a6e9a338,
+        type: 3}
     - target: {fileID: 4728799383336540792, guid: a0909504f4114eb45a4cfac60d75466b,
         type: 3}
       propertyPath: pipeGameObject

@@ -29,7 +29,6 @@ public class GlobalControl : MonoBehaviour
     public enum KeysAvailable
     {
         KEYELECT1
-
     }
 
 
