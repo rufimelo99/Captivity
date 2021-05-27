@@ -147,6 +147,7 @@ MonoBehaviour:
   pipe: {fileID: 1922625752619262897}
   myColliderPipe: {fileID: 4840122325773002735}
   rendPipe: {fileID: 8048125966741462398}
+  pipeGameObject: {fileID: 0}
 --- !u!95 &1922625752619262897
 Animator:
   serializedVersion: 3

@@ -31,11 +31,11 @@ public class PressureClockGroup : MonoBehaviour
         }
 
         if (allPressurePlatesActivated == false){
-            Chest.GetComponent<Animator>().Play("ChestOpen");
+            Chest.GetComponent<Animator>().Play("ChestClose");
             Key.GetComponent<Animator>().Play("KeyClose");
         }
         else {
-            Chest.GetComponent<Animator>().Play("ChestClose");
+            Chest.GetComponent<Animator>().Play("ChestOpen");
             Key.GetComponent<Animator>().Play("KeyOpening");
         }
     }

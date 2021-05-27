@@ -199,7 +199,7 @@ MonoBehaviour:
   myColliderTornado: {fileID: 1358532180800591745}
   rendTornado: {fileID: 3063110595740601320}
   speed: 5
-  damage: 0.5
+  damage: 0.2
   rb: {fileID: 6273342792300954423}
   color: 0
   finished: 0

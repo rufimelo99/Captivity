@@ -133,9 +133,23 @@ public class EnemyMole : MonoBehaviour
             }
 
             health = health - obj.GetComponent<Bullet>().damage;
-            healthBar.fillAmount = health / 10f;
-            animator.SetFloat("Health", health);
+            
         }
+        if (obj.tag == "Magma"){
+            health = health - 0.1f;
+            
+        }
+        healthBar.fillAmount = health / 10f;
+        animator.SetFloat("Health", health);
+    }
+    void OnTriggerStay2D(Collider2D obj)
+    {
+        if (obj.tag == "Magma"){
+            health = health - 0.1f;
+            
+        }
+        healthBar.fillAmount = health / 10f;
+        animator.SetFloat("Health", health);
     }
 
 

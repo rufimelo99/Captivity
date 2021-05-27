@@ -10,7 +10,7 @@ public class Tornado : MonoBehaviour
     [SerializeField] private SpriteRenderer rendTornado;
 
     public float speed = 5f;  
-    public float damage = 0.5f;
+    public float damage = 0.2f;
     private float moveSpeed = 15f;
     public Rigidbody2D rb;
     public int color = 0;
@@ -31,7 +31,6 @@ public class Tornado : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
-        damage = 1f;
         StartCoroutine(ShotTimer());
         StartCoroutine(destoryAfterAFewSecond(5.0f));
     }

@@ -66,7 +66,7 @@ public class PressurePlate_v2 : MonoBehaviour
             activated = false;
         }*/
 
-        if (normal)
+        if (normal && obj.tag != "Bullet")
         {
             PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
             activated = true;
@@ -93,7 +93,7 @@ public class PressurePlate_v2 : MonoBehaviour
             activated = false;
         }*/
 
-        if (normal)
+        if (normal && obj.tag != "Bullet")
         {
             PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
             activated = true;
