@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressurePlate_v2 : MonoBehaviour
 {
 
+    //public GameObject bulletPrefab;
     private SpriteRenderer PressurePlate1_sr;
     private SpriteRenderer Door_sr;
     [SerializeField]
@@ -59,6 +60,11 @@ public class PressurePlate_v2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
+        /*if (obj.tag == "Bullet")
+        {
+            PressurePlate1_sr.sprite = PressurePlateNonActivated_Sprite;
+            activated = false;
+        }*/
 
         if (normal)
         {
@@ -81,6 +87,12 @@ public class PressurePlate_v2 : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D obj)
     {
+        /*if (obj.tag == "Bullet")
+        {
+            PressurePlate1_sr.sprite = PressurePlateNonActivated_Sprite;
+            activated = false;
+        }*/
+
         if (normal)
         {
             PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
