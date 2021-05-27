@@ -41449,6 +41449,7 @@ MonoBehaviour:
     type: 3}
   landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
     type: 3}
+  fusionVaporPrefab: {fileID: 0}
   isThereATarget: 0
   timer: 0
 --- !u!114 &871239291

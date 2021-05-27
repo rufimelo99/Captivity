@@ -16,6 +16,7 @@ public class WaterBoss : MonoBehaviour
 
     public Transform Player1;
     public Transform Player2;
+    private Transform closestPlayer;
 
     private float distance1;
     private float distance2;
@@ -59,10 +60,20 @@ public class WaterBoss : MonoBehaviour
 
     void Shoot()
     {
+        //GameObject bull = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0,0,0));
+        //bull.GetComponent<FollowingBullet>().assignPlayer(closestPlayer);
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 0));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0f, 180f, 0f));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0f, 0f, 90f));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270f));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 180));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 90));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270));
+    }
+
+    void OnTriggerEnter2D(Collider2D obj)
+    {
+        if (obj.tag == "Bullet")
+        {
+            health = health - obj.GetComponent<Bullet>().damage;
+        }
     }
 
 
@@ -75,10 +86,12 @@ public class WaterBoss : MonoBehaviour
         if (distance1 <= distance2)
         {
             direction = Player1.position - transform.position;
+            closestPlayer = Player1;
         }
         else
         {
             direction = Player2.position - transform.position;
+            closestPlayer = Player2;
         }
 
         animate();
@@ -96,6 +109,14 @@ public class WaterBoss : MonoBehaviour
         checkPlates();
 
     }
+
+    Quaternion GetRotationTo(Transform target)
+    {
+        Vector3 dir = target.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        return Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
 
     void checkPlates()
     {
