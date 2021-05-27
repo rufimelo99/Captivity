@@ -5,9 +5,14 @@ using UnityEngine;
 public class PipeTeletransportation : MonoBehaviour
 {
     /*private float distanceToVapourPrefab;
-    [SerializeField] public GameObject fusionVapourPrefab;
+    [SerializeField] public GameObject fusionVapourPrefab;*/
 
-    [SerializeField] public GameObject pipe;
+    [SerializeField] private Animator pipe;
+    [SerializeField] private Collider2D myColliderPipe;
+    [SerializeField] private SpriteRenderer rendPipe;
+
+    [SerializeField] public GameObject pipeGameObject;
+    /*
     [SerializeField] public GameObject roomChangerToMistery;
     [SerializeField] private Collider2D myCollider;
     [SerializeField] private SpriteRenderer rend;
@@ -19,7 +24,11 @@ public class PipeTeletransportation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(pipeGameObject.tag == "PipeOut"){
+            pipe.SetBool("PipeOut", true);
+        }else{
+            pipe.SetBool("PipeOut", false);
+        }
     }
 
     // Update is called once per frame
