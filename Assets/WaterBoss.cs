@@ -14,9 +14,9 @@ public class WaterBoss : MonoBehaviour
     public Transform Player1;
     public Transform Player2;
 
-    public float distance1;
-    public float distance2;
-    public Vector3 direction;
+    private float distance1;
+    private float distance2;
+    private Vector3 direction;
 
     public GameObject bulletPrefab;
 
@@ -24,6 +24,13 @@ public class WaterBoss : MonoBehaviour
     public Image healthBar;
 
     public int shoot;
+
+
+    public GameObject plate1;
+    public GameObject plate2;
+    public GameObject plate3;
+    public GameObject plate4;
+
 
     void Start()
     {
@@ -77,6 +84,17 @@ public class WaterBoss : MonoBehaviour
             StartCoroutine(freeze());
         }
 
+        checkPlates();
+
+    }
+
+    void checkPlates()
+    {
+        if(plate1.GetComponent<PressurePlate_v2>().activated && plate1.GetComponent<PressurePlate_v2>().activated ||
+            plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated)
+        {
+            DecreaseLife();
+        }
     }
 
     void animate()
@@ -104,7 +122,7 @@ public class WaterBoss : MonoBehaviour
     void DecreaseLife()
     {
 
-        health = health - 0.1f;
+        health = health - 0.01f;
 
 
         healthBar.fillAmount = health / 10f;
