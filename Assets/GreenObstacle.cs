@@ -15,5 +15,11 @@ public class GreenObstacle : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+    public void KillMePLease()
+    {
+        Destroy(gameObject);
+    }
 }
     

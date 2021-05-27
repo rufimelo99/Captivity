@@ -61,7 +61,7 @@ public class PressurePlate_v2 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D obj)
     {
 
-        if (normal && obj.tag != "Bullet" && obj.tag != "Magma")
+        if (normal && obj.tag != "Bullet" && obj.tag != "Magma" && obj.tag != "Small Enemy Bullet")
         {
             PressurePlate1_sr.sprite = PressurePlateActivated_Sprite;
             activated = true;

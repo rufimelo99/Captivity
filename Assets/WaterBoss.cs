@@ -8,8 +8,11 @@ public class WaterBoss : MonoBehaviour
     public float speed;
 
     private bool frozen = false;
+    private bool destroyed = false;
 
     public Animator animator;
+
+    public GameObject doorToDestroy;
 
     public Transform Player1;
     public Transform Player2;
@@ -37,6 +40,7 @@ public class WaterBoss : MonoBehaviour
         animator.SetFloat("Health", 10);
         animator.SetFloat("Speed", 0);
         speed = 3.0f;
+        StartCoroutine(ShotTimer());
     }
 
 
@@ -81,6 +85,11 @@ public class WaterBoss : MonoBehaviour
 
         if (health <= 0)
         {
+            if (!destroyed)
+            {
+                doorToDestroy.GetComponent<GreenObstacle>().KillMePLease();
+                destroyed = true;
+            }     
             StartCoroutine(freeze());
         }
 
