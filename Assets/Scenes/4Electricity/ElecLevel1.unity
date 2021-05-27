@@ -7680,6 +7680,8 @@ MonoBehaviour:
     type: 3}
   landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
     type: 3}
+  fusionVaporPrefab: {fileID: 6492137079657893293, guid: d077bb1322235ee4393fe58ccbffd8cd,
+    type: 3}
   isThereATarget: 0
   timer: 0
 --- !u!114 &319164869
@@ -16357,7 +16359,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DialogueToDisplay
       value: 
-      objectReference: {fileID: 7553862517005297476, guid: cb267335e83d9dc4fb87b3b242b8d911,
+      objectReference: {fileID: 7553862517005297476, guid: 2b349ba4fc50ee045b9857d2a16fb20f,
         type: 3}
     - target: {fileID: 4648797957525149051, guid: b0b8ce03cfef4d94d9c38bb31096c61e,
         type: 3}
@@ -16367,7 +16369,7 @@ PrefabInstance:
     - target: {fileID: 4648797957525149051, guid: b0b8ce03cfef4d94d9c38bb31096c61e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -573.03
+      value: -566.2
       objectReference: {fileID: 0}
     - target: {fileID: 4648797957525149051, guid: b0b8ce03cfef4d94d9c38bb31096c61e,
         type: 3}
@@ -64296,6 +64298,12 @@ PrefabInstance:
       propertyPath: combinationBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
+        type: 3}
+      propertyPath: fusionVaporPrefab
+      value: 
+      objectReference: {fileID: 6492137079657893293, guid: d077bb1322235ee4393fe58ccbffd8cd,
+        type: 3}
     - target: {fileID: 2168002739416069406, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: landingAreaPrefab

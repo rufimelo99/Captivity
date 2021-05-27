@@ -125,7 +125,7 @@ public class Tornado : MonoBehaviour
 
     public void GenocideBaby()
     {
-        player1.GetComponent<SpriteRenderer>().enabled = true; //player1.gameObject.SetActive(true); //put back player 1
+        player1.GetComponent<SpriteRenderer>().enabled = true; 
         player1.transform.position = tornado.transform.position;
         player1.GetComponent<Player>().putTheRightColor();
         player1.GetComponent<Collider2D>().enabled = true;

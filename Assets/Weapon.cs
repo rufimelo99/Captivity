@@ -22,6 +22,8 @@ public class Weapon : MonoBehaviour
 	public GameObject fusionTornadoPrefab;
     public GameObject magmaPrefab;
     public GameObject landingAreaPrefab;
+    public GameObject fusionVaporPrefab;
+
 
     public bool isThereATarget = false; // so the targets don't go crazy
 
@@ -258,7 +260,8 @@ public class Weapon : MonoBehaviour
                 myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.WATER)
             {
                 
-                //GameObject XXXXX = Instantiate(XXXXXXXX, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                GameObject vapor = Instantiate(fusionVaporPrefab, firePoint.position /*+ offset*/, Quaternion.Euler(0f, 0f, 0f));
+                vapor.GetComponent<FusionVapor>().assignPlayers(player, otherPlayer);
             }
 			if (myElement == Player.ElementalsAvailable.FIRE && otherElement == Player.ElementalsAvailable.ELECTRICITY ||
                 myElement == Player.ElementalsAvailable.ELECTRICITY && otherElement == Player.ElementalsAvailable.FIRE)

@@ -63,7 +63,7 @@ public class PipeTeletransportation : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag == "Fusion"){
+        if(col.gameObject.tag == "Vapor"){
             camera1.position += move;    
             camera2.position += move;
             col.gameObject.transform.position = nextPosition.position;

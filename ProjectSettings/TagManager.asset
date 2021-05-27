@@ -25,6 +25,7 @@ TagManager:
   - Fusion
   - PipeOut
   - PipeIn
+  - Vapor
   layers:
   - Default
   - TransparentFX
