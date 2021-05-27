@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class WaterBoss : MonoBehaviour
 {
     public float speed;
-    public float range = 150f;
 
     private bool frozen = false;
 
@@ -30,13 +29,7 @@ public class WaterBoss : MonoBehaviour
     {
         animator.SetFloat("Health", 10);
         animator.SetFloat("Speed", 0);
-        speed = 2.0f;
-
-        if (shoot == 1)
-        {
-            speed = 1.0f;
-            StartCoroutine(ShotTimer());
-        }
+        speed = 3.0f;
     }
 
 
@@ -95,23 +88,16 @@ public class WaterBoss : MonoBehaviour
 
     void FixedUpdate()
     {
-        if ((distance1 <= range || distance2 <= range) && !frozen)
+        animator.SetFloat("Speed", speed);
+        if (distance1 <= distance2)
         {
-            animator.SetFloat("Speed", speed);
-            if (distance1 <= distance2)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, Player1.position, Time.deltaTime * speed);
-            }
-            else
-            {
-                transform.position = Vector2.MoveTowards(transform.position, Player2.position, Time.deltaTime * speed);
-            }
+            transform.position = Vector2.MoveTowards(transform.position, Player1.position, Time.deltaTime * speed);
         }
         else
         {
-            animator.SetFloat("Speed", 0);
-            //speed = 0f;
+            transform.position = Vector2.MoveTowards(transform.position, Player2.position, Time.deltaTime * speed);
         }
+
     }
 
 

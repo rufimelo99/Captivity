@@ -49216,7 +49216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   range: 150
-  animator: {fileID: 0}
+  animator: {fileID: 2104840363}
   Player1: {fileID: 135416978}
   Player2: {fileID: 871239293}
   distance1: 0
