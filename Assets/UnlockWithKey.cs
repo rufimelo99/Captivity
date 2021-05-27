@@ -25,14 +25,16 @@ public class UnlockWithKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //GlobalControl.KeysAvailable.KEYELECT1;
         distanceToPlayer1 = (transform.position - player.transform.position).sqrMagnitude;
         distanceToPlayer2 = (transform.position - otherPlayer.transform.position).sqrMagnitude;
-        
-        if((distanceToPlayer1 < 2 || distanceToPlayer2 < 2)){
+        if(GlobalControl.Instance.keysCollected.Contains(GlobalControl.KeysAvailable.KEYELECT1) && (distanceToPlayer1 < 2 || distanceToPlayer2 < 2))
+        {
             GlobalControl.Instance.deleteKey(GlobalControl.KeysAvailable.KEYELECT1);
             Destroy(grid);
             Destroy(locker);
         }
+        
     }
 }
 //&& (GlobalControl.Instance.keysCollected.Contains(GlobalControl.KeysAvailable.KEYELECT1)
