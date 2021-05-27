@@ -90,7 +90,7 @@ public class WaterBoss : MonoBehaviour
 
     void checkPlates()
     {
-        if(plate1.GetComponent<PressurePlate_v2>().activated && plate1.GetComponent<PressurePlate_v2>().activated ||
+        if(plate1.GetComponent<PressurePlate_v2>().activated && plate2.GetComponent<PressurePlate_v2>().activated ||
             plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated)
         {
             DecreaseLife();
