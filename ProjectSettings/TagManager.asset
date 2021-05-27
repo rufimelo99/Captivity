@@ -26,6 +26,15 @@ TagManager:
   - PipeOut
   - PipeIn
   - Vapor
+  - PressurePlate1
+  - PressurePlate2
+  - PressurePlate3
+  - PressurePlate4
+  - PressurePlate5
+  - PressurePlate6
+  - PressurePlate7
+  - PressurePlate8
+  - PressurePlate9
   layers:
   - Default
   - TransparentFX

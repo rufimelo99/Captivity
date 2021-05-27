@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -31125,6 +31125,8 @@ MonoBehaviour:
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
+  keysCollected: 
+  pagesCollected: 
 --- !u!4 &154645318
 Transform:
   m_ObjectHideFlags: 0
@@ -33533,6 +33535,10 @@ MonoBehaviour:
   camera2: {fileID: 297294361}
   nextPosition: {fileID: 1018916779}
   vertical: 0
+  color: 0
+  onlyTrigger: 0
+  amountRoomsX: 0
+  amountRoomsY: 0
 --- !u!61 &710205731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33669,6 +33675,10 @@ MonoBehaviour:
   camera2: {fileID: 297294361}
   nextPosition: {fileID: 1835160073}
   vertical: 0
+  color: 0
+  onlyTrigger: 0
+  amountRoomsX: 0
+  amountRoomsY: 0
 --- !u!61 &786687744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42173,6 +42183,10 @@ MonoBehaviour:
   camera2: {fileID: 297294361}
   nextPosition: {fileID: 2139086902}
   vertical: 0
+  color: 0
+  onlyTrigger: 0
+  amountRoomsX: 0
+  amountRoomsY: 0
 --- !u!61 &1115189027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47386,6 +47400,9 @@ MonoBehaviour:
     type: 3}
   magmaPrefab: {fileID: 1742236524971873477, guid: 22b7e9e646d94fa42946eee57a41aa37,
     type: 3}
+  landingAreaPrefab: {fileID: 0}
+  fusionVaporPrefab: {fileID: 0}
+  isThereATarget: 0
   timer: 0
 --- !u!114 &1661290607
 MonoBehaviour:
@@ -47481,6 +47498,10 @@ MonoBehaviour:
   camera2: {fileID: 297294361}
   nextPosition: {fileID: 746055147}
   vertical: 0
+  color: 0
+  onlyTrigger: 0
+  amountRoomsX: 0
+  amountRoomsY: 0
 --- !u!61 &1704181658
 BoxCollider2D:
   m_ObjectHideFlags: 0
