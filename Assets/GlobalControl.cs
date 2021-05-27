@@ -17,11 +17,11 @@ public class GlobalControl : MonoBehaviour
     [HideInInspector]
     public enum GemsAvailable
     {
-        WATER, //1
-        FIRE, //2
-        GROUND, //3
-        ELECTRICITY, //4
+        WATER, 
+        GROUND,
+        FIRE,
         AIR,
+        ELECTRICITY,
         WIZARD
     }
 

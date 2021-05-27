@@ -6,21 +6,21 @@ public class PipeTeletransportation : MonoBehaviour
 {
     /*private float distanceToVapourPrefab;
     [SerializeField] public GameObject fusionVapourPrefab;*/
-    [SerializeField]
-    private Player player;
     [SerializeField] private Animator pipe;
     [SerializeField] private Collider2D myColliderPipe;
     [SerializeField] private SpriteRenderer rendPipe;
+    [SerializeField] private Transform camera1;
+    [SerializeField] private Transform camera2;
+    [SerializeField] private bool up;
     
+    //public Collider2D roomChanger;
+    public Transform nextPosition;
     
-    public Collider2D roomChanger;
-
-    public GameObject pipeGameObject;
-
-    //public GameObject fusionTornado;
+    private Vector3 move;
+    
 
     //private float distanceToVapourPrefab;
-    private float distanceToPlayer1;
+    //private float distanceToPlayer1;
 
     /*
     [SerializeField] public GameObject roomChangerToMistery;
@@ -34,7 +34,13 @@ public class PipeTeletransportation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(pipeGameObject.tag == "PipeOut"){
+        if (up){
+            move = new Vector3(0, 24, 0);
+        }else{
+            move = new Vector3(0, -24, 0);
+        }
+
+        if(gameObject.tag == "PipeOut"){
             pipe.SetBool("PipeOut", true);
         }else{
             pipe.SetBool("PipeOut", false);
@@ -46,23 +52,21 @@ public class PipeTeletransportation : MonoBehaviour
     {
         
         //distanceToVapourPrefab = (fusionTornado.transform.position - transform.position).sqrMagnitude;
-        distanceToPlayer1 = (player.transform.position - pipeGameObject.transform.position).sqrMagnitude;
+        //distanceToPlayer1 = (player.transform.position - pipeGameObject.transform.position).sqrMagnitude;
 
-        if(distanceToPlayer1 < 20 && pipeGameObject.tag == "PipeIn"){
+        /*if(distanceToPlayer1 < 20 && pipeGameObject.tag == "PipeIn"){
             SetActive(roomChanger);
             Debug.Log(distanceToPlayer1);
         }else{
             SetInActive(roomChanger);
-        }
+        }*/
     }
 
-    //turn off
-    void SetInActive (Collider2D col) {
-        col.enabled = false;
-    } 
- 
-    //turn on
-    void SetActive (Collider2D col) {
-         col.enabled = true;
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag == "Fusion"){
+            camera1.position += move;    
+            camera2.position += move;
+            col.gameObject.transform.position = nextPosition.position;
+        }
     }
 }
