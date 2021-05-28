@@ -36,6 +36,7 @@ TagManager:
   - PressurePlate8
   - PressurePlate9
   - rockcave
+  - wind
   layers:
   - Default
   - TransparentFX
