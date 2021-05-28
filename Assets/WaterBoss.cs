@@ -67,8 +67,20 @@ public class WaterBoss : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bull = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
-        bull.GetComponent<FollowingBullet>().addPlayer(closestPlayer);
+        if (health >= 5)
+        {
+            GameObject bull = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
+            bull.GetComponent<FollowingBullet>().addPlayer(closestPlayer);
+        }
+        else
+        {
+            GameObject bull1 = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
+            bull1.GetComponent<FollowingBullet>().addPlayer(Player1);
+            GameObject bull2 = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
+            bull2.GetComponent<FollowingBullet>().addPlayer(Player2);
+        }
+
+        
     }
 
     void OnTriggerEnter2D(Collider2D obj)
