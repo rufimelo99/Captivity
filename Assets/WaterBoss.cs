@@ -10,6 +10,9 @@ public class WaterBoss : MonoBehaviour
     private bool frozen = false;
     private bool destroyed = false;
 
+    private float startTime;
+    private bool isIn = true;
+
     public Animator animator;
 
     public GameObject doorToDestroy;
@@ -36,7 +39,7 @@ public class WaterBoss : MonoBehaviour
     public GameObject plate4;
 
 
-    private bool lifeTaken = false;
+    private bool lifeTaken = true;
     private bool left = true;
 
 
@@ -46,6 +49,7 @@ public class WaterBoss : MonoBehaviour
         animator.SetFloat("Speed", 0);
         speed = 3.0f;
         StartCoroutine(ShotTimer());
+        left = true;
     }
 
 
@@ -66,10 +70,6 @@ public class WaterBoss : MonoBehaviour
     {
         GameObject bull = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
         bull.GetComponent<FollowingBullet>().addPlayer(closestPlayer);
-        /*Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 0));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 180));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 90));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270));*/
     }
 
     void OnTriggerEnter2D(Collider2D obj)
@@ -131,13 +131,11 @@ public class WaterBoss : MonoBehaviour
         if(plate1.GetComponent<PressurePlate_v2>().activated && plate2.GetComponent<PressurePlate_v2>().activated & left)      
         {
             DecreaseLife();
-            left = false;
-        }
+        }       
 
-        if(plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated && !left)
+        if (plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated && !left)
         {
             DecreaseLife();
-            left = true;
         }
     }
 
@@ -162,25 +160,54 @@ public class WaterBoss : MonoBehaviour
 
     }
 
-
     void DecreaseLife()
     {
-        if (!lifeTaken)
+        if (isIn)
+        {
+            startTime = Time.time;
+            isIn = false;
+        }
+
+        if (left & (!plate1.GetComponent<PressurePlate_v2>().activated || !plate2.GetComponent<PressurePlate_v2>().activated))
+        {
+            //Debug.Log("Left");
+            left = false;
+            isIn = true;
+            return;
+        }
+
+        if (!left & (!plate3.GetComponent<PressurePlate_v2>().activated || !plate4.GetComponent<PressurePlate_v2>().activated))
+        {
+            //Debug.Log("right");
+            left = true;
+            isIn = true;
+            return;
+        }
+
+        if (Time.time - startTime >= 1.5f)
         {
             StartCoroutine(BananaMan());
-        }
+            if (left)
+            {
+                left = false;
+                isIn = true;
+            }
+            else
+            {
+                left = true;
+                isIn = true;
+            }
+        }        
     }
 
     IEnumerator BananaMan()
     {
-        lifeTaken = true;
-        healthBar.color = Color.black;
+        healthBar.color = Color.black;  // just to animate the health bar
         health = health - 3f;
         healthBar.fillAmount = health / 10f;
         animator.SetFloat("Health", health);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         healthBar.color = Color.white;
-        lifeTaken = false;
     }
 
 
