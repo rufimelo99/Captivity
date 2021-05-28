@@ -124,7 +124,6 @@ public class WizardMole : MonoBehaviour
 
         if (health <= 0)
         {
-            destroyed = true;
             StartCoroutine(freeze());
         }
 
