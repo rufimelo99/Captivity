@@ -7,6 +7,8 @@ public class EvilWizard : MonoBehaviour
 
     private bool moveTo = false;
     private bool moveBack = false;
+    private bool shoot = false;
+    private bool inBase = true;
 
     public Transform target; 
     public Transform Base;
@@ -73,6 +75,7 @@ public class EvilWizard : MonoBehaviour
             if (transform.position == Base.position)
             {
                 moveBack = false;
+                inBase = true;
             }
         }
 
@@ -121,7 +124,7 @@ public class EvilWizard : MonoBehaviour
     void Attack0()
     {
 
-        if (count < 4)
+        if (count < 4 & inBase)
         {
             GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
             moly.SetActive(true);
@@ -131,7 +134,8 @@ public class EvilWizard : MonoBehaviour
 
         if (GameObject.FindWithTag("Evil Touch") == null)
         {
-            moveAttack();
+            moveTo = true;
+            inBase = false;
             count = 0;
         }
          //Instantiate(EvilTreePrefab, transform.position + offset, transform.rotation);
@@ -141,22 +145,35 @@ public class EvilWizard : MonoBehaviour
     IEnumerator waitAndMoveBack()
     {
         WaitForSeconds pause = new WaitForSeconds(3f);
+        shoot = true;
+        StartCoroutine(moveAttack());
         yield return pause;
+        shoot = false;
         moveBack = true;
     }
 
 
-    void moveAttack()
+    IEnumerator moveAttack()
     {
-        moveTo = true;
- 
-        GameObject bull1 = Instantiate(FireBall, transform.position, transform.rotation);
-        bull1.GetComponent<FollowingBullet>().addPlayer(player1.transform);
-        bull1.GetComponent<FollowingBullet>().makeFaster();
 
-        GameObject bull2 = Instantiate(FireBall, transform.position, transform.rotation);// follow the player
-        bull2.GetComponent<FollowingBullet>().addPlayer(player2.transform);
-        bull2.GetComponent<FollowingBullet>().makeFaster();
+        WaitForSeconds pause = new WaitForSeconds(0.2f);
+
+        while (shoot)
+        {
+            GameObject bull1 = Instantiate(FireBall, transform.position, transform.rotation);
+            bull1.GetComponent<FollowingBullet>().addPlayer(player1.transform);
+            bull1.GetComponent<FollowingBullet>().makeFaster();
+
+            yield return pause;
+
+
+            GameObject bull2 = Instantiate(FireBall, transform.position, transform.rotation);
+            bull2.GetComponent<FollowingBullet>().addPlayer(player2.transform);
+            bull2.GetComponent<FollowingBullet>().makeFaster();
+
+            yield return pause;
+
+        }
     }
 
 
