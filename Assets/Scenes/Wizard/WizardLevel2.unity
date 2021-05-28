@@ -39011,6 +39011,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1749668968}
+  player1: {fileID: 1073826633}
+  player2: {fileID: 1779437358}
+  molePrefab: {fileID: 1079402690663034389, guid: 52b1c2667197d9540bcf653111282c5d,
+    type: 3}
+  EvilTreePrefab: {fileID: 9108804543175455868, guid: 27478a48b5a8e464d9ef6f355d089beb,
+    type: 3}
+  WaterBossPrefab: {fileID: 4459195084043743745, guid: bb68d02f98e87854bbeaca922db393d2,
+    type: 3}
 --- !u!61 &1749668970
 BoxCollider2D:
   m_ObjectHideFlags: 0
