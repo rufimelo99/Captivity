@@ -23,6 +23,8 @@ public class EvilWizard : MonoBehaviour
     private int stage = 0;
     private float attackTime = 2.0f;
 
+    private bool yes = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,11 @@ public class EvilWizard : MonoBehaviour
             offset = new Vector3(3f, 0f, 0f);
         }
 
+        if (health <= 5)
+        {
+            stage = 1;
+        }
+
         manageTime();
     }
 
@@ -56,12 +63,6 @@ public class EvilWizard : MonoBehaviour
                 attackTime = 2.0f;  // shoot some balls
                 break;
             case 1:
-                attackTime = 1.0f;   // shoot lots of balls
-                break;
-            case 2:
-                attackTime = 2.0f;   // shoot some enemies
-                break;
-            case 3:
                 attackTime = 1.0f;  // shoot lots of enemies and balls
                 break;
         }
@@ -83,10 +84,33 @@ public class EvilWizard : MonoBehaviour
 
     void manageAttacks()
     {
+
+        
+        GameObject bull1 = Instantiate(FireBall, transform.position, transform.rotation);
+        bull1.GetComponent<FollowingBullet>().addPlayer(player1.transform);
+        bull1.GetComponent<FollowingBullet>().makeFaster();
+
+        GameObject bull2 = Instantiate(FireBall, transform.position, transform.rotation);// follow the player
+        bull2.GetComponent<FollowingBullet>().addPlayer(player2.transform);
+        bull2.GetComponent<FollowingBullet>().makeFaster();
+
+
+        if (yes)
+        {
+            GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly.SetActive(true);
+            moly.GetComponent<WizardMole>().addPlayers(player1, player2);
+            yes = false;
+        }
+        else
+        {
+            yes = true;
+        }
+        
+        
+        
         //Instantiate(EvilTreePrefab, transform.position + offset, transform.rotation);
-        GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation*Quaternion.Euler(0, 180, 0));
-        moly.SetActive(true);
-        moly.GetComponent<WizardMole>().addPlayers(player1, player2);
+        
     }
 
 

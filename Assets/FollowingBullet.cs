@@ -7,7 +7,7 @@ public class FollowingBullet : MonoBehaviour
 
     public float bulletDamage;
 
-    private float bulletSpeed = 9.5f;
+    private float bulletSpeed = 20f;
     private float spriteWithDelta;
     //private Rigidbody2D bulletBody;
     private Transform playerTransform;
@@ -22,9 +22,13 @@ public class FollowingBullet : MonoBehaviour
     {
         //bulletBody = GetComponent<Rigidbody2D>();
         //playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        bulletSpeed = 20f;      
         selfTransform = GetComponent<Transform>();
         makeBigger();
+    }
+
+    public void makeFaster()
+    {
+        bulletSpeed = 50f;
     }
 
     void OnTriggerEnter2D(Collider2D obj)
