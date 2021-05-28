@@ -5,6 +5,12 @@ using UnityEngine;
 public class EvilWizard : MonoBehaviour
 {
 
+    private bool moveTo = false;
+    private bool moveBack = false;
+
+    public Transform target; 
+    public Transform Base;
+
     private bool left = true;
     private Vector3 offset = new Vector3(-3f, 0f, 0f);
     private float health = 10f;
@@ -23,7 +29,7 @@ public class EvilWizard : MonoBehaviour
     private int stage = 0;
     private float attackTime = 2.0f;
 
-    private bool yes = true;
+    private int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +56,24 @@ public class EvilWizard : MonoBehaviour
         if (health <= 5)
         {
             stage = 1;
+        }
+
+        if (moveTo)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, 10 * Time.deltaTime);
+            if (transform.position == target.position)
+            {
+                moveTo = false;
+                StartCoroutine(waitAndMoveBack());
+            }
+        }
+        if (moveBack)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Base.position, 10 * Time.deltaTime);
+            if (transform.position == Base.position)
+            {
+                moveBack = false;
+            }
         }
 
         manageTime();
@@ -81,11 +105,51 @@ public class EvilWizard : MonoBehaviour
         }
     }
 
-
     void manageAttacks()
     {
+        if (stage == 0)
+        {
+            Attack0();
+        }
+        else
+        {
+            Attack0();
+        }
+    }
 
+
+    void Attack0()
+    {
+
+        if (count < 4)
+        {
+            GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly.SetActive(true);
+            moly.GetComponent<WizardMole>().addPlayers(player1, player2);
+            count += 1;
+        }
+
+        if (GameObject.FindWithTag("Evil Touch") == null)
+        {
+            moveAttack();
+            count = 0;
+        }
+         //Instantiate(EvilTreePrefab, transform.position + offset, transform.rotation);
         
+    }
+
+    IEnumerator waitAndMoveBack()
+    {
+        WaitForSeconds pause = new WaitForSeconds(3f);
+        yield return pause;
+        moveBack = true;
+    }
+
+
+    void moveAttack()
+    {
+        moveTo = true;
+ 
         GameObject bull1 = Instantiate(FireBall, transform.position, transform.rotation);
         bull1.GetComponent<FollowingBullet>().addPlayer(player1.transform);
         bull1.GetComponent<FollowingBullet>().makeFaster();
@@ -93,24 +157,6 @@ public class EvilWizard : MonoBehaviour
         GameObject bull2 = Instantiate(FireBall, transform.position, transform.rotation);// follow the player
         bull2.GetComponent<FollowingBullet>().addPlayer(player2.transform);
         bull2.GetComponent<FollowingBullet>().makeFaster();
-
-
-        if (yes)
-        {
-            GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
-            moly.SetActive(true);
-            moly.GetComponent<WizardMole>().addPlayers(player1, player2);
-            yes = false;
-        }
-        else
-        {
-            yes = true;
-        }
-        
-        
-        
-        //Instantiate(EvilTreePrefab, transform.position + offset, transform.rotation);
-        
     }
 
 
