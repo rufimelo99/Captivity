@@ -16,7 +16,7 @@ public class EvilWizard : MonoBehaviour
 
     private bool left = true;
     private Vector3 offset = new Vector3(-3f, 0f, 0f);
-    private float health = 10f;
+    private float health = 30f;
 
     public Animator animator;
 
@@ -56,25 +56,29 @@ public class EvilWizard : MonoBehaviour
             offset = new Vector3(3f, 0f, 0f);
         }
 
-        if (health <= 5)
+        if (health <= 15)
         {
             stage = 1;
         }
 
         if (moveTo)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, 10 * Time.deltaTime);
+            animator.SetBool("Move", true);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, 10 * Time.deltaTime);           
             if (transform.position == target.position)
             {
+                animator.SetBool("Move", false);
                 moveTo = false;
                 StartCoroutine(waitAndMoveBack());
             }
         }
         if (moveBack)
         {
+            animator.SetBool("Move", true);
             transform.position = Vector3.MoveTowards(transform.position, Base.position, 10 * Time.deltaTime);
             if (transform.position == Base.position)
             {
+                animator.SetBool("Move", false);
                 moveBack = false;
                 inBase = true;
             }
