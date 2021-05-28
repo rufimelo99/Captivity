@@ -6,6 +6,7 @@ public class EvilWizard : MonoBehaviour
 {
 
     private bool left = true;
+    private float health = 10f;
 
     public Animator animator;
 
@@ -13,6 +14,7 @@ public class EvilWizard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator.SetFloat("Health", health);
         StartCoroutine(Attack());
 
     }
@@ -41,6 +43,16 @@ public class EvilWizard : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             animator.SetBool("Attack", false);
         }
-        
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        //river - TODO - make this good
+        if (col.tag == "Bullet")
+        {
+            health = health - 1f;
+            animator.SetFloat("Health", health);
+        }
     }
 }
