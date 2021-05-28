@@ -37,6 +37,10 @@ public class PipeTeletransportation : MonoBehaviour
         if (up){
             move = new Vector3(0, 24, 0);
         }
+        else
+        {
+            move = new Vector3(0, -24, 0);
+        }
 
         if(gameObject.tag == "PipeOut"){
             pipe.SetBool("PipeOut", true);

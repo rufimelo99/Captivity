@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8139,7 +8139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  element: 0
+  element: 2
 --- !u!61 &1028472878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46674,6 +46674,7 @@ MonoBehaviour:
     type: 3}
   landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
     type: 3}
+  fusionVaporPrefab: {fileID: 0}
   isThereATarget: 0
   timer: 0
 --- !u!114 &1882961482
