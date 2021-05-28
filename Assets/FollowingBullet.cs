@@ -14,13 +14,15 @@ public class FollowingBullet : MonoBehaviour
     private Transform selfTransform;
     private Vector3 playerPosition;
 
+    public SpriteRenderer sp;
+
 
     // Use this for initialization
     void Start()
     {
         //bulletBody = GetComponent<Rigidbody2D>();
         //playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        bulletSpeed = 10f;      
+        bulletSpeed = 20f;      
         selfTransform = GetComponent<Transform>();
         makeBigger();
     }
@@ -52,6 +54,20 @@ public class FollowingBullet : MonoBehaviour
     void Update()
     {
         selfTransform.position = Vector3.MoveTowards(selfTransform.position, playerPosition, bulletSpeed * Time.deltaTime);
+        if (selfTransform.position == playerPosition)
+        {
+            StartCoroutine(expelliarmus());
+        }
+        
+    }
+
+
+    IEnumerator expelliarmus()
+    {
+        WaitForSeconds pause = new WaitForSeconds(0.5f);
+        sp.color = Color.red;
+        yield return pause;
+        Destroy(gameObject);
     }
 }
 

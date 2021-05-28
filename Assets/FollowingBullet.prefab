@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 0.2
 --- !u!82 &8806860500044207876
 AudioSource:
   m_ObjectHideFlags: 0
@@ -231,3 +231,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 40
+  sp: {fileID: 4610505604689755118}

@@ -36,6 +36,10 @@ public class WaterBoss : MonoBehaviour
     public GameObject plate4;
 
 
+    private bool lifeTaken = false;
+    private bool left = true;
+
+
     void Start()
     {
         animator.SetFloat("Health", 10);
@@ -124,10 +128,16 @@ public class WaterBoss : MonoBehaviour
 
     void checkPlates()
     {
-        if(plate1.GetComponent<PressurePlate_v2>().activated && plate2.GetComponent<PressurePlate_v2>().activated ||
-            plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated)
+        if(plate1.GetComponent<PressurePlate_v2>().activated && plate2.GetComponent<PressurePlate_v2>().activated & left)      
         {
             DecreaseLife();
+            left = false;
+        }
+
+        if(plate3.GetComponent<PressurePlate_v2>().activated && plate4.GetComponent<PressurePlate_v2>().activated && !left)
+        {
+            DecreaseLife();
+            left = true;
         }
     }
 
@@ -155,14 +165,24 @@ public class WaterBoss : MonoBehaviour
 
     void DecreaseLife()
     {
+        if (!lifeTaken)
+        {
+            StartCoroutine(BananaMan());
+        }
+    }
 
-        health = health - 0.01f;
-
-
+    IEnumerator BananaMan()
+    {
+        lifeTaken = true;
+        healthBar.color = Color.black;
+        health = health - 3f;
         healthBar.fillAmount = health / 10f;
         animator.SetFloat("Health", health);
+        yield return new WaitForSeconds(2f);
+        healthBar.color = Color.white;
+        lifeTaken = false;
     }
-    
+
 
 
     IEnumerator freeze()

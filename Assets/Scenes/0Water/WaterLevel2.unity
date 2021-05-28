@@ -9748,12 +9748,12 @@ PrefabInstance:
     - target: {fileID: 2168002739416069403, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.25
+      value: 23.02
       objectReference: {fileID: 0}
     - target: {fileID: 2168002739416069403, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.2
+      value: -20.74
       objectReference: {fileID: 0}
     - target: {fileID: 2168002739416069403, guid: cb711b64104ea704aa6ec6e871cfffd6,
         type: 3}
@@ -40522,7 +40522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.5566038, b: 0.5566038, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -41267,12 +41267,12 @@ PrefabInstance:
     - target: {fileID: 8146559362446528171, guid: 296f6c99e2197e14fb0dbde03a1630ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.329998
+      value: 23.1
       objectReference: {fileID: 0}
     - target: {fileID: 8146559362446528171, guid: 296f6c99e2197e14fb0dbde03a1630ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.18
+      value: -15.65
       objectReference: {fileID: 0}
     - target: {fileID: 8146559362446528171, guid: 296f6c99e2197e14fb0dbde03a1630ee,
         type: 3}
@@ -50300,7 +50300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104840359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.6, y: -17.31, z: 0}
+  m_LocalPosition: {x: 49.91, y: -17.31, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children:
   - {fileID: 1142962178}
