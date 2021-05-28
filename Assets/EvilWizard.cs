@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EvilWizard : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class EvilWizard : MonoBehaviour
     private bool inBase = true;
     private bool madeMore = true;
 
+    public Image healthBar;
+
     public Transform target; 
     public Transform Base;
 
     private bool left = true;
     private Vector3 offset = new Vector3(-3f, 0f, 0f);
-    private float health = 30f;
+    private float health = 50f;
 
     public Animator animator;
 
@@ -56,9 +59,14 @@ public class EvilWizard : MonoBehaviour
             offset = new Vector3(3f, 0f, 0f);
         }
 
-        if (health <= 15)
+        if (health <= 40)
         {
             stage = 1;
+        }
+
+        if (health <= 20)
+        {
+            stage = 2;
         }
 
         if (moveTo)
@@ -95,7 +103,10 @@ public class EvilWizard : MonoBehaviour
                 attackTime = 2.0f;  // shoot some balls
                 break;
             case 1:
-                attackTime = 1.0f;  // shoot lots of enemies and balls
+                attackTime = 1.5f;  // shoot lots of enemies and balls
+                break;
+            case 2:
+                attackTime = 1f;  // shoot lots of enemies and balls
                 break;
         }
     }
@@ -108,21 +119,92 @@ public class EvilWizard : MonoBehaviour
             yield return new WaitForSeconds(attackTime);
             animator.SetBool("Attack", true);
             manageAttacks();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(attackTime);
             animator.SetBool("Attack", false);
         }
     }
 
     void manageAttacks()
     {
-        /*if (stage == 0)
+
+        switch (stage)
         {
-            Attack0();
+            case 0:
+                Attack0();
+                break;
+            case 1:
+                Attack1();
+                break;
+            case 2:
+                Attack2();
+                break;
         }
-        else
-        {*/
-        Attack0();
-        //}
+
+    }
+
+
+    void makeTrees()
+    {
+        Instantiate(EvilTreePrefab, target.position+new Vector3(2,6,0), transform.rotation * Quaternion.Euler(0, 180, 0));
+        Instantiate(EvilTreePrefab, target.position + new Vector3(2, 4, 0), transform.rotation * Quaternion.Euler(0, 180, 0));
+        Instantiate(EvilTreePrefab, target.position + new Vector3(2, -4,0), transform.rotation * Quaternion.Euler(0, 180, 0));
+        Instantiate(EvilTreePrefab, target.position + new Vector3(2, -6, 0), transform.rotation * Quaternion.Euler(0, 180, 0));
+    }
+
+
+    void Attack2()
+    {
+        if (count < 8 & inBase)
+        {
+            GameObject moly1 = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly1.SetActive(true);
+            moly1.GetComponent<WizardMole>().addPlayers(player1, player2);
+
+            GameObject moly2 = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly2.SetActive(true);
+            moly2.GetComponent<WizardMole>().addPlayers(player1, player2);
+
+            madeMore = true;
+            count += 2;
+
+            makeTrees();
+        }
+
+        if (GameObject.FindWithTag("Evil Touch") == null && madeMore)
+        {
+            moveTo = true;
+            inBase = false;
+            count = 0;
+            madeMore = false;
+        }
+    }
+
+
+
+
+    void Attack1()
+    {
+        if (count < 8 & inBase)
+        {
+            GameObject moly1 = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly1.SetActive(true);
+            moly1.GetComponent<WizardMole>().addPlayers(player1, player2);
+            
+            GameObject moly2 = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
+            moly2.SetActive(true);
+            moly2.GetComponent<WizardMole>().addPlayers(player1, player2);
+            
+            madeMore = true;
+            count += 2;
+        }
+
+        if (GameObject.FindWithTag("Evil Touch") == null && madeMore)
+        {
+            moveTo = true;
+            inBase = false;
+            count = 0;
+            madeMore = false;
+        }
     }
 
 
@@ -193,5 +275,7 @@ public class EvilWizard : MonoBehaviour
             health = health - 1f;
             animator.SetFloat("Health", health);
         }
+
+        healthBar.fillAmount = health / 50f;
     }
 }
