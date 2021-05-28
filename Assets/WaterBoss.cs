@@ -39,7 +39,6 @@ public class WaterBoss : MonoBehaviour
     public GameObject plate4;
 
 
-    private bool lifeTaken = true;
     private bool left = true;
 
 
