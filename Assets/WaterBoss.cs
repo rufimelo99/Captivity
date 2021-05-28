@@ -60,12 +60,12 @@ public class WaterBoss : MonoBehaviour
 
     void Shoot()
     {
-        //GameObject bull = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0,0,0));
-        //bull.GetComponent<FollowingBullet>().assignPlayer(closestPlayer);
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+        GameObject bull = Instantiate(bulletPrefab, transform.position, transform.rotation); // follow the player
+        bull.GetComponent<FollowingBullet>().addPlayer(closestPlayer);
+        /*Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 0));
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 180));
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 90));
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270));
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, 270));*/
     }
 
     void OnTriggerEnter2D(Collider2D obj)
@@ -74,6 +74,10 @@ public class WaterBoss : MonoBehaviour
         {
             health = health - obj.GetComponent<Bullet>().damage;
         }
+
+
+        healthBar.fillAmount = health / 10f;
+        animator.SetFloat("Health", health);
     }
 
 

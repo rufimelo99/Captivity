@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ebf843ff646b4234aa92e617387c2cf2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.9518118, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +135,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: bb6cdd13aeb95f743847b1cd460889bc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.54
-  m_Pitch: 3
+  m_Pitch: -3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -230,3 +230,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3117b755241d6654a92cf393166bc96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletDamage: 40
