@@ -38,6 +38,7 @@ TagManager:
   - rockcave
   - wind
   - tornadorTP
+  - Comb Tree
   layers:
   - Default
   - TransparentFX
