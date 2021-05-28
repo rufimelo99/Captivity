@@ -28,6 +28,7 @@ public class GlobalControl : MonoBehaviour
     [HideInInspector]
     public enum KeysAvailable
     {
+        KEYAIR1,
         KEYELECT1
     }
 

@@ -7,18 +7,22 @@ public class TakeKey : MonoBehaviour
 
     private bool player1 = false;
     private bool player2 = false;
+    //private bool boolrock = false;
+
+    //public Collider2D rock;
 
     public GlobalControl.KeysAvailable keyType;
 
+    //private float distanceToRock;
 
-    [SerializeField]
-    private GameObject Key;
+    //[SerializeField] private GameObject key;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //distanceToRock = (transform.position - rock.transform.position).sqrMagnitude;
+
     }
 
     // Update is called once per frame
@@ -29,6 +33,11 @@ public class TakeKey : MonoBehaviour
             GlobalControl.Instance.addKey(keyType);
             gameObject.SetActive(false);
         }
+
+        /*if(boolrock)
+        {
+            key.layer = 1;
+        }*/
     }
 
 
@@ -43,6 +52,19 @@ public class TakeKey : MonoBehaviour
         {
             player2 = true;//
         }
+        /*if(col.gameObject.tag == "rockcave")
+        {
+            boolrock = true;//
+        }*/
+    }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        
+        /*if(col.gameObject.tag == "rockcave")
+        {
+            boolrock = true;//
+        }*/
     }
 
     void OnCollisionExit2D(Collision2D col)
@@ -57,4 +79,6 @@ public class TakeKey : MonoBehaviour
             player2 = false;//
         }
     }
+
+
 }
