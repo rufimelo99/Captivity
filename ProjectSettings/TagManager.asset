@@ -37,6 +37,7 @@ TagManager:
   - PressurePlate9
   - rockcave
   - wind
+  - tornadorTP
   layers:
   - Default
   - TransparentFX
