@@ -62,8 +62,8 @@ public class GlobalControl : MonoBehaviour
         elementalsPossesed.Add(Player.ElementalsAvailable.HUMAN);
 
 
-        //PUT TO ZERO IN THE FINAL VERSION
-        CompletedLevels = 11;
+        //PUT TO ZERO IN THE FINAL VERSION, 11 for testing
+        CompletedLevels = 0;
 
         //THESE ARE NOT THE GEMS YOU ARE LOOKING FOR
         /*gemsCollected.Add(GlobalControl.GemsAvailable.WATER);
@@ -74,14 +74,14 @@ public class GlobalControl : MonoBehaviour
         gemsCollected.Add(GlobalControl.GemsAvailable.WIZARD);
         */
 
-        //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
+        /*FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
         elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
         elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
         elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
         elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
         elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
         pagesCollected = new bool[16]; //needs to be equal to the number of pages on the book
-        /*#To allow all the pages on the diary
+        #To allow all the pages on the diary
         for (int i=0; i<pagesCollected.Length; i++)
         {
             pagesCollected[i] = true;

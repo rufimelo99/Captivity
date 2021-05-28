@@ -38,7 +38,15 @@ public class EndGame : MonoBehaviour
         {
             GlobalControl.Instance.CompletedLevels = level;
         }
-        SceneManager.LoadScene(3);
+
+        if (level == 11)
+        {
+            SceneManager.LoadScene(17);
+        }
+        else
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
 
