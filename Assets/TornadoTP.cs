@@ -25,28 +25,28 @@ public class TornadoTP : MonoBehaviour
     void Start()
     {
         if (up){
-            move = new Vector3(0, 23.9f, 0);
+            move = new Vector3(0, 24.0f, 0);
         }
         if (down){
-            move = new Vector3(0, -23.9f, 0);
+            move = new Vector3(0, -24.0f, 0);
         }
         if (right){
-            move = new Vector3(27.18f, 0, 0);
+            move = new Vector3(27.0f, 0, 0);
         }
         if (left){
-            move = new Vector3(-27.18f, 23.9f, 0);
+            move = new Vector3(-27.0f, 24.0f, 0);
         }
         if (upright){
-            move = new Vector3(27.18f, 23.9f, 0);
+            move = new Vector3(27.0f, 24.0f, 0);
         }
         if (upleft){
-            move = new Vector3(-27.18f, 23.9f, 0);
+            move = new Vector3(-27.0f, 24.0f, 0);
         }
         if (downright){
-            move = new Vector3(27.18f, -23.9f, 0);
+            move = new Vector3(27.0f, -24.0f, 0);
         }
         if (downleft){
-            move = new Vector3(-27.18f, -23.9f, 0);
+            move = new Vector3(-27.0f, -24.0f, 0);
         }
     }
 
@@ -58,7 +58,7 @@ public class TornadoTP : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Player"){
-            camera1.position += move;    
+            camera1.position += move;
             col.gameObject.transform.position = nextPosition.position;
         }
         if(col.gameObject.tag == "Player2"){  

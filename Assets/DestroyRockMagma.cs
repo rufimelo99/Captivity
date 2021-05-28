@@ -9,8 +9,17 @@ public class DestroyRockMagma : MonoBehaviour
     {
         if (obj.tag == "Magma")
         {
-            Destroy(gameObject);
+            StartCoroutine(GenocideMagma());
         }
+    }
+
+
+    IEnumerator GenocideMagma()
+    {
+        WaitForSeconds pause = new WaitForSeconds(1f);
+
+        yield return pause;
+        Destroy(gameObject);
     }
 
 }
