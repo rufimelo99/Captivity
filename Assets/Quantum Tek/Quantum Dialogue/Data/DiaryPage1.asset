@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: WaterLevel1_NewStartPaper
+  m_Name: DiaryPage1
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -32,28 +32,23 @@ MonoBehaviour:
     SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: March 12th, 1987
+    MessageText: 'March 29th, 2450 '
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: I've held captive for quite a while now...
+    MessageText: Yet it was we, the spirits of nature, who brought you here to Earth,
+      and for that reason we feel obliged to do something.
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 2
-    NextMessage: 4
-    MessageText: It is time to attemp to leave this place, whatever this is...
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: Note
-    PreviousMessage: 3
     NextMessage: -1
-    MessageText: If these note find someone, hope it can help them
+    MessageText: 'In 2050, the environment revolted against the recurring atrocities
+      spawned by you ordinary humans.  '
     Clip: {fileID: 0}
   Choices:
   - ID: 4

@@ -569,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7553862517005297477}
   m_Layer: 0
-  m_Name: WaterLevelPiecePaper0
+  m_Name: DiaryPage3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e215bbb36679a431e93c51bb0514659e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 02bef4add152c2d4084392fbc7bac403, type: 2}
+  dialogue: {fileID: 11400000, guid: dc8e4e914518e8e4c9a0d3856136cfd0, type: 2}
   currentConversationIndex: -1
   currentConversation:
     ID: 0
