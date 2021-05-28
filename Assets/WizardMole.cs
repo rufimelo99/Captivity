@@ -8,7 +8,6 @@ public class WizardMole : MonoBehaviour
     public float speed;
 
     private bool frozen = false;
-    private bool destroyed = false;
 
     private float startTime;
     private bool isIn = true;
