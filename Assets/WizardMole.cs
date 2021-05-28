@@ -10,7 +10,6 @@ public class WizardMole : MonoBehaviour
     private bool frozen = false;
 
     private float startTime;
-    private bool isIn = true;
 
     public Animator animator;
 

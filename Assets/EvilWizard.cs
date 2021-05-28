@@ -18,14 +18,16 @@ public class EvilWizard : MonoBehaviour
     public GameObject molePrefab;
     public GameObject EvilTreePrefab;
     public GameObject WaterBossPrefab;
+    public GameObject FireBall;
 
+    private int stage = 0;
+    private float attackTime = 2.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         animator.SetFloat("Health", health);
         StartCoroutine(Attack());
-
     }
 
 
@@ -42,6 +44,27 @@ public class EvilWizard : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
             offset = new Vector3(3f, 0f, 0f);
         }
+
+        manageTime();
+    }
+
+    void manageTime()
+    {
+        switch (stage)
+        {
+            case 0:
+                attackTime = 2.0f;  // shoot some balls
+                break;
+            case 1:
+                attackTime = 1.0f;   // shoot lots of balls
+                break;
+            case 2:
+                attackTime = 2.0f;   // shoot some enemies
+                break;
+            case 3:
+                attackTime = 1.0f;  // shoot lots of enemies and balls
+                break;
+        }
     }
 
 
@@ -49,7 +72,7 @@ public class EvilWizard : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(attackTime);
             animator.SetBool("Attack", true);
             manageAttacks();
             yield return new WaitForSeconds(0.1f);
