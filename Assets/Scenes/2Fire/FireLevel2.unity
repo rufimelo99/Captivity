@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -40587,7 +40587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2136433738}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1112941872
@@ -55294,6 +55294,7 @@ MonoBehaviour:
     type: 3}
   landingAreaPrefab: {fileID: 5533691282215770890, guid: 717cbeaf49f67cc48a3b80745fb01d77,
     type: 3}
+  fusionVaporPrefab: {fileID: 0}
   isThereATarget: 0
   timer: 0
 --- !u!114 &1849565222
