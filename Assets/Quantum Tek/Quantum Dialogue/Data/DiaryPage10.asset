@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: WaterLevel1_NewStartPaper
+  m_Name: DiaryPage10
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -32,28 +32,29 @@ MonoBehaviour:
     SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: March 12th, 1987
+    MessageText: 'DEZ. 26th, 2450 '
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: I've held captive for quite a while now...
+    MessageText: He forged the plan to deceive us in order to capture us.
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 2
     NextMessage: 4
-    MessageText: It is time to attemp to leave this place, whatever this is...
+    MessageText: 'He wants his family to be the most powerful once again, '
     Clip: {fileID: 0}
   - ID: 4
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 3
     NextMessage: -1
-    MessageText: If these note find someone, hope it can help them
+    MessageText: but he realizes that to do it is not enough to have only one of
+      the powers, but all. He wants all our powers.
     Clip: {fileID: 0}
   Choices:
   - ID: 4

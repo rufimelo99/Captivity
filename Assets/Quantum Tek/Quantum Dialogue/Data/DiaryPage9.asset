@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: WaterLevel1_NewStartPaper
+  m_Name: DiaryPage9
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -32,28 +32,30 @@ MonoBehaviour:
     SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: March 12th, 1987
+    MessageText: 'Nov. 7th, 2450 '
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: I've held captive for quite a while now...
+    MessageText: 'Now 400 years later, the powers have lost their full potential
+      due to crosses between families. '
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 2
     NextMessage: 4
-    MessageText: It is time to attemp to leave this place, whatever this is...
+    MessageText: 'The Wizard, descended from the junction between the two families, '
     Clip: {fileID: 0}
   - ID: 4
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 3
     NextMessage: -1
-    MessageText: If these note find someone, hope it can help them
+    MessageText: ', possesses the power of illusion, however he is no longer able
+      to fully manipulate either fire or air.  '
     Clip: {fileID: 0}
   Choices:
   - ID: 4

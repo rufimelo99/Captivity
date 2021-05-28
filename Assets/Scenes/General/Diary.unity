@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -113648,7 +113648,7 @@ PrefabInstance:
       objectReference: {fileID: 74791331}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.size
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[0]
@@ -113658,7 +113658,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 978eb1ba2f978f94ebf4bb85c1e3bded,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[2]
@@ -113732,7 +113732,7 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.size
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[0]
@@ -113742,67 +113742,67 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: fab2e1dd3bad1674eb6790c76fad4274,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: a35ea115006c6214186106f7de988321,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: baab936375d97a74d8f6632c73839bc7,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: bcc2af32a4850414daac5d77b7a59a8e,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 333c876d2155d4145b7b5a124d91627a,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: a15672f7161f74b47bd8ff00bccde2a5,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[7]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 985c0edf91c636a459484a13d759f9b2,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[8]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 647d793d3ee92294993940f6ad91dc2a,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[9]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 203fefcb90a872e439ad30752adba7b0,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[10]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 47f9134e47ce06d41a96998799425d98,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[11]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 12a1559db0dfe35419d64c85540366fb,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[12]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 04c49225054106a41b2da81c00cad4b9,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[13]
       value: 
-      objectReference: {fileID: 21300000, guid: 9463735736b67f146a1fa1e868b491e3,
+      objectReference: {fileID: 21300000, guid: 978eb1ba2f978f94ebf4bb85c1e3bded,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPagesCompleted.Array.data[14]
