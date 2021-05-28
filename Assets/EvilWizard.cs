@@ -9,6 +9,7 @@ public class EvilWizard : MonoBehaviour
     private bool moveBack = false;
     private bool shoot = false;
     private bool inBase = true;
+    private bool madeMore = true;
 
     public Transform target; 
     public Transform Base;
@@ -110,14 +111,14 @@ public class EvilWizard : MonoBehaviour
 
     void manageAttacks()
     {
-        if (stage == 0)
+        /*if (stage == 0)
         {
             Attack0();
         }
         else
-        {
-            Attack0();
-        }
+        {*/
+        Attack0();
+        //}
     }
 
 
@@ -129,14 +130,16 @@ public class EvilWizard : MonoBehaviour
             GameObject moly = Instantiate(WaterBossPrefab, transform.position + offset, transform.rotation * Quaternion.Euler(0, 180, 0));
             moly.SetActive(true);
             moly.GetComponent<WizardMole>().addPlayers(player1, player2);
+            madeMore = true;
             count += 1;
         }
 
-        if (GameObject.FindWithTag("Evil Touch") == null)
+        if (GameObject.FindWithTag("Evil Touch") == null && madeMore)
         {
             moveTo = true;
             inBase = false;
             count = 0;
+            madeMore = false;
         }
          //Instantiate(EvilTreePrefab, transform.position + offset, transform.rotation);
         
@@ -149,6 +152,7 @@ public class EvilWizard : MonoBehaviour
         StartCoroutine(moveAttack());
         yield return pause;
         shoot = false;
+        moveTo = false;
         moveBack = true;
     }
 
