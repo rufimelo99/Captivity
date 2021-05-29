@@ -32,26 +32,28 @@ MonoBehaviour:
     SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: March 12th, 1987
+    MessageText: March 12th, 2040
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: I've held captive for quite a while now...
+    MessageText: We were held captive for so long, but now we will finally manage
+      to break out and kill Him
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 2
-    NextMessage: 4
-    MessageText: It is time to attemp to leave this place, whatever this is...
+    NextMessage: -1
+    MessageText: We will leave these notes in case we don't succeed so that they
+      might help the next generation of rebels
     Clip: {fileID: 0}
   - ID: 4
     Speaker: 2
     SpeakerName: Note
-    PreviousMessage: 3
+    PreviousMessage: -1
     NextMessage: -1
     MessageText: If these note find someone, hope it can help them
     Clip: {fileID: 0}
