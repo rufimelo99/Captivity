@@ -39,6 +39,7 @@ TagManager:
   - wind
   - tornadorTP
   - Comb Tree
+  - Thunder
   layers:
   - Default
   - TransparentFX
