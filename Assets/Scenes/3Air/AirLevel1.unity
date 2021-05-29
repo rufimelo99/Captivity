@@ -1872,11 +1872,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317471008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.155539, y: 22.196304, z: 0}
+  m_LocalPosition: {x: -11.4, y: -4.209999, z: 10.9453125}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 2034790391}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &361236119
 GameObject:
@@ -45509,7 +45509,7 @@ Transform:
   m_LocalScale: {x: 11.960836, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &441118004
 MonoBehaviour:
@@ -46047,7 +46047,7 @@ RectTransform:
   - {fileID: 2024688345}
   - {fileID: 1041650570}
   m_Father: {fileID: 2131879290}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -63517,7 +63517,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1556659083
 MonoBehaviour:
@@ -64161,7 +64161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640423687}
   m_Layer: 0
-  m_Name: Room2
+  m_Name: Pressure Plates room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64267,7 +64267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1646154400}
   m_Layer: 0
-  m_Name: Room3
+  m_Name: Final Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65661,7 +65661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729284015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.57, y: 5.96, z: 0}
+  m_LocalPosition: {x: -11.8, y: 6.3, z: 11}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 2034790391}
@@ -70989,7 +70989,7 @@ GameObject:
   - component: {fileID: 1911381280}
   - component: {fileID: 1911381281}
   m_Layer: 0
-  m_Name: MisteryRoom
+  m_Name: TOrnado1 Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72212,7 +72212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034790391}
   m_Layer: 0
-  m_Name: Shiny Room
+  m_Name: Key Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72237,6 +72237,7 @@ Transform:
   - {fileID: 459063223}
   - {fileID: 540145085}
   - {fileID: 545072706}
+  - {fileID: 317471009}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72795,8 +72796,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 790871970}
-  - {fileID: 1651709860}
   - {fileID: 477160806}
+  - {fileID: 1651709860}
   - {fileID: 1732248078}
   - {fileID: 1021515640}
   - {fileID: 2010740034}
