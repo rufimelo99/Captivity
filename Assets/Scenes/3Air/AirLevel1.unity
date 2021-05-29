@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -63219,7 +63219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503157121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.76, y: 25.16, z: 0}
+  m_LocalPosition: {x: 21.76, y: 24.2, z: 0}
   m_LocalScale: {x: 5.1946197, y: 6.90925, z: 1}
   m_Children:
   - {fileID: 398253456}
@@ -65601,8 +65601,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 84780115}
   camera2: {fileID: 817929088}
-  nextPosition: {fileID: 0}
-  vertical: 0
+  nextPosition: {fileID: 1646447468}
+  vertical: 1
   color: 0
   onlyTrigger: 0
   amountRoomsX: 0
@@ -66429,7 +66429,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DialogueToDisplay
       value: 
-      objectReference: {fileID: 7553862517005297476, guid: 2b349ba4fc50ee045b9857d2a16fb20f,
+      objectReference: {fileID: 7553862517005297476, guid: b948300a0dfc68c4da75d240bea401a3,
         type: 3}
     - target: {fileID: 4648797957525149051, guid: b0b8ce03cfef4d94d9c38bb31096c61e,
         type: 3}

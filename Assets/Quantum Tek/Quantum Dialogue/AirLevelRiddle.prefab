@@ -569,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7553862517005297477}
   m_Layer: 0
-  m_Name: AdivinanzaElect1
+  m_Name: AirLevelRiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

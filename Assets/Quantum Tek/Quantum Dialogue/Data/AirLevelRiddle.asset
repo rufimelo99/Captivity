@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: AdivinanzaElect1Text
+  m_Name: AirLevelRiddle
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -32,33 +32,25 @@ MonoBehaviour:
     SpeakerName: Note
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: If you want to open this chest, the next riddle you need to guess.
+    MessageText: 'Think about the number of the chapter. '
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: '"For some people I am too short, for others I am ok, for sad people
-      I am too long and for God I am the eternity".'
+    MessageText: Now try to draw it  with the plates.
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 2
-    NextMessage: 4
-    MessageText: Do you know what am I? If you do, you now know how this room works!
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: Note
-    PreviousMessage: 3
     NextMessage: -1
-    MessageText: You just need to think about it.
+    MessageText: 'Hint: "You need to press the right plates at the same time"'
     Clip: {fileID: 0}
   Choices:
   - ID: 4
     Choices:
     - Pretty good, thanks.
     - Not so good.
-    NextMessages: 0600000051000000
+    NextMessages: 0600000007000000
