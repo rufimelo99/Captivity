@@ -18718,7 +18718,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06099224, y: 0.43560028}
+  m_Offset: {x: 0.06099224, y: 1.019403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18729,7 +18729,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.879881, y: 1.7214489}
+  m_Size: {x: 2.879881, y: 2.8890543}
   m_EdgeRadius: 0
 --- !u!1 &1295666352
 GameObject:
@@ -64885,6 +64885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31e6e68ead6da748a980ce615fb85f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Debugging: 0
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
