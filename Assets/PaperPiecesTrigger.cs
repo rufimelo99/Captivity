@@ -17,18 +17,21 @@ public class PaperPiecesTrigger : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
-        if (displayDialogue)
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
         {
-            displayDialogue.displayDialogue();
-        }
-        Destroy(gameObject);
-        if (pageId != -1 )
-        {
-            GlobalControl.Instance.pagesCollected[pageId] = true;
-            Debug.Log("adding to diary");
+                DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
+            if (displayDialogue)
+            {
+                displayDialogue.displayDialogue();
+            }
+            Destroy(gameObject);
+            if (pageId != -1 )
+            {
+                GlobalControl.Instance.pagesCollected[pageId] = true;
+                Debug.Log("adding to diary");
+            }
         }
     }
 }

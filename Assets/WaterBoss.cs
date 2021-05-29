@@ -119,7 +119,7 @@ public class WaterBoss : MonoBehaviour
         {
             if (!destroyed)
             {
-                doorToDestroy.GetComponent<GreenObstacle>().KillMePLease();
+                Destroy(doorToDestroy);
                 destroyed = true;
             }     
             StartCoroutine(freeze());
