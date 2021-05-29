@@ -16,6 +16,8 @@ public class WaterBoss : MonoBehaviour
     public Animator animator;
 
     public GameObject doorToDestroy;
+    public GameObject ball1;
+    public GameObject ball2;
 
     public Transform Player1;
     public Transform Player2;
@@ -120,6 +122,8 @@ public class WaterBoss : MonoBehaviour
             if (!destroyed)
             {
                 Destroy(doorToDestroy);
+                Destroy(ball1);
+                Destroy(ball2);
                 destroyed = true;
             }     
             StartCoroutine(freeze());

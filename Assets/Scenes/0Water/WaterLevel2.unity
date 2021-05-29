@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -48738,6 +48738,8 @@ MonoBehaviour:
   speed: 4
   animator: {fileID: 1821066401}
   doorToDestroy: {fileID: 914150686}
+  ball1: {fileID: 1180976149}
+  ball2: {fileID: 1462567015}
   Player1: {fileID: 135416978}
   Player2: {fileID: 871239293}
   bulletPrefab: {fileID: 4610505604689755112, guid: 6a0895290c383f447b8ed68adefc1f3f,
@@ -51946,7 +51948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851caa951e03fb7488fea143092ec2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueToDisplay: {fileID: 7553862517005297476, guid: 1e0cdd8cc5fb5de4eb3dafb6a3679001,
+  DialogueToDisplay: {fileID: 7553862517005297476, guid: 3ac64e0f76db3e243a444b3f8b6d1712,
     type: 3}
 --- !u!61 &2134095615
 BoxCollider2D:
