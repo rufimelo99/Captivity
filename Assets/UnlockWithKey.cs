@@ -34,6 +34,12 @@ public class UnlockWithKey : MonoBehaviour
             Destroy(grid);
             Destroy(locker);
         }
+        if(GlobalControl.Instance.keysCollected.Contains(GlobalControl.KeysAvailable.KEYAIR1) && (distanceToPlayer1 < 2 || distanceToPlayer2 < 2))
+        {
+            GlobalControl.Instance.deleteKey(GlobalControl.KeysAvailable.KEYAIR1);
+            Destroy(grid);
+            Destroy(locker);
+        }
         
     }
 }
