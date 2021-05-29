@@ -16,7 +16,10 @@ public class TornadoTP : MonoBehaviour
     [SerializeField] private bool upright;
     [SerializeField] private bool upleft;
     [SerializeField] private bool downright;
-    [SerializeField] private bool downleft;    
+    [SerializeField] private bool downleft;   
+    public GameObject otherTornado; 
+
+
     //public Collider2D roomChanger;
     public Transform nextPosition;
     
@@ -53,17 +56,40 @@ public class TornadoTP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag == "Player"){
+        /*if(col.gameObject.tag == "Player"){
             camera1.position += move;
             col.gameObject.transform.position = nextPosition.position + new Vector3(0,0,29.7f- 0.344532f);
         }
         if(col.gameObject.tag == "Player2"){  
             camera2.position += move;
             col.gameObject.transform.position = nextPosition.position + new Vector3(0, 0, 29.7f - 0.344532f);
+        }*/
+        if(col.gameObject.tag == "Fusion"){  
+            camera1.position += move;
+            camera2.position += move;
+            col.gameObject.transform.position = nextPosition.position + new Vector3(0, 0, 29.7f - 0.344532f);
         }
+        otherTornado.GetComponent<TornadoTP>().waitToTP();
     }
+
+
+    public void waitToTP()
+    {
+        StartCoroutine(YouAreAWizardHarry());
+    }
+
+
+    IEnumerator YouAreAWizardHarry()
+    {
+        myColliderTornadoTP.enabled = false;
+        WaitForSeconds pause = new WaitForSeconds(1f);
+        yield return pause;
+        myColliderTornadoTP.enabled = true;
+    }
+
+
 }

@@ -130,6 +130,11 @@ public class PlayerMovement : MonoBehaviour
             player.health = player.health - 0.5f*damage;
         }
 
+        if (obj.gameObject.tag == "tornadorTP" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.AIR)
+        {
+            player.health = player.health - 0.1f*damage;
+        }
+
         if (obj.gameObject.tag == "Obstacle_blue" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.WATER)
         {
             player.health = player.health - damage;
@@ -180,6 +185,10 @@ public class PlayerMovement : MonoBehaviour
         if (obj.gameObject.tag == "Evil Touch")
         {
             player.health = player.health - 0.5f*damage;
+        }
+        if (obj.gameObject.tag == "tornadorTP" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.AIR)
+        {
+            player.health = player.health - 0.1f*damage;
         }
     }
     private void OnTriggerStay2D(Collider2D col)

@@ -38,7 +38,7 @@ MonoBehaviour:
     Speaker: 2
     SpeakerName: Note
     PreviousMessage: 1
-    NextMessage: 3
+    NextMessage: -1
     MessageText: Now try to draw it  with the plates.
     Clip: {fileID: 0}
   - ID: 3
