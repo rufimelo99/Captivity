@@ -46547,6 +46547,7 @@ GameObject:
   - component: {fileID: 507079485}
   - component: {fileID: 507079484}
   - component: {fileID: 507079483}
+  - component: {fileID: 507079488}
   m_Layer: 21
   m_Name: Light2
   m_TagString: Untagged
@@ -46566,7 +46567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d207e7114574f4d94c386a7df2d5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherLight: {fileID: 507079482}
+  otherLight: {fileID: 477160805}
   outerLimit: {fileID: 507079484}
   myLight: {fileID: 473191292}
 --- !u!58 &507079484
@@ -46681,6 +46682,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5, y: -8.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &507079488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507079482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08de81618bd77eb4ab468f6911de491a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera1: {fileID: 84780115}
+  camera2: {fileID: 817929088}
+  nextPosition: {fileID: 0}
+  vertical: 0
+  color: 0
+  onlyTrigger: 1
+  amountRoomsX: -1
+  amountRoomsY: 2
 --- !u!1 &507933869
 GameObject:
   m_ObjectHideFlags: 0
@@ -72125,7 +72146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.133, y: 0.071}
+  m_AnchoredPosition: {x: 0.017, y: 0.013}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024688346

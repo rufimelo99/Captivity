@@ -59,11 +59,11 @@ public class TornadoTP : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Player"){
             camera1.position += move;
-            col.gameObject.transform.position = nextPosition.position;
+            col.gameObject.transform.position = nextPosition.position + new Vector3(0,0,29.7f- 0.344532f);
         }
         if(col.gameObject.tag == "Player2"){  
             camera2.position += move;
-            col.gameObject.transform.position = nextPosition.position;
+            col.gameObject.transform.position = nextPosition.position + new Vector3(0, 0, 29.7f - 0.344532f);
         }
     }
 }
