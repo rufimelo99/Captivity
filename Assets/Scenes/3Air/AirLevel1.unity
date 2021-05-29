@@ -72765,8 +72765,6 @@ MonoBehaviour:
   - {fileID: 235229259}
   - {fileID: 1348928022}
   - {fileID: 54790447}
-  - {fileID: 4739313}
-  - {fileID: 999963543}
   grid: {fileID: 1885107483}
 --- !u!1 &2131879289
 GameObject:
