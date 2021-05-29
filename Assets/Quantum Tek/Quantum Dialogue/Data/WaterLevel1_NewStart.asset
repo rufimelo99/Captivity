@@ -52,8 +52,9 @@ MonoBehaviour:
     Speaker: 2
     SpeakerName: '  ?'
     PreviousMessage: 3
-    NextMessage: 5
-    MessageText: I am a prisoner... *coof coof*  And so are you...
+    NextMessage: 6
+    MessageText: We are all prisioners here, come set us free and we will help you
+      escape Captivity
     Clip: {fileID: 0}
   - ID: 5
     Speaker: 2
@@ -65,16 +66,16 @@ MonoBehaviour:
   - ID: 6
     Speaker: 0
     SpeakerName: Hero 1
-    PreviousMessage: 5
+    PreviousMessage: 4
     NextMessage: 7
-    MessageText: Ok ok, let's figure out a way out of here
+    MessageText: Ok, let's find a way out of here!
     Clip: {fileID: 0}
   - ID: 7
     Speaker: 0
     SpeakerName: Hero 2
     PreviousMessage: 6
     NextMessage: -1
-    MessageText: Wait!! I found a note on the ground
+    MessageText: Hey, I found a piece of parchmentf on the ground
     Clip: {fileID: 0}
   Choices:
   - ID: 4
