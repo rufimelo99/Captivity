@@ -7,7 +7,7 @@ public class GlobalControl : MonoBehaviour
 
     public static GlobalControl Instance;
 
-
+    public bool Debugging;
     public int CompletedLevels;
     public List<Player.ElementalsAvailable> elementalsPossesed = new List<Player.ElementalsAvailable>();
 
@@ -75,12 +75,15 @@ public class GlobalControl : MonoBehaviour
         */
 
         //FOR TESTS - DO NOT FORGET TO COMMENT FOR THE BUILD 
-        //elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
-        //elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
-        elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
-        //elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
-        //elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
+        if (Debugging)
+        {
+            elementalsPossesed.Add(Player.ElementalsAvailable.WATER);
+            elementalsPossesed.Add(Player.ElementalsAvailable.GROUND);
+            elementalsPossesed.Add(Player.ElementalsAvailable.FIRE);
+            elementalsPossesed.Add(Player.ElementalsAvailable.AIR);
+            elementalsPossesed.Add(Player.ElementalsAvailable.ELECTRICITY);
         
+        }
         pagesCollected = new bool[14]; //needs to be equal to the number of pages on the book*/
         //#To allow all the pages on the diary
         /*
