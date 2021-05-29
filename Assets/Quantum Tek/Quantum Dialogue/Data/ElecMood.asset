@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
-  m_Name: AirMood
+  m_Name: ElecMood
   m_EditorClassIdentifier: 
   Conversations:
   - ID: 2
@@ -31,15 +31,9 @@ MonoBehaviour:
     Speaker: 1
     SpeakerName: ' '
     PreviousMessage: -1
-    NextMessage: 2
-    MessageText: Oh God the power! And what we now able to create!
-    Clip: {fileID: 0}
-  - ID: 2
-    Speaker: 1
-    SpeakerName: ' '
-    PreviousMessage: 1
     NextMessage: -1
-    MessageText: We will teach him to fear us...
+    MessageText: We find remnants of a distant past, before technology became too
+      dangerous to wield
     Clip: {fileID: 0}
   Choices:
   - ID: 4
