@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851caa951e03fb7488fea143092ec2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueToDisplay: {fileID: 7553862517005297476, guid: 1e0cdd8cc5fb5de4eb3dafb6a3679001,
+  DialogueToDisplay: {fileID: 7553862517005297476, guid: 800f01b19e9e7c049a4880f24e83e253,
     type: 3}
 --- !u!95 &390661672
 Animator:
