@@ -32,33 +32,31 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: 'Only one Kingdom, commanded by 8 wizards. '
+    MessageText: You have received the Water Gem
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
-    SpeakerName: ' '
+    SpeakerName: 
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: 'The Great Wizard tries to steal the powers of the other 7, with 
-      black magic. In order to not let him reach his goal, the other Wizards sacrifice
-      themselves and commit suicide. '
+    MessageText: Long ago Ellium was ruled by five families, to which an elemental
+      power had been bestowed.
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 2
     NextMessage: 4
-    MessageText: "The great Wizard catches his spirits and makes them victims of
-      captivity in his castle. He realizes that it\u2019s only possible to remove
-      the power of the spirits if they are inside a body, or if they give it spontaneously. "
+    MessageText: As they mingled with ordinary humans, their powers were deluted
+      and they lost their original glory
     Clip: {fileID: 0}
   - ID: 4
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 3
     NextMessage: -1
-    MessageText: 'Power can only be drawn from within a body and not from within
-      a spirit. '
+    MessageText: But one family refused to mix and decided to live in exile, sworing
+      to forever hold their grip on power....
     Clip: {fileID: 0}
   Choices:
   - ID: 4

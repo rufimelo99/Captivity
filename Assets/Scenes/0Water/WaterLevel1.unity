@@ -66563,7 +66563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31e6e68ead6da748a980ce615fb85f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Debugging: 0
+  Debugging: 1
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
@@ -67121,7 +67121,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}

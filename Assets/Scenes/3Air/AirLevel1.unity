@@ -45298,7 +45298,7 @@ GameObject:
   - component: {fileID: 416251779}
   - component: {fileID: 416251778}
   m_Layer: 0
-  m_Name: EvilMole41
+  m_Name: Angelina
   m_TagString: Angelina
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45312,12 +45312,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416251776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.29, y: 0.24000002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.039999, y: 23.45, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 2103736305}
-  m_Father: {fileID: 592451868}
-  m_RootOrder: 1
+  m_Father: {fileID: 1646154400}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &416251778
 BoxCollider2D:
@@ -51080,10 +51080,8 @@ Transform:
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 947172690}
-  - {fileID: 416251777}
-  - {fileID: 1071406543}
   m_Father: {fileID: 1646154400}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &592451869
 BoxCollider2D:
@@ -51456,7 +51454,7 @@ Transform:
   - {fileID: 1251004591}
   - {fileID: 25495220}
   m_Father: {fileID: 1646154400}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &700274819
 MonoBehaviour:
@@ -54004,12 +54002,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071406542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7499995, y: 0.24000002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.7400031, y: 23.19, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 725910741}
-  m_Father: {fileID: 592451868}
-  m_RootOrder: 2
+  m_Father: {fileID: 1646154400}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1071406544
 BoxCollider2D:
@@ -54678,7 +54676,7 @@ Transform:
   m_Children:
   - {fileID: 995674401}
   m_Father: {fileID: 1646154400}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1190832917
 BoxCollider2D:
@@ -63985,7 +63983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31e6e68ead6da748a980ce615fb85f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Debugging: 1
+  Debugging: 0
   CompletedLevels: 0
   elementalsPossesed: 
   gemsCollected: 
@@ -64182,7 +64180,7 @@ Transform:
   - {fileID: 398253456}
   - {fileID: 1395406461}
   m_Father: {fileID: 1646154400}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1503157123
 MonoBehaviour:
@@ -65247,6 +65245,8 @@ Transform:
   - {fileID: 1158067315}
   - {fileID: 454515523}
   - {fileID: 1649960138}
+  - {fileID: 1071406543}
+  - {fileID: 416251777}
   - {fileID: 592451868}
   - {fileID: 1190832916}
   - {fileID: 700274818}
@@ -65313,7 +65313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649960137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.8, y: 23.02, z: 0}
+  m_LocalPosition: {x: 24.8, y: 23.45, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 1621301529}
