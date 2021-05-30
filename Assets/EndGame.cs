@@ -79,7 +79,6 @@ public class EndGame : MonoBehaviour
     {
         if (element == 1)
         {
-            Debug.Log("hwlklo pls");
             GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.WATER);
         }
         if (element == 2)

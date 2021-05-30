@@ -37,11 +37,10 @@ public class GlobalControl : MonoBehaviour
 
     public void addGemWithoutRepetition(GemsAvailable gem)
     {
-        //if (!gemsCollected.Contains(gem))
-        //{
-        //Debug.Log('g');
-        gemsCollected.Add(gem);
-        //}
+        if (!gemsCollected.Contains(gem))
+        {
+            gemsCollected.Add(gem);
+        }
     }
 
     public void addKey(KeysAvailable key)

@@ -72,7 +72,7 @@ public class MoveCameraNextRoom : MonoBehaviour
                     camera1.position += next;
                     collision.gameObject.transform.position = nextPosition.position;
                     AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
-                    Debug.Log("analyticsResult: " + analyticsResult);
+                    //Debug.Log("analyticsResult: " + analyticsResult);
                 }
                 if (collision.tag == "Player2")
                 {
@@ -80,7 +80,7 @@ public class MoveCameraNextRoom : MonoBehaviour
                     camera2.position += next;
                     collision.gameObject.transform.position = nextPosition.position;
                     AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
-                    Debug.Log("analyticsResult: " + analyticsResult);
+                    //Debug.Log("analyticsResult: " + analyticsResult);
                 }
 
                 if (collision.tag == "Fusion")
