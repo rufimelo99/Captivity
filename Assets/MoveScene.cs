@@ -47,53 +47,41 @@ public class MoveScene : MonoBehaviour
         go(7);
     }
 
-    public void goEarth2()
+
+    public void goFire1()
     {
         go(8);
     }
 
-    public void goFire1()
+    public void goFire2()
     {
         go(9);
     }
 
-    public void goFire2()
+    public void goAir1()
     {
         go(10);
     }
 
-    public void goAir1()
+
+    public void goElec1()
     {
         go(11);
     }
 
-    public void goAir2()
+
+    public void goWizard1()
     {
         go(12);
     }
 
-    public void goElec1()
+    public void goWizard2()
     {
         go(13);
     }
-
-    public void goElec2()
-    {
-        go(14);
-    }
-
-    public void goWizard1()
-    {
-        go(15);
-    }
-
-    public void goWizard2()
-    {
-        go(16);
-    }
     public void goDiary()
     {
-        go(17);
+        go(14);
     }
 
     public void restart()
