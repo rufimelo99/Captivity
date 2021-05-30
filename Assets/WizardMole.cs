@@ -65,7 +65,7 @@ public class WizardMole : MonoBehaviour
         while (true)
         {
             yield return pause;
-            if (!frozen & iHaveThemPLayers)
+            if (!frozen & iHaveThemPLayers && (distance1 <= maxRange || distance2 <= maxRange))
             {
                 Shoot();
             }
