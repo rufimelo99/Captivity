@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e215bbb36679a431e93c51bb0514659e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 3fc8e45dd6911d145afc181b4d278523, type: 2}
+  dialogue: {fileID: 11400000, guid: 5974993c431dbf74cab3c52ffb9cec9b, type: 2}
   currentConversationIndex: -1
   currentConversation:
     ID: 0
