@@ -8,7 +8,7 @@ public class EnemyMole : MonoBehaviour
 
 
     public float speed;
-    public float range = 150f;
+    public float range = 250f;
 
     private bool frozen = false;
 

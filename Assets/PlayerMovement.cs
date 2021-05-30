@@ -130,6 +130,11 @@ public class PlayerMovement : MonoBehaviour
             player.health = player.health - 0.5f*damage;
         }
 
+        if (obj.gameObject.tag == "Angelina")
+        {
+            player.health = 10f;
+        }
+
         if (obj.gameObject.tag == "tornadorTP" && player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.AIR)
         {
             player.health = player.health - 0.1f*damage;

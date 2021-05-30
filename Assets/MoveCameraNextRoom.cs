@@ -64,8 +64,7 @@ public class MoveCameraNextRoom : MonoBehaviour
        
             else if (gameObject.tag == "Room Changer Next")
             {
-            
-            
+                
                 if (collision.tag == "Player")
                 {
 
@@ -74,7 +73,7 @@ public class MoveCameraNextRoom : MonoBehaviour
                     AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
                     //Debug.Log("analyticsResult: " + analyticsResult);
                 }
-                if (collision.tag == "Player2")
+                else if (collision.tag == "Player2")
                 {
 
                     camera2.position += next;
@@ -83,18 +82,24 @@ public class MoveCameraNextRoom : MonoBehaviour
                     //Debug.Log("analyticsResult: " + analyticsResult);
                 }
 
-                if (collision.tag == "Fusion")
+                else if (collision.tag == "Fusion")
                 {
                     camera1.position += next;
                     camera2.position += next;
                     collision.gameObject.transform.position = nextPosition.position;
 
                 }
+                else if (collision.tag == "Angelina" || collision.tag == "Evil Touch")
+                {
+                    collision.gameObject.transform.position = nextPosition.position;
+                        //Debug.Log("analyticsResult: " + analyticsResult);
+                }
 
             }
             else if (gameObject.tag == "Room Changer Back")
             {
-            
+
+
                 if (collision.tag == "Player")
                 {
 
@@ -102,29 +107,28 @@ public class MoveCameraNextRoom : MonoBehaviour
                     collision.gameObject.transform.position = nextPosition.position;
 
                 }
-                if (collision.tag == "Player2")
+                else if (collision.tag == "Player2")
                 {
 
                     camera2.position +=  previous;
                     collision.gameObject.transform.position = nextPosition.position;
 
                 }
-                if (collision.tag == "Evil Touch")
-                {
-                    collision.gameObject.transform.position = nextPosition.position;
-
-                }
-                if (collision.tag == "Fusion")
+                else if (collision.tag == "Fusion")
                 {
                     camera1.position += previous;
                     camera2.position += previous;
                     collision.gameObject.transform.position = nextPosition.position;
 
                 }
+                else if (collision.tag == "Angelina" || collision.tag == "Evil Touch")
+                {
+                    collision.gameObject.transform.position = nextPosition.position;
+                }
 
             }
 
-            }
+        }
        
     }
 }
