@@ -26,9 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1Earth/EarthLevel1.unity
     guid: 2ea470110ecce98409c420a34b498b82
-  - enabled: 1
-    path: Assets/Scenes/1Earth/EarthLevel2.unity
-    guid: 8c035d355edbec949acce85d76759120
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/2Fire/FireLevel1.unity
     guid: ee19713247c9c9040aa9621d22022a93
@@ -38,15 +38,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3Air/AirLevel1.unity
     guid: 700647ded91a2e449b18a767e709af2e
-  - enabled: 1
-    path: Assets/Scenes/3Air/AirLevel2.unity
-    guid: c4c8bfa6aa8e721498fad8f6a06ac219
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/4Electricity/ElecLevel1.unity
     guid: be1ab986a6ddb18449cc171b1536bb07
-  - enabled: 1
-    path: Assets/Scenes/4Electricity/ElecLevel2.unity
-    guid: bdbcda6d51bf0ff42968a2f1cce2991b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Wizard/WizardLevel1.unity
     guid: c6dc57c95ef2340459c3847b2ab1e7f4
