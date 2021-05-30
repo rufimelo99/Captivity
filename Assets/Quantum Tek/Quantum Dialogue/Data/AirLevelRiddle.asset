@@ -29,24 +29,17 @@ MonoBehaviour:
   Messages:
   - ID: 1
     Speaker: 2
-    SpeakerName: Note
+    SpeakerName: 
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: 'Think about the number of the chapter. '
+    MessageText: Square me and I am still me. Who am I?
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
-    SpeakerName: Note
+    SpeakerName: Hint
     PreviousMessage: 1
     NextMessage: -1
-    MessageText: Now try to draw it  with the plates.
-    Clip: {fileID: 0}
-  - ID: 3
-    Speaker: 2
-    SpeakerName: Note
-    PreviousMessage: 2
-    NextMessage: -1
-    MessageText: 'Hint: "You need to press the right plates at the same time"'
+    MessageText: Combine and conquer
     Clip: {fileID: 0}
   Choices:
   - ID: 4
