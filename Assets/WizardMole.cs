@@ -119,9 +119,7 @@ public class WizardMole : MonoBehaviour
 
         distance1 = (Player1.position - transform.position).sqrMagnitude;
         distance2 = (Player2.position - transform.position).sqrMagnitude;
-        Debug.Log(distance1);
-        Debug.Log(distance2);
-        Debug.Log(maxRange);
+
         if (distance1>maxRange && distance2 > maxRange)
         {
 

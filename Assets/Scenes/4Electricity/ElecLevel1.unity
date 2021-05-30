@@ -7763,7 +7763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851caa951e03fb7488fea143092ec2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueToDisplay: {fileID: 7553862517005297476, guid: b2821dcb35d585848af5dca4c00ccab2,
+  DialogueToDisplay: {fileID: 7553862517005297476, guid: 6b6eab785e9484f4eb320b5365a55947,
     type: 3}
 --- !u!1 &319164863 stripped
 GameObject:
@@ -49923,6 +49923,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1465375993}
     m_Modifications:
+    - target: {fileID: -7571885441266123663, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b2685c4cc015ab844b34dbdad5a2d723, type: 2}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder

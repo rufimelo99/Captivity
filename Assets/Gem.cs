@@ -64,7 +64,7 @@ public class Gem : MonoBehaviour
                 color = 5;  //blue color
                 break;
         }
-        animator.SetInteger("Color", color);
+        animator.SetInteger("color", color);
     }
 
     void Update()
