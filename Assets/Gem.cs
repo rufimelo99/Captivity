@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class Gem : MonoBehaviour
 {
@@ -93,6 +94,8 @@ public class Gem : MonoBehaviour
         {
             player2 = true;//
         }
+        AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
+        Debug.Log("analyticsResult: " + analyticsResult);
     }
 
     void OnCollisionExit2D(Collision2D col)

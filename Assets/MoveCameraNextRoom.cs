@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class MoveCameraNextRoom : MonoBehaviour
 {
@@ -36,8 +37,7 @@ public class MoveCameraNextRoom : MonoBehaviour
             next = new Vector3(27, 0, 0);
             previous = new Vector3(-27, 0, 0);
         }
-        
-        
+
     }
     public void TpHero(GameObject gameObject)
     {
@@ -71,14 +71,16 @@ public class MoveCameraNextRoom : MonoBehaviour
 
                     camera1.position += next;
                     collision.gameObject.transform.position = nextPosition.position;
-
+                    AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
+                    Debug.Log("analyticsResult: " + analyticsResult);
                 }
                 if (collision.tag == "Player2")
                 {
 
                     camera2.position += next;
                     collision.gameObject.transform.position = nextPosition.position;
-
+                    AnalyticsResult analyticsResult = Analytics.CustomEvent("NewRoomEntered");
+                    Debug.Log("analyticsResult: " + analyticsResult);
                 }
 
                 if (collision.tag == "Fusion")
@@ -125,8 +127,4 @@ public class MoveCameraNextRoom : MonoBehaviour
             }
        
     }
-
-       
-    
-
 }

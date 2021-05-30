@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class Weapon : MonoBehaviour
 {
@@ -143,6 +144,8 @@ public class Weapon : MonoBehaviour
                 if (otherPlayer.tryingCombination)
                 {
                     Combine();
+                    AnalyticsResult analyticsResult = Analytics.CustomEvent("CombinationUsed");
+                    Debug.Log("analyticsResult: " + analyticsResult);
 
                     player.tryingCombination = false;
                     otherPlayer.tryingCombination = false;
