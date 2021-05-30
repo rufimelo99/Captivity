@@ -18836,7 +18836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 7
-  element: 5
+  element: -1
 --- !u!61 &1290362687
 BoxCollider2D:
   m_ObjectHideFlags: 0
