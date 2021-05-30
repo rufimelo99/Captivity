@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 5090280}
   - component: {fileID: 5090279}
   - component: {fileID: 5090278}
+  - component: {fileID: 5090281}
   m_Layer: 0
   m_Name: EndGame
   m_TagString: endGame
@@ -456,6 +457,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.21, y: 2.7593555}
   m_EdgeRadius: 0
+--- !u!114 &5090281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 7
 --- !u!1 &20198897
 GameObject:
   m_ObjectHideFlags: 0

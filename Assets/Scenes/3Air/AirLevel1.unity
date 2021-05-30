@@ -1018,6 +1018,7 @@ GameObject:
   - component: {fileID: 89753092}
   - component: {fileID: 89753094}
   - component: {fileID: 89753093}
+  - component: {fileID: 89753095}
   m_Layer: 0
   m_Name: Room Changer to Shiny
   m_TagString: Room Changer Next
@@ -1085,6 +1086,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &89753095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89753091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 30
 --- !u!1 &137291790
 GameObject:
   m_ObjectHideFlags: 0
@@ -51097,6 +51111,7 @@ GameObject:
   - component: {fileID: 596445377}
   - component: {fileID: 596445379}
   - component: {fileID: 596445378}
+  - component: {fileID: 596445380}
   m_Layer: 0
   m_Name: Room Changer to 1
   m_TagString: Room Changer Back
@@ -51164,6 +51179,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.395609, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &596445380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596445376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 27
 --- !u!1 &604997529
 GameObject:
   m_ObjectHideFlags: 0
@@ -51949,6 +51977,7 @@ GameObject:
   - component: {fileID: 818078504}
   - component: {fileID: 818078506}
   - component: {fileID: 818078505}
+  - component: {fileID: 818078507}
   m_Layer: 0
   m_Name: Room Changer 1
   m_TagString: Room Changer Next
@@ -52016,6 +52045,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0763662, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &818078507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818078503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 28
 --- !u!1 &843244415
 GameObject:
   m_ObjectHideFlags: 0
@@ -52027,6 +52069,7 @@ GameObject:
   - component: {fileID: 843244416}
   - component: {fileID: 843244418}
   - component: {fileID: 843244417}
+  - component: {fileID: 843244419}
   m_Layer: 0
   m_Name: Room Changer back to 1
   m_TagString: Room Changer Back
@@ -52094,6 +52137,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &843244419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843244415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 27
 --- !u!1 &854582876
 GameObject:
   m_ObjectHideFlags: 0
@@ -52107,6 +52163,7 @@ GameObject:
   - component: {fileID: 854582880}
   - component: {fileID: 854582879}
   - component: {fileID: 854582878}
+  - component: {fileID: 854582882}
   m_Layer: 0
   m_Name: TornadoTeleport
   m_TagString: tornadorTP
@@ -52251,6 +52308,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &854582882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854582876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 29
 --- !u!1 &867549101
 GameObject:
   m_ObjectHideFlags: 0
@@ -53706,6 +53776,7 @@ GameObject:
   - component: {fileID: 1055525271}
   - component: {fileID: 1055525270}
   - component: {fileID: 1055525269}
+  - component: {fileID: 1055525272}
   m_Layer: 0
   m_Name: EndGame
   m_TagString: endGame
@@ -53788,6 +53859,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.879881, y: 2.4815817}
   m_EdgeRadius: 0
+--- !u!114 &1055525272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055525267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 33
 --- !u!1 &1071406542
 GameObject:
   m_ObjectHideFlags: 0
@@ -53976,6 +54060,7 @@ GameObject:
   - component: {fileID: 1078873249}
   - component: {fileID: 1078873251}
   - component: {fileID: 1078873250}
+  - component: {fileID: 1078873252}
   m_Layer: 0
   m_Name: Room Changer to Mistery
   m_TagString: Room Changer Back
@@ -54043,6 +54128,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &1078873252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078873248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 29
 --- !u!1 &1081682671
 GameObject:
   m_ObjectHideFlags: 0
@@ -54199,7 +54297,7 @@ SpriteRenderer:
   m_Size: {x: 0.33, y: 0.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1081682678
@@ -66372,6 +66470,7 @@ GameObject:
   - component: {fileID: 1707265683}
   - component: {fileID: 1707265685}
   - component: {fileID: 1707265684}
+  - component: {fileID: 1707265686}
   m_Layer: 0
   m_Name: Room Changer to 3
   m_TagString: Room Changer Next
@@ -66439,6 +66538,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &1707265686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707265682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 32
 --- !u!1 &1729284015
 GameObject:
   m_ObjectHideFlags: 0
@@ -71878,6 +71990,7 @@ GameObject:
   - component: {fileID: 1921415277}
   - component: {fileID: 1921415276}
   - component: {fileID: 1921415275}
+  - component: {fileID: 1921415279}
   m_Layer: 0
   m_Name: TornadoTeleport
   m_TagString: tornadorTP
@@ -72022,6 +72135,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1921415279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921415273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 31
 --- !u!1 &1921675613
 GameObject:
   m_ObjectHideFlags: 0
@@ -72033,6 +72159,7 @@ GameObject:
   - component: {fileID: 1921675614}
   - component: {fileID: 1921675616}
   - component: {fileID: 1921675615}
+  - component: {fileID: 1921675617}
   m_Layer: 0
   m_Name: Room changer to Mistery
   m_TagString: Room Changer Next
@@ -72100,6 +72227,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0763662, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &1921675617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921675613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 29
 --- !u!1 &1933536247
 GameObject:
   m_ObjectHideFlags: 0
@@ -73021,6 +73161,7 @@ GameObject:
   - component: {fileID: 2079521744}
   - component: {fileID: 2079521746}
   - component: {fileID: 2079521745}
+  - component: {fileID: 2079521747}
   m_Layer: 0
   m_Name: Room Changer back to 2
   m_TagString: Room Changer Back
@@ -73088,6 +73229,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &2079521747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079521743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 28
 --- !u!1 &2080608534
 GameObject:
   m_ObjectHideFlags: 0

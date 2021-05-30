@@ -5578,6 +5578,7 @@ GameObject:
   - component: {fileID: 467959251}
   - component: {fileID: 467959250}
   - component: {fileID: 467959249}
+  - component: {fileID: 467959252}
   m_Layer: 0
   m_Name: EndGame
   m_TagString: endGame
@@ -5660,6 +5661,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.21, y: 2.9174232}
   m_EdgeRadius: 0
+--- !u!114 &467959252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467959247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 26
 --- !u!1 &470579462
 GameObject:
   m_ObjectHideFlags: 0
@@ -8986,6 +9000,7 @@ GameObject:
   - component: {fileID: 526634624}
   - component: {fileID: 526634626}
   - component: {fileID: 526634625}
+  - component: {fileID: 526634627}
   m_Layer: 0
   m_Name: Room Changer 2
   m_TagString: Room Changer Next
@@ -9053,6 +9068,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.395609, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &526634627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526634623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 25
 --- !u!1 &592594951
 GameObject:
   m_ObjectHideFlags: 0
@@ -41329,6 +41357,7 @@ GameObject:
   - component: {fileID: 1135498486}
   - component: {fileID: 1135498488}
   - component: {fileID: 1135498487}
+  - component: {fileID: 1135498489}
   m_Layer: 0
   m_Name: Room Changer back to 1
   m_TagString: Room Changer Back
@@ -41396,6 +41425,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0034752, y: 0.2005791}
   m_EdgeRadius: 0
+--- !u!114 &1135498489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135498485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 23
 --- !u!1 &1181801576
 GameObject:
   m_ObjectHideFlags: 0
@@ -46351,6 +46393,7 @@ GameObject:
   - component: {fileID: 1401634417}
   - component: {fileID: 1401634419}
   - component: {fileID: 1401634418}
+  - component: {fileID: 1401634420}
   m_Layer: 0
   m_Name: Room Changer back to 2
   m_TagString: Room Changer Back
@@ -46418,6 +46461,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.1987305, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &1401634420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401634416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 24
 --- !u!1 &1438949834
 GameObject:
   m_ObjectHideFlags: 0
@@ -55549,6 +55605,7 @@ GameObject:
   - component: {fileID: 1798168849}
   - component: {fileID: 1798168851}
   - component: {fileID: 1798168850}
+  - component: {fileID: 1798168852}
   m_Layer: 0
   m_Name: Room Changer 1
   m_TagString: Room Changer Next
@@ -55616,6 +55673,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0763662, y: 0.12046242}
   m_EdgeRadius: 0
+--- !u!114 &1798168852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798168848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cb67d5ba8ec814d89078a4ce8030a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticEventTobeTriggered: 24
 --- !u!1 &1830144192
 GameObject:
   m_ObjectHideFlags: 0
