@@ -24,7 +24,7 @@ public class WizardMole : MonoBehaviour
 
     public GameObject bulletPrefab;
 
-    public float health = 10f;
+    public float health = 19f;
     public Image healthBar;
 
     public int shoot;
@@ -102,6 +102,10 @@ public class WizardMole : MonoBehaviour
             if (obj.GetComponent<Bullet>().shock)
             {
                 StartCoroutine(freeze());
+            }
+            if (obj.tag == "Magma")
+            {
+                health = health - 0.2f;
             }
         }
         healthBar.fillAmount = health / 10f;

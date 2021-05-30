@@ -136,8 +136,7 @@ public class EnemyMole : MonoBehaviour
             
         }
         if (obj.tag == "Magma"){
-            health = health - 0.1f;
-            
+            health = health - 0.2f;   
         }
         healthBar.fillAmount = health / 10f;
         animator.SetFloat("Health", health);

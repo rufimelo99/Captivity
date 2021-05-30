@@ -19,7 +19,7 @@ public class EvilWizard : MonoBehaviour
 
     private bool left = true;
     private Vector3 offset = new Vector3(-3f, 0f, 0f);
-    private float health = 50f;
+    private float health = 60f;
 
     public Animator animator;
 
@@ -59,12 +59,12 @@ public class EvilWizard : MonoBehaviour
             offset = new Vector3(3f, 0f, 0f);
         }
 
-        if (health <= 40)
+        if (health <= 50)
         {
             stage = 1;
         }
 
-        if (health <= 20)
+        if (health <= 30)
         {
             stage = 2;
         }
