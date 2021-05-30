@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class Player : MonoBehaviour
 {
@@ -163,6 +164,8 @@ public class Player : MonoBehaviour
 
     void die()
     {
+        AnalyticsResult analyticsResult = Analytics.CustomEvent("PlayerDied");
+        Debug.Log("analyticsResult: " + analyticsResult);
         health = 10f;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }

@@ -14,19 +14,26 @@ public class EndGame : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.tag == "Player")
+        if(level != -1)
         {
-            player1 = true;
-        }
+            if (obj.tag == "Player")
+            {
+                player1 = true;
+            }
             
-        if(obj.tag == "Player2")
-        {
-            player2 = true;
-        }
+            if(obj.tag == "Player2")
+            {
+                player2 = true;
+            }
 
-        if(player1 && player2)
+            if(player1 && player2)
+            {
+                endTheLevel();
+            }
+        }
+        else
         {
-            endTheLevel();
+            giveElemental();
         }
     }
 
@@ -34,18 +41,22 @@ public class EndGame : MonoBehaviour
     void endTheLevel()
     {
         giveElemental();
-        if (GlobalControl.Instance.CompletedLevels <= level)
+        if (level != -1)
         {
-            GlobalControl.Instance.CompletedLevels = level;
-        }
+            if (GlobalControl.Instance.CompletedLevels <= level)
+            {
+                GlobalControl.Instance.CompletedLevels = level;
+            }
 
-        if (level == 11)
-        {
-            SceneManager.LoadScene(17);
-        }
-        else
-        {
-            SceneManager.LoadScene(3);
+            if (level == 11)
+            {
+                SceneManager.LoadScene(17);
+            }
+            else
+            {
+                SceneManager.LoadScene(3);
+            }
+
         }
     }
 
@@ -68,6 +79,7 @@ public class EndGame : MonoBehaviour
     {
         if (element == 1)
         {
+            Debug.Log("hwlklo pls");
             GlobalControl.Instance.addWithoutRepetition(Player.ElementalsAvailable.WATER);
         }
         if (element == 2)
