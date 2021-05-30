@@ -210,7 +210,7 @@ public class WaterBoss : MonoBehaviour
             return;
         }
 
-        if (Time.time - startTime >= 1.5f)
+        if (Time.time - startTime >= 1f)
         {
             StartCoroutine(BananaMan());
             if (left)

@@ -13,8 +13,12 @@ public class GiveElementalPower : MonoBehaviour
         {
 
             GlobalControl.Instance.addWithoutRepetition(newShittyPower);
-            player1.elementalsPossesed.Add(newShittyPower);
-            player2.elementalsPossesed.Add(newShittyPower);
+            if (!player1.elementalsPossesed.Contains(newShittyPower)){
+                player1.elementalsPossesed.Add(newShittyPower);
+            }
+            if (!player2.elementalsPossesed.Contains(newShittyPower)){
+                player2.elementalsPossesed.Add(newShittyPower);
+            }
         }
     }
 
