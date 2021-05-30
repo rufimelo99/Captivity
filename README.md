@@ -15,6 +15,7 @@
   </p>
 </p>
 https://rodcar.itch.io/captivity
+https://twitter.com/Captivity_IST
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
