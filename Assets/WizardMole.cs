@@ -31,7 +31,7 @@ public class WizardMole : MonoBehaviour
     public bool isJustStandinThere;
 
     private bool iHaveThemPLayers = false;
-
+    public float maxRange = 100000;
 
     void Start()
     {
@@ -119,7 +119,16 @@ public class WizardMole : MonoBehaviour
 
         distance1 = (Player1.position - transform.position).sqrMagnitude;
         distance2 = (Player2.position - transform.position).sqrMagnitude;
+        Debug.Log(distance1);
+        Debug.Log(distance2);
+        Debug.Log(maxRange);
+        if (distance1>maxRange && distance2 > maxRange)
+        {
 
+            animator.SetFloat("Speed", 0);
+            return;
+        }
+            
         if (distance1 <= distance2)
         {
             direction = Player1.position - transform.position;
@@ -159,6 +168,12 @@ public class WizardMole : MonoBehaviour
 
         if (!iHaveThemPLayers)
         {
+            return;
+        }
+        if (distance1 > maxRange && distance2 > maxRange)
+        {
+
+            animator.SetFloat("Speed", 0);
             return;
         }
 
