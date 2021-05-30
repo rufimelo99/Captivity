@@ -32,37 +32,23 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: 'The guardians who are they? Other players who were trapped in the
-      castle because they never managed to overcome the obstacles and free the spirits. '
+    MessageText: One day a baby was born in the midst of the exiled family and he
+      was like no other begin in existance
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: 'They try to prevent the new men trapped in the castle, from being
-      able to release the spirits. '
+    MessageText: The spark of before, which laid dorment in all his ancestors, was
+      gluming once more in his mind
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 2
-    NextMessage: 4
-    MessageText: "The great Wizard catches his spirits and makes them victims of
-      captivity in his castle. He realizes that it\u2019s only possible to remove
-      the power of the spirits if they are inside a body, or if they give it spontaneously. "
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 3
     NextMessage: -1
-    MessageText: 'Power can only be drawn from within a body and not from within
-      a spirit. '
+    MessageText: As he grew, he learned to control nature and use them to reshape
+      reality to hil will... He was not a kind man...
     Clip: {fileID: 0}
-  Choices:
-  - ID: 4
-    Choices:
-    - Pretty good, thanks.
-    - Not so good.
-    NextMessages: 0600000007000000
+  Choices: []

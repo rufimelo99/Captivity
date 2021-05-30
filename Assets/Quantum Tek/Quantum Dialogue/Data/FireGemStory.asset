@@ -32,46 +32,16 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: 'As the powers can only pass from the spirits to a person if they
-      want to, the Wizard forges a way to manipulate them. He captures humans from
-      the Kingdom, who will try to escape. '
+    MessageText: As time passed, the adored spririts move to sancuaries, where they
+      lived amongst their acolits
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 1
-    NextMessage: 3
-    MessageText: 'But to do that they need to set the spirits free. The spirits reward
-      those who help them, so the spirits give the powers to those who can set them
-      free. When the humans reach the end of each level, they release the spirit,
-      which in turn gives them their power. '
-    Clip: {fileID: 0}
-  - ID: 3
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 2
-    NextMessage: 4
-    MessageText: "The great Wizard catches his spirits and makes them victims of
-      captivity in his castle. He realizes that it\u2019s only possible to remove
-      the power of the spirits if they are inside a body, or if they give it spontaneously. "
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 3
-    NextMessage: 5
-    MessageText: When they reach all the elements' power, they have to fight the
-      Wizard. In the end, only one wins. The Wizard fights against him to steal all
-      his powers and he either wins or he doesn't.
-    Clip: {fileID: 0}
-  - ID: 5
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 4
     NextMessage: -1
-    MessageText: If he wins, he takes control of the kingdom or even the whole world.
-      If not, the human liberates all spirits and guardians and reestablishes the
-      natural order of the kingdom.
+    MessageText: And as they grew fonder of their companioins, they stoped caring
+      for their safety, which in the end would be their downfall...
     Clip: {fileID: 0}
   Choices:
   - ID: 4

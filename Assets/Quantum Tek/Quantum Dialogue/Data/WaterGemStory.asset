@@ -32,28 +32,21 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: You have received the Water Gem
+    MessageText: Long ago Ellium was ruled by five families, to which an elemental
+      power had been bestowed.
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: 
     PreviousMessage: 1
     NextMessage: 3
-    MessageText: Long ago Ellium was ruled by five families, to which an elemental
-      power had been bestowed.
+    MessageText: As they mingled with ordinary humans, their powers were deluted
+      and they lost their original glory
     Clip: {fileID: 0}
   - ID: 3
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 2
-    NextMessage: 4
-    MessageText: As they mingled with ordinary humans, their powers were deluted
-      and they lost their original glory
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 3
     NextMessage: -1
     MessageText: But one family refused to mix and decided to live in exile, sworing
       to forever hold their grip on power....

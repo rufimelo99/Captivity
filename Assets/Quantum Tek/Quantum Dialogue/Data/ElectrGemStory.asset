@@ -32,33 +32,15 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: 'Only one Kingdom, commanded by 8 wizards. '
+    MessageText: The day came when the acolites woke up to an empty throne. The spirits
+      were gone... Taken without a sign of a fight...
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2
     SpeakerName: ' '
     PreviousMessage: 1
-    NextMessage: 3
-    MessageText: 'The Great Wizard tries to steal the powers of the other 7, with 
-      black magic. In order to not let him reach his goal, the other Wizards sacrifice
-      themselves and commit suicide. '
-    Clip: {fileID: 0}
-  - ID: 3
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 2
-    NextMessage: 4
-    MessageText: "The great Wizard catches his spirits and makes them victims of
-      captivity in his castle. He realizes that it\u2019s only possible to remove
-      the power of the spirits if they are inside a body, or if they give it spontaneously. "
-    Clip: {fileID: 0}
-  - ID: 4
-    Speaker: 2
-    SpeakerName: ' '
-    PreviousMessage: 3
     NextMessage: -1
-    MessageText: 'Power can only be drawn from within a body and not from within
-      a spirit. '
+    MessageText: How could this be?
     Clip: {fileID: 0}
   Choices:
   - ID: 4
