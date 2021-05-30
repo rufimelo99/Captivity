@@ -88,6 +88,11 @@ public class WaterBoss : MonoBehaviour
         if (obj.tag == "Bullet")
         {
             health = health - obj.GetComponent<Bullet>().damage;
+
+            if (obj.GetComponent<Bullet>().shock)
+            {
+                StartCoroutine(freeze());
+            }
         }
 
 
@@ -159,6 +164,12 @@ public class WaterBoss : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (frozen) // if he was shocked, do noting
+        {
+            animator.SetFloat("Speed", speed);
+            return;
+        }
+
         animator.SetFloat("Speed", speed);
         if (distance1 <= distance2)
         {
