@@ -72,7 +72,7 @@ public class Gem : MonoBehaviour
         if(player1 && player2)
         {
             GlobalControl.Instance.addGemWithoutRepetition(gemType);
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);  // if both players touch it make it dissapear
 
             DisplayDialogue displayDialogue = gameObject.GetComponent<DisplayDialogue>();
             if (displayDialogue)
