@@ -123,6 +123,23 @@ public class Weapon : MonoBehaviour
             otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] != Player.ElementalsAvailable.HUMAN &&
             distanceToOtherPlayer <= 5)
         {
+
+            if ((player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.ELECTRICITY &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] != Player.ElementalsAvailable.ELECTRICITY) || 
+            (player.elementalsPossesed[player.actualElementalIndex] != Player.ElementalsAvailable.ELECTRICITY &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] == Player.ElementalsAvailable.ELECTRICITY))
+            {
+                return;
+            }
+            if ((player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.GROUND &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] == Player.ElementalsAvailable.AIR) ||
+            (player.elementalsPossesed[player.actualElementalIndex] == Player.ElementalsAvailable.AIR &&
+            otherPlayer.elementalsPossesed[otherPlayer.actualElementalIndex] == Player.ElementalsAvailable.GROUND))
+            {
+                return;
+            }
+
+
             amountTimePressed = (Time.time - startTime);
             chargingBar.SetHealth(amountTimePressed);
 

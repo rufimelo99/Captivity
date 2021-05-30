@@ -30,7 +30,7 @@ public class PaperPiecesTrigger : MonoBehaviour
             if (pageId != -1 )
             {
                 GlobalControl.Instance.pagesCollected[pageId] = true;
-                Debug.Log("adding to diary");
+                //Debug.Log("adding to diary");
             }
         }
     }

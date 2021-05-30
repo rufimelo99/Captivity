@@ -32,7 +32,7 @@ MonoBehaviour:
     SpeakerName: Fire Spirit
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: I will not be thanking you for doing your job, peasants...
+    MessageText: I will not be thanking you for doing your job, little...
     Clip: {fileID: 0}
   - ID: 2
     Speaker: 2

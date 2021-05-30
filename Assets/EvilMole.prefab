@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  range: 100
+  range: 10000
   animator: {fileID: 1079402690663034414}
   Player1: {fileID: 0}
   Player2: {fileID: 0}

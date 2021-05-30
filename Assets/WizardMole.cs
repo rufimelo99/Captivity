@@ -28,13 +28,21 @@ public class WizardMole : MonoBehaviour
     public Image healthBar;
 
     public int shoot;
+    public bool isJustStandinThere;
 
     private bool iHaveThemPLayers = false;
-
+    public float maxRange = 100000;
 
     void Start()
     {
-        
+        if (isJustStandinThere)
+        {
+            iHaveThemPLayers = true;
+            animator.SetFloat("Health", 10);
+            animator.SetFloat("Speed", 0);
+            speed = 3.0f;
+            StartCoroutine(ShotTimer());
+        }
     }
 
 
@@ -91,6 +99,10 @@ public class WizardMole : MonoBehaviour
         if (obj.tag == "Bullet")
         {
             health = health - obj.GetComponent<Bullet>().damage;
+            if (obj.GetComponent<Bullet>().shock)
+            {
+                StartCoroutine(freeze());
+            }
         }
         healthBar.fillAmount = health / 10f;
         animator.SetFloat("Health", health);
@@ -108,6 +120,13 @@ public class WizardMole : MonoBehaviour
         distance1 = (Player1.position - transform.position).sqrMagnitude;
         distance2 = (Player2.position - transform.position).sqrMagnitude;
 
+        if (distance1>maxRange && distance2 > maxRange)
+        {
+
+            animator.SetFloat("Speed", 0);
+            return;
+        }
+            
         if (distance1 <= distance2)
         {
             direction = Player1.position - transform.position;
@@ -147,6 +166,12 @@ public class WizardMole : MonoBehaviour
 
         if (!iHaveThemPLayers)
         {
+            return;
+        }
+        if (distance1 > maxRange && distance2 > maxRange)
+        {
+
+            animator.SetFloat("Speed", 0);
             return;
         }
 

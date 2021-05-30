@@ -8116,7 +8116,7 @@ SpriteRenderer:
   m_Size: {x: 0.33, y: 0.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &793849259
@@ -71951,6 +71951,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045981043}
     m_Modifications:
+    - target: {fileID: -7571885441266123663, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b2685c4cc015ab844b34dbdad5a2d723, type: 2}
     - target: {fileID: 5231569563846713586, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: m_RootOrder
@@ -72034,7 +72039,7 @@ PrefabInstance:
     - target: {fileID: 5231569563846713597, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
       propertyPath: gemType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5231569563846713599, guid: 0cbb31d63a538d54a9f3b65a33ca1f59,
         type: 3}
