@@ -47,6 +47,10 @@ public class Bullet : MonoBehaviour
     public void electricity()
     {
         transform.localScale = new Vector3(2f, 0.5f, 0);
+        if (damage != 10f)
+        {
+            damage = 1f;
+        }
         speed = 50f;
         damage = 1.5f;
         shock = true;
@@ -56,22 +60,37 @@ public class Bullet : MonoBehaviour
     public void fire()
     {
         transform.localScale = new Vector3(1.5f, 0.8f, 0);
+        if (damage != 10f)
+        {
+            damage = 1f;
+        }
         damage = 3f;
     }
 
     public void ground()
     {
-        damage = 1f;
+        if (damage != 10f)
+        {
+            damage = 1f;
+        }
         color = 1;
     }
 
     public void air()
     {
+        if (damage != 10f)
+        {
+            damage = 1f;
+        }
         damage = 0.9f;
     }
 
     public void water()
     {
+        if (damage != 10f)
+        {
+            damage = 1f;
+        }
         damage = 1f;
     }
 }
