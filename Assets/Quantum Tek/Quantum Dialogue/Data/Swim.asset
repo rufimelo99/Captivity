@@ -32,7 +32,7 @@ MonoBehaviour:
     SpeakerName: ' '
     PreviousMessage: -1
     NextMessage: 2
-    MessageText: Oh the marvels of breading under water! Our limits are expanded
+    MessageText: Oh the marvels of breathing under water! Our limits are expanded
       and a new horizon appears in our minds!
     Clip: {fileID: 0}
   - ID: 2
