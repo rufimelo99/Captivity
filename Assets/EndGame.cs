@@ -48,9 +48,9 @@ public class EndGame : MonoBehaviour
                 GlobalControl.Instance.CompletedLevels = level;
             }
 
-            if (level == 11)
+            if (level == 9)
             {
-                SceneManager.LoadScene(15);
+                SceneManager.LoadScene(14);
             }
             else
             {
