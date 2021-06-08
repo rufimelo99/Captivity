@@ -25,23 +25,24 @@ MonoBehaviour:
     Speaker: 0
     SpeakerName: 
     PreviousMessage: -1
-    NextMessage: -1
-    MessageText: Left and right, around you must go. Stand stll long enough and your
-      foe will be no more.
+    NextMessage: 2
+    MessageText: Left and right, around you must go. Stand long enough and your foe
+      will be no more.
     Clip: {fileID: 0}
-  - ID: 6
+  - ID: 2
     Speaker: 0
-    SpeakerName: Bob
-    PreviousMessage: -1
-    NextMessage: -1
-    MessageText: Good to hear.
+    SpeakerName: Player 1
+    PreviousMessage: 1
+    NextMessage: 3
+    MessageText: Watch out these plates and the arrows! They might be telling us
+      something.
     Clip: {fileID: 0}
-  - ID: 7
+  - ID: 3
     Speaker: 0
-    SpeakerName: Bob
-    PreviousMessage: 4
+    SpeakerName: Player 2
+    PreviousMessage: 2
     NextMessage: -1
-    MessageText: I am sorry to hear that.
+    MessageText: You are right, let's try to work around them together!
     Clip: {fileID: 0}
   Choices:
   - ID: 4
