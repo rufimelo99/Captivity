@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Obstacle
+  - Enemies
+  - Bullet
+  - Obstacle_blue
+  - endGame
+  - Virtual Camera
+  - Room Changer
+  - Player2
+  - Vertical Room Changer
+  - Horizontal Room Changer
+  - Small Enemy Bullet
+  - Evil Touch
+  - Room Changer Next
+  - Room Changer Back
+  - Hole
+  - PressurePlate
+  - Bounce
+  - Magma
+  - Fusion
+  - PipeOut
+  - PipeIn
+  - Vapor
+  - PressurePlate1
+  - PressurePlate2
+  - PressurePlate3
+  - PressurePlate4
+  - PressurePlate5
+  - PressurePlate6
+  - PressurePlate7
+  - PressurePlate8
+  - PressurePlate9
+  - rockcave
+  - wind
+  - tornadorTP
+  - Comb Tree
+  - Thunder
+  - Angelina
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
+  - Layer 4
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2425651459
+    locked: 0
+  - name: Character
+    uniqueID: 1884189207
+    locked: 0
+  - name: Midground
+    uniqueID: 4189426099
+    locked: 0
