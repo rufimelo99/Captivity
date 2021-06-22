@@ -56,7 +56,7 @@ See Deliveries on Documents Folder.
 ![Capture](https://user-images.githubusercontent.com/44201826/122843542-9ac09700-d2f7-11eb-85d1-4564f576b4f2.PNG)
 
 ```
- ![Tux, the Linux mascot](/SourceFiles/Assets/beast.jpg)
+ ![Tux, the Linux mascot](/SourceFiles/Assets/Tiny RPG Forest/Artwork/sprites/mole/walk/mole-walk-front)
 ```
 https://github.com/rufimelo99/Captivity/blob/main/SourceFiles/Assets/beast.jpg
 
