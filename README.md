@@ -23,6 +23,8 @@
       <a href="#keywords">Keywords</a>
     </li>
     <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#screnshots">Screnshots</a></li>
+    <li><a href="#social">Social</a></li>
   </ol>
 </details>
 
