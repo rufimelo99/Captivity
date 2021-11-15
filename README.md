@@ -47,15 +47,15 @@ See Deliveries on Documents Folder.
 
 <!-- USAGE EXAMPLES -->
 ## Screnshots
-![_gDA62](https://user-images.githubusercontent.com/44201826/122843538-98f6d380-d2f7-11eb-8422-3a681bfb7cf4.png)
-![428mT3](https://user-images.githubusercontent.com/44201826/122843539-998f6a00-d2f7-11eb-9ba4-84a00292c785.png)
+![5](https://github.com/rufimelo99/Captivity/blob/main/images/1.png?raw=true)
+![5](https://github.com/rufimelo99/Captivity/blob/main/images/2.png?raw=true)
 
 <!-- USAGE EXAMPLES -->
 ## Social
 [Twitter](https://twitter.com/Captivity_IST)
 
-![Capture](https://user-images.githubusercontent.com/44201826/122843542-9ac09700-d2f7-11eb-85d1-4564f576b4f2.PNG)
+![5](https://github.com/rufimelo99/Captivity/blob/main/images/3.png?raw=true)
 
 [itch.io](https://rodcar.itch.io/captivity)
 
-[![Alt text](https://user-images.githubusercontent.com/44201826/122846851-9fd51480-d2fe-11eb-8fd2-27da4b293b2b.PNG)](https://www.youtube.com/watch?v=XWu383oxArI)
+![5](https://github.com/rufimelo99/Captivity/blob/main/images/4.png?raw=true)
